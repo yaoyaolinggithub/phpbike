@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分类折叠列表展示</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			/*头部样式*/
+			.mui-bar{
+				background-color: rgb(212, 52, 40);
+				height: 45px;
+				padding: 0px;
+			}
+			.mui-bar div{
+				height: 100%;
+			}
+			.mui-bar-nav.mui-bar .mui-icon {
+			    margin-right: 0px;
+			    margin-left: 0px;
+			    padding-right: 0px; 
+    			padding-left: 0px; 
+    			width: 8%;
+    			text-align: center;
+			}
+			#muiinp{
+				width: 79%;
+			    height: 80%;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    margin: auto;
+			}
+			.mui-input-reserve{
+				position: relative;
+			}
+			.mui-input-reserve .mui-btn {
+			    font-weight: 400;
+			    position: absolute;
+			    z-index: 20;
+			    top: 5px;
+			    right: 0;
+			    margin-top: 0;
+			    padding: 8px 6px 7px;
+			}
+			.mui-input-reserve .mui-btn-danger{
+				width: 13%;
+			    color: #fff;
+			    border: 1px solid #d43428;
+			    background-color: #d43428;
+			}
+			.mui-input-reserve a{
+				height: 100%;
+			}
+			.mui-input-reserve span{
+				font-size: 13px;
+				position: absolute;
+				right: 0.4rem;
+				line-height: 45px;
+			}
+			.mui-input-reserve input{
+				background: rgba(255,255,255,0);
+			}
+			.mui-input-reserve input::-webkit-input-placeholder{
+				font-size: 0.8rem;
+				color: white;
+			}
+			.mui-input-reserve .hunt{
+				background:url(../images/hunt.png) no-repeat 97%   rgba(255,255,255,0.5);
+				background-size:15px ;
+			}
+			/*主体样式*/
+			#classPage {
+			    padding-top: 45px;
+			}
+			#classPage .mui-collapse:after {
+			    left: 0px;
+			}
+			#classPage .mui-collapse {
+			    padding: 10px 15px;
+			}
+			#classPage .mui-navigate-right{
+				font-size: 0.95rem;
+			}
+			#classPage .mui-table-view-cell.mui-active {
+			    background-color: #f3e7e7;
+			}
+			#classPage>.mui-table-view:first-child {
+			    margin-top: 10px;
+			}
+			/*li9宫格*/
+			#classPage .mui-collapse .mui-collapse-content{
+				padding: 8px 0px;
+			}
+			#classPage .mui-grid-view,#classPage .mui-grid-view .mui-media{
+				padding: 0;
+    			margin: 0;
+    			background: white;
+    			border-right: 0px solid #eee; 
+    			border-bottom: 0px solid #eee; 
+			}
+			#classPage .mui-grid-view .mui-media:after {
+			     height: 0px; 
+			}
+			#classPage .mui-media .mui-icon img {
+			     width: 55px;
+			}
+			#classPage .mui-media .mui-media-body {
+			     font-size: 0.9rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav ">
+			<div class="mui-input-reserve">
+		    	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <input id="muiinp" type="text" placeholder="搜索商品" class="hunt">
+			    <button type="button" class="mui-btn mui-btn-danger">确定</button>
+			</div>
+		</header>
+		<div class="mui-content" id="classPage">
+			<!--ul列表展示商品列表-->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse mui-active">
+					<a class="mui-navigate-right" href="#">美妆彩妆</a>
+					<div class="mui-collapse-content">
+						<!--li9宫格-->
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">BB霜</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">气垫BB</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">遮瑕</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">粉底液</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">蜜粉/散粉</div></a></li>
+				        </ul> 
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">美妆彩妆</a>
+					<div class="mui-collapse-content">
+						<!--li9宫格-->
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">BB霜</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">气垫BB</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">遮瑕</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">粉底液</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">蜜粉/散粉</div></a></li>
+				        </ul> 
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">美妆彩妆</a>
+					<div class="mui-collapse-content">
+						<!--li9宫格-->
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">BB霜</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">气垫BB</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">遮瑕</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">粉底液</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">蜜粉/散粉</div></a></li>
+				        </ul> 
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">美妆彩妆</a>
+					<div class="mui-collapse-content">
+						<!--li9宫格-->
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">BB霜</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">气垫BB</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">遮瑕</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">粉底液</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">蜜粉/散粉</div></a></li>
+				        </ul> 
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		(function($, doc) {
+			$.init();
+			// 跳转商品列表展示
+			$.plusReady(function() {
+				// 备份单个跳转详情页
+//				var clasPagBtn = doc.getElementsByClassName('mui-media');
+//				clasPagBtn[0].addEventListener('tap', function(event) {
+//					$.openWindow({
+//						url: "list.html",
+//						id: "list",
+//						preload: true,
+//						show: {
+//							aniShow: 'pop-in'
+//						},
+//						styles: {
+//							popGesture: 'hide'
+//						},
+//						waiting: {
+//							autoShow: false
+//						}
+//					});
+//				}, false);
+				// 批量进入列表页页
+				mui("#classPage").on('tap','.mui-col-xs-3',function(event){
+					$.openWindow({
+						url: "list.html",
+						id: "list",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+			});
+		}(mui, document));
+	</script>	
+</html>

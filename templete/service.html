@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>客服服务</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-radius ul{
+				padding:15px;
+			}
+			.mui-radius .ser-li{
+				height: 50px;
+				line-height: 50px;
+				border-bottom: 1px solid #DED6C9;
+				min-width: 283px;
+				font-size: 1rem;
+			}
+			.mui-radius .ser-li .ser-spn1{
+				display: inline-block;
+    			width: 68px;
+			}
+			.mui-radius .mui-btn-block{
+			    width: 93%;
+			    padding: 13px 0;
+			    margin: auto;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">客服服务</h1>
+		</header>
+		<div class="mui-content mui-radius" >
+			<ul>
+				<li class="ser-li"><span class="ser-spn1">商店名称</span><sapn>：</sapn><span class="ser-spn2">比客网商</span></li>
+				<li class="ser-li"><span class="ser-spn1">客服QQ </span><sapn>：</sapn><span class="ser-spn2">3004740957</span></li>
+				<li class="ser-li"><span class="ser-spn1">联系电话</span><sapn>：</sapn><span class="ser-spn2">400-678-0028</span></li>
+				<li class="ser-li"><span class="ser-spn1">客服邮箱</span><sapn>：</sapn><span class="ser-spn2">3004740957@qq.com</span></li>
+			</ul>
+			<button id="servicetel" type="button" class="mui-btn mui-btn-success mui-btn-block">400-678-0028</button>
+		</div>
+		
+		
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		(function($, doc) {
+			$.init();
+			// 跳转商品列表展示
+			 //客服电话
+			doc.getElementById("servicetel").addEventListener('tap', function() {
+				plus.device.dial("114");
+			});
+		}(mui, document));
+	</script>
+</html>

@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>确认订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			#indetCon{
+			    padding-top: 45px;
+			}
+			#indetCon .indet-site,#indetCon .indet-comm,#indetCon .indet-favorable,#indetCon .indet-way,#indetCon .indet-money{
+				width: 100%;
+				background-color: #fff;
+    			padding: 14px 13px 12px 10px;
+			}
+			/*收货信息*/
+			#indetCon .indet-site .si-name span{
+				margin-left: 23px;
+				font-size: 1rem;
+			    color: #252525;
+			    font-weight: bold;
+			}
+			#indetCon .indet-site .si-name .si-name2{
+				margin-left: 50px;
+			}
+			#indetCon .indet-site .si-name{
+				padding-bottom: 10px;
+			}
+			#indetCon .indet-site .si-site{
+			    padding-left: 22px;
+    			font-size: 0.8rem;
+    			position: relative;
+    		}
+			#indetCon .si-site .si-site1{
+				display: inline-block;
+			    width: 12px;
+			    height: 12px;
+			    background: url(../images/site.png) no-repeat center;
+			    background-size: 12px;
+			    position: absolute;
+			    left: 0px;
+			    top: 5px;
+			}
+			#indetCon .si-site .si-site2{
+				font-size: 0.95rem;
+			    color: #232326;
+			    line-height: 22px;
+			}
+			#indetCon .indet-site{
+				position: relative;
+			}
+			#indetCon .si-bot{
+				position: absolute;
+			    bottom: 1px;
+			    left: 0;
+			    height: 3px;
+			    width: 100%;
+			    background: url(../images/cai.png) repeat-x;
+			    background-size: 80px 4px;
+			    margin-bottom: 0px;
+			}
+			/*商品信息*/
+			#indetCon .indet-comm{
+				position: relative;
+				margin-top: 10px;
+				padding-top: 1px;
+			}
+			#indetCon .indet-comm .indet-comm-ul{
+				padding: 0;
+				margin: 0;
+			}
+			#indetCon .indet-comm .indet-comm-ul .indet-comm-li{
+				position: relative;
+				margin-top: 13px;
+			}
+			#indetCon .indet-comm img{
+				width: 80px;
+			    height: 80px;
+			    border: 1px solid #e3e5e9;
+			}
+			#indetCon .indet-comm .mui-rig-h1 {
+			    padding-left: 90px;
+			    position: absolute;
+			    top: 0;
+			}
+			#indetCon .mui-rig-h1 .mui-rig1{
+			    margin-bottom: 7px;
+			    font-size: 0.9rem;
+			    vertical-align: middle;
+			    display: -webkit-box;
+			    -webkit-box-pack: center;
+			    -webkit-box-align: start;
+			    color: #232326;
+			    word-break: break-all;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    line-height: 15px;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			}
+			#indetCon .mui-rig-h1 .mui-rig2{
+			    height: 12px;
+			    line-height: 14px;
+			    margin-bottom: 3px;
+			    font-size: 0.6rem;
+			    color: #81838e;
+			    white-space: nowrap;
+			    display: -webkit-box;
+			}
+			#indetCon .mui-rig2 .mui-rig2-spn1 {
+			    margin-right: 5px;
+			    display: block;
+			    -webkit-box-flex: 1;
+			    -webkit-flex: 1;
+			    -ms-flex: 1;
+			    flex: 1;
+			    -webkit-flex-basis: 0;
+			    -ms-flex-preferred-size: 0;
+			    flex-basis: 0;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			}
+			#indetCon .mui-rig2 .mui-rig2-spn2 {
+			    display: block;
+			    -webkit-box-flex: 1;
+			    -webkit-flex: 1;
+			    -ms-flex: 1;
+			    flex: 1;
+			    -webkit-flex-basis: 0;
+			    -ms-flex-preferred-size: 0;
+			    flex-basis: 0;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			}
+			#indetCon .mui-rig-price {
+			    margin-top: 8px;
+			    line-height: 28px;
+			}
+			#indetCon .mui-rig-price .mui-pri-spn1 {
+			    font-size: 0.9rem;
+			    color: #f23030;
+			}
+			#indetCon .mui-rig-price .mui-pri-spn1 strong {
+			    font-size: 1.2rem;
+			    font-weight: normal;
+			}
+			#indetCon .mui-indet-value{
+				color:#848689;
+				float: right;
+				padding-right: 50px;
+			}
+			/*优惠劵*/
+			#indetCon .indet-favorable{
+				margin-top: 10px;
+				color: #262629;
+				font-size: 0.95rem;
+			}
+			#indetCon .indet-favorable .favo-p2-txt{
+				width: 70%;
+				height: 33px;
+				font-size: 0.9rem;
+			}
+			#indetCon .indet-favorable .mui-btn{
+				width: 30%;
+				font-size: 0.9rem;
+				text-align: center;
+				padding: 5.5px 0px;
+			}
+			/*支付方式*/
+			#indetCon .indet-way{
+				margin-top: 10px;
+			}
+			#indetCon .indet-way .way-select{
+				font-size: 1rem;
+				color:#262629 ;
+				margin-bottom: 10px;
+			}
+			#indetCon .indet-way .mode1{
+				width: 50%;
+				margin-right: 30px;
+			}
+			#indetCon .indet-way .mode1 input{
+				position: inherit;
+				display: inline-block;
+			    width: 25px;
+			    height: 25px;
+			    border: 0;
+			    outline: 0!important;
+			    background-color: transparent;
+			    -webkit-appearance: none;
+			}
+			#indetCon .mui-checkbox input[type=checkbox]:before,#indetCon .mui-radio input[type=radio]:before {
+			    font-size: 23px;
+			}
+			#indetCon .mui-checkbox input[type=checkbox]:checked:before,#indetCon  .mui-radio input[type=radio]:checked:before {
+			    color: #f23030;
+			}
+			/*立即支付*/
+			#indetCon .indet-money{
+				margin-top: 10px;
+			}
+			#indetCon .indet-money .indet-money-con{
+				height: 45px;
+    			line-height: 30px;
+				text-align: center;
+				font-size: 0.9rem;
+				color: #f23030;
+				
+			}
+			#indetCon .indet-money .indet-money-con .indet-money-span{
+				font-size: 1rem;
+			}
+			#indetCon .indet-money .indet-monet-sub .mui-btn-block {
+			    padding: 8px 0;
+			    background-color: #f23030;
+    			border: 1px solid#f23030;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">确认订单</h1>
+		</header>
+		<div class="mui-content" id="indetCon">
+		    <!--收货信息-->
+		    <div class="indet-site">
+		    	<div class="si-name">
+		    		<span class="si-name1">某某某</span>
+		    		<span class="si-name2">12345678910</span>
+		    	</div>
+		    	<div class="si-site">
+		    		<span class="si-site1"></span>
+		    		<span class="si-site2">广东广州市天河区新世界东逸花园逸晴居小区-东方三路200号</span>
+		    	</div>
+		    	<p class="si-bot"></p>
+		    </div>
+		    <!--商品信息-->
+		    <div class="indet-comm">
+		    	<ul class="indet-comm-ul">
+		    		<li class="indet-comm-li">
+		    			<img src="../images/comm.jpg" alt="图片" />
+						<div class="mui-rig-h1">
+							<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+							<div class="mui-rig2">
+								<span class="mui-rig2-spn1">颜色:白色</span>
+								<span class="mui-rig2-spn2">尺码:37</span>
+							</div>
+							<div class="mui-rig-price mui-cf">
+								<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+								<div class="mui-indet-value">
+									x<span class="mui-indet-num">1</span>
+								</div>
+							</div>
+						</div>
+		    		</li>
+		    		<li class="indet-comm-li">
+		    			<img src="../images/comm.jpg" alt="图片" />
+						<div class="mui-rig-h1">
+							<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+							<div class="mui-rig2">
+								<span class="mui-rig2-spn1">颜色:白色</span>
+								<span class="mui-rig2-spn2">尺码:37</span>
+							</div>
+							<div class="mui-rig-price mui-cf">
+								<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+								<div class="mui-indet-value">
+									x<span class="mui-indet-num">1</span>
+								</div>
+							</div>
+						</div>
+		    		</li>
+		    		<li class="indet-comm-li">
+		    			<img src="../images/comm.jpg" alt="图片" />
+						<div class="mui-rig-h1">
+							<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+							<div class="mui-rig2">
+								<span class="mui-rig2-spn1">颜色:白色</span>
+								<span class="mui-rig2-spn2">尺码:37</span>
+							</div>
+							<div class="mui-rig-price mui-cf">
+								<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+								<div class="mui-indet-value">
+									x<span class="mui-indet-num">1</span>
+								</div>
+							</div>
+						</div>
+		    		</li>
+		    	</ul>
+				
+		    </div>
+		    <!--优惠劵-->
+		    <div class="indet-favorable">
+		    	<div class="favo-p2"><input class="favo-p2-txt" type="text"/><button type="button" class="mui-btn">验证代金卷</button></div>
+		    	<div class="favo-p1"><span class="favo-p1-spn1">使用代金劵：</span><span class="favo-p1-spn2">123456789123456</span></div>
+		    </div>
+		    <!--支付方式-->
+		    <div class="indet-way">
+		    	<div class="way-select">支付方式</div>
+		    	<div class="way-mode mui-radio">
+		    		<span class="mode1"><input name="radio1" value="weixin" type="radio" checked>微信</span>
+		    		<span class="mode1"><input name="radio1" value="zhifu" type="radio" >支付宝</span>
+		    	</div>
+		    </div>
+		    <!--立即支付-->
+		    <div class="indet-money">
+		    	<div class="indet-money-con">商品总金额：￥<span class="indet-money-span">2500.00</span></div>
+		    	<div class="indet-monet-sub"><button type="button" class="mui-btn mui-btn-danger mui-btn-block">提交订单</button></div>
+		    </div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+	</script>
+</html>

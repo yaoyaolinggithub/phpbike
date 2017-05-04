@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../font_about/iconfont.css"/>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*头部*/
+			#abouthead{
+				width: 100%;
+				height: 135px;
+				background: url(../images/aboutBJ.png) no-repeat;
+				font-size: 100%;
+			}
+			
+			#abouthead .mui-left-se{
+				width: 100%;
+				height: 50px;
+				overflow: hidden;
+			}
+			#abouthead .mui-left-se span{
+				width: 25px;
+				height: 25px;
+				display: block;
+				float: right;
+				margin:10px;
+			}
+			#abouthead .mui-left-se .mui-se1{
+				background: url(../images/set.png) no-repeat;
+				background-size: 95%;
+			}
+			#abouthead .mui-left-se .mui-se2{
+				background: url(../images/newsl.png) no-repeat;
+				background-size: 95%;
+			}
+			#abouthead .mui-hed-left{
+				width: 100%;
+				
+			} 
+			.mui-hed-left:after {
+			    content: "";
+			    display: block;
+			    height: 0;
+			    clear: both;
+			    visibility: hidden;
+			}
+			#abouthead .mui-hed-left .mui-left-head{
+				float: left;
+				width: 70px;
+				height: 70px;
+				border-radius: 50%;
+				box-shadow: 0 0 0 5px rgba(243, 238, 236, .4);
+			}
+			#abouthead .mui-hed-left .mui-left-head img{
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+			#abouthead .mui-hed-left .mui-left-zu{
+				margin-left: 23px;
+				line-height: 4rem;
+				font-size: 1rem;
+			}
+			.mui-left-zu a{
+				color:#ffffff ;
+			}
+			
+			/*主体头部*/
+			.mui-bar-nav~.mui-content {
+			    padding-top: 135px;
+			}
+			/*订单列表*/
+			.mui-content>.mui-table-view:first-child {
+			    margin-top: 0px;
+			}
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+			    padding:5px 0 ;
+			    width: 20%;
+			    background-color: white;
+			}
+			.mui-grid-view.mui-grid-9 .mui-media .mui-icon {
+			    font-size: 2em;
+
+			}
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+			    margin: 15px 0px 0px 0px;
+			    font-size: 0.8rem;
+			}
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+			    border-right: 1px solid white; 
+			}
+			.mui-grid-view .mui-table-view-cell:nth-child(5) {
+			    border-left: 1px solid lightgray; 
+			}
+			/*优惠列表列表*/
+			#regalia{
+				margin: 10px 0;
+			}
+			#regalia .mui-table-view-cell .mui-icon {
+			    font-size: 1.2em;
+			}
+			/*相关活动*/
+			#acti .mui-table-view-cell {
+			    width: 25%;
+			}
+			#acti .mui-table-view-cell:nth-child(5) {
+			    border-left: 0px solid lightgray; 
+			}
+			#acti .mui-table-view-cell .icon-xinxing{
+				color: #fa3c3c;
+			}
+			#acti .mui-table-view-cell .icon-dianpu{
+				color: #ffc800;
+			}
+			#acti .mui-table-view-cell .icon-jiaoyin-copy{
+				color: #ff7e45;
+			}
+			#acti .mui-table-view-cell .icon-kefu{
+				color: #fc6a70;
+			}
+			#acti .mui-table-view-cell .icon-huodong{
+				color: #fe8652;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav" id="abouthead">
+			<div class="mui-left-se mui-cf">
+				<span class="mui-se2"></span>
+				<span class="mui-se1"></span>
+			</div>
+			<div class="mui-hed-left">
+				<div class="mui-left-head">
+					<img src="../images/user-photo.png"/>
+				</div>
+				<span class="mui-left-zu"><a href="#" id="abolog">登录/注册 > </a></span>
+			</div>
+		</header>
+		<div class="mui-content">
+		    <!--订单列表-->
+			<ul class="mui-table-view mui-grid-view mui-grid-9" id="indent">
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon iconfont  icon-yinxingqia"></span>
+			        <div class="mui-media-body">代付款</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon iconfont icon-huoche"><span class="mui-badge">5</span></span>
+			        <div class="mui-media-body">待收货</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon iconfont icon-daipingjia"></span>
+			        <div class="mui-media-body">待评价</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon iconfont icon-gongju"></span>
+			        <div class="mui-media-body">退换/售后</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon iconfont icon-xingzhuang88kaobei3-copy"></span>
+			        <div class="mui-media-body">我的订单</div></a></li>
+			</ul> 
+			<!--优惠列表列表-->
+			<ul class="mui-table-view mui-grid-view mui-grid-9" id="regalia">
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon ">0</span>
+			        <div class="mui-media-body">积分</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3" id="favoBtn"><a href="#">
+			        <span class="mui-icon ">0</span>
+			        <div class="mui-media-body">优惠卷</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon ">0</span>
+			        <div class="mui-media-body">白条</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon ">0</span>
+			        <div class="mui-media-body">会员卡</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon  iconfont icon-qianbao"></span>
+			        <div class="mui-media-body">我的钱包</div></a></li>
+			</ul>
+			<!--相关活动-->
+			<ul class="mui-table-view mui-grid-view mui-grid-9" id="acti">
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon iconfont icon-xinxing"></span>
+			        <div class="mui-media-body">商品关注</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon iconfont icon-dianpu"></span>
+			        <div class="mui-media-body">店铺关注</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon iconfont icon-jiaoyin-copy"></span>
+			        <div class="mui-media-body">浏览记录</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3  mui-about-ser"><a href="#">
+			        <span class="mui-icon iconfont icon-kefu"></span>
+			        <div class="mui-media-body">客服服务</div></a></li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			        <span class="mui-icon iconfont icon-huodong"></span>
+			        <div class="mui-media-body">我的活动</div></a></li>
+			</ul>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		mui.init();
+		var abologBtn = document.getElementById('abolog');
+		var favoBtn = document.getElementById('favoBtn');
+		var muiSeBtn = document.getElementsByClassName("mui-se1");
+		var aboutserBtn = document.getElementsByClassName("mui-about-ser");
+		mui.plusReady(function(){
+			// 跳转到登录页面
+			abologBtn.addEventListener('tap',function(){
+				mui.openWindow({
+					url: "login.html",
+					id: "login",
+//					preload: true,
+					styles: {
+						popGesture: 'hide'
+					},
+					show: {
+					    aniShow: 'none'
+					},
+					waiting: {
+						autoShow: false
+					}
+				})
+			})
+			// 跳转到设置页面
+			muiSeBtn[0].addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"setting.html",
+					id:"setting",
+//					preload:true,
+					show:{
+						aniShow:"none"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false)
+			// 跳转到客服页面
+			aboutserBtn[0].addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"service.html",
+					id:"service",
+//					preload:true,
+					show:{
+						aniShow:"none"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false)
+			// 跳转到优惠劵
+			favoBtn.addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"favorable.html",
+					id:"favorable",
+//					preload:true,
+					show:{
+						aniShow:"none"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false)
+		});
+	</script>
+</html>

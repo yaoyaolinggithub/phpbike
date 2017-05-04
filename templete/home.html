@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" >
+			mui.init();
+		</script>
+		<style type="text/css">
+			/*头部沉隐式*/
+			.mui-bar-nav~.mui-content {
+			    padding-top: 0px;
+			}
+			/*头部样式*/
+			.mui-bar{
+				background-color: rgba(226, 73, 67,0);
+				height: 45px;
+			}
+			.mui-bar div{
+				height: 100%;
+			}
+			#muiinp{
+				width:90%;
+				height: 80%;
+				margin: 5px 0px 5px;
+			}
+			.mui-input-reserve{
+				position: relative;
+			}
+			.mui-input-reserve span{
+				font-weight:200;
+				font-size: 13px;
+				position: absolute;
+				right: 0.1rem;
+				line-height: 45px;
+			}
+			.mui-input-reserve input{
+				background: rgba(255,255,255,0);
+			}
+			.mui-input-reserve input::-webkit-input-placeholder{
+				font-size: 0.8rem;
+				color: white;
+			}
+			.mui-input-reserve .hunt{
+				background:url(../images/hunt.png) no-repeat 97%   rgba(255,255,255,0.5);
+				background-size:15px ;
+			}
+			body .mui-bar-nav {
+			    top: 0;
+			    -webkit-box-shadow: 0 0px 0px #ccc;
+			    box-shadow: 0 0px 0px #ccc;
+			}
+			/*flex布局 分类*/
+			.mui-row-flex{
+				display: -webkit-flex; 
+  				display: flex;
+  				flex-wrap: wrap;
+  				align-content: space-between;
+			}
+			.mui-row-colour{
+				padding: 10px 0px;
+  				background: rgb(243, 243, 243);
+			}
+			.mui-row-flex .mui-flex-item{
+				width: 20%;
+				margin:5px 0px;
+			}
+			.mui-row-flex .mui-flex-item div{
+				width: 100%;
+			}
+			.mui-row-flex .mui-flex-item .mui-flex-img{
+
+			}
+			.mui-row-flex .mui-flex-item .mui-flex-img img{
+				width: 70%;
+				display:block;
+				margin: auto;
+			}
+			.mui-row-flex .mui-flex-item .mui-flex-p {
+				line-height: 21px;
+				text-align: center;
+				font-size: 0.8rem;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			    display: box;
+			    line-clamp: 1;
+			    box-orient: vertical;
+			}
+			/*图片展示*/
+			.mui-content .show img{
+				width: 100%;
+			}
+			/*flex布局 商品*/
+			.mui-row-flex-comm{
+				width: 100%;
+				margin-top: 5px;
+				background: white;
+				display:flex;
+				display: -webkit-flex; 
+				flex-wrap: wrap;
+  				align-content: space-between;
+			}
+			.mui-row-flex-comm .mui-flex-sm{
+				width: 50%;
+				padding: 5px 10px;
+				flex-wrap:wrap;
+				display:flex;
+			}
+			.mui-row-flex-comm .mui-flex-sm .mui-flex-xs{
+				width: 50%;
+				/*height: 100%;*/
+				flex-wrap:wrap;
+			}
+			.mui-flex-xs .mui-flex-h1{
+				font-size: 1.3rem;
+				color: black;
+				font-weight:bold;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			}
+			.mui-flex-xs .mui-flex-comp{
+				font-size: 0.8rem;
+				margin-top: 5px;
+				color: gray;
+				font-weight:normal ;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			    display: box;
+			    line-clamp: 1;
+			    box-orient: vertical;
+			}
+			.mui-flex-xs .mui-flex-hot{
+				margin-top: 5px;
+				padding: 0px 3px;
+				font-size: 0.6rem;
+				color: white;
+				font-weight:normal ;
+				background: hotpink;
+				height: 16px;
+			    line-height: 17px;
+			    display: inline-block;
+			    text-align: center;
+			}
+			#homeBtna .mui-row-flex-comm .mui-flex-h1 strong{
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			}
+			.mui-flex-sm .mui-flex-xs img{
+				width: 100%;
+			}
+			.mui-row-flex-comm .mui-flex-li{
+				width: 25%;
+				padding: 0px 10px;
+				flex-wrap:wrap;
+				position: relative;
+			}
+			.mui-row-flex-comm .mui-flex-li .mui-flex-comp{
+				font-size: 0.8rem;
+				color: gray;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			    display: box;
+			    line-clamp: 1;
+			    box-orient: vertical;
+			    margin-bottom: 2px;
+			}
+			.mui-row-flex-comm .mui-flex-li .mui-flex-li-img{
+				width: 100%;
+			}
+			.mui-flex-li .mui-flex-li-img img{
+				width: 100%;
+			}
+			.mui-flex-li .mui-flex-li-img div{
+				height: 18px;
+				padding:0px 5px;
+				text-align: center;
+				margin: 0;
+				font-size: 0.5rem;
+				background: #952dff;
+				color: white;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			/*小型轮播图*/
+			.mui-mix-marg{
+				margin: 10px 10px 0px;
+			}
+			#mui-loop-mix{
+				width: 100%;
+				height:85px ;
+			}
+			#mui-loop-mix .mui-slider-indicator{
+				bottom: 1px;
+			}
+			.mui-loop-nav{
+				width: 100%;
+				height:33px ;
+			}
+			.mui-loop-nav img{
+				width: 100%;
+				height: 100%;
+			}
+			
+			/*推荐样式*/
+			.mui-gray-text {
+			    position: relative;
+			    display: -webkit-box;
+			    margin: 14px 5px;
+			    color: #848689;
+			    font-size: 14px;
+			    -webkit-box-pack: center;
+			}
+			.mui-gray-layout {
+			    padding: 0 10px;
+			    background-color: #f0f2f5;
+			    z-index: 9;
+			    position: relative;
+			    display: block;
+			}
+			.gray-text-img {
+			    background: url(../images/top_ni.png);
+			    background-repeat: no-repeat;
+			    background-size: 13px 13px;
+			    width: 13px;
+			    height: 13px;
+			    display: block;
+			    margin-right: 10px;
+			    position: relative;
+			    top: 3px;
+			    float: left;
+			}
+			.mui-gray-text:after {
+			    content: "";
+			    height: 1px;
+			    width: 100%;
+			    position: absolute;
+			    top: 50%;
+			    left: 0;
+			    background-color: #cbcbcb;
+			    -webkit-transform: scaleY(0.5);
+			}
+			/*ul列表推荐*/
+			.mui-content ul{
+				padding:0;
+				margin: 0;
+			}
+			.mui-similar-li:nth-child(2n+1) {
+			    padding-right: 2px;
+			}
+			.mui-similar-li:nth-child(2n) {
+			    padding-left: 2px;
+			}
+			.mui-similar-li {
+			    float: left;
+			    width: 50%;
+			    box-sizing: border-box;
+			    padding-bottom: 4px;
+			    position: relative;
+			}
+			.mui-similar-product {
+			    background-color: white;
+			    padding-bottom: 6px;
+			    font-size: 0;
+			}
+			.mui-similar-product img {
+			    width: 100%;
+			    display: block;
+			}
+			.mui-similar-product-text {
+			    height: 33px;
+			    font-size: 13px;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 2;
+			    -webkit-box-orient: vertical;
+			    word-break: break-word;
+			    color: #232326;
+			    margin-top: 5px;
+			    line-height: 17px;
+			    margin-bottom: 3px;
+			    padding: 0 4px;
+			}
+			.mui-similar-product-price {
+			    color: #f23030;
+			    font-size: 13px;
+			    display: block;
+			    padding: 0 4px;
+			    position: relative;
+			    top: 1px;
+			    height: 25px;
+			    line-height: 25px;
+			}
+			.mui-similar-product-price .mui-big-price {
+			    font-size: 18px;
+			}
+			.mui-guess-button {
+			    display: block;
+			    position: absolute;
+			    top: 0;
+			    right: 8px;
+			    text-align: center;
+			    color: #686868;
+			    font-size: 12px;
+			    width: 49px;
+			    height: 24px;
+			    line-height: 27px;
+			}
+			.mui-guess-button:after {
+			    content: '';
+			    width: 100%;
+			    height: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    border: 1px solid #bfbfbf;
+			    border-radius: 4px;
+			}
+			.mui-cf:after {
+			    content: "";
+			    display: block;
+			    height: 0;
+			    clear: both;
+			    visibility: hidden;
+			}
+			/*底部*/
+			.mui-content .mui-bott-over{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				text-align:center;
+				font-size: 0.8rem;
+			}
+			
+			/*回到顶部样式*/
+			#mui-btn-top {
+				width:40px; 
+				height:40px; 
+				border-radius: 50%;
+				position:fixed; 
+				right:25px; 
+				bottom:10px; 
+				display:none; 
+				background:url(../images/top.png) no-repeat center;
+			}
+			#mui-btn-top img{
+				width: 100%;
+			}
+			#mui-btn-top:hover {
+				background:url(../images/top.png) no-repeat center;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav mui-bar-transparent">
+			<div class="mui-input-reserve">
+			    <input id="muiinp" type="text" placeholder="搜索商品" class="hunt">
+			    <a href="#"><span class="mui-badge-white mui-badge-inverted " id="homeLong">登录</span></a>
+			</div>
+		</header>
+		<!--内容-->
+		<div class="mui-content" id="homeBtna">
+			<!--轮播图-->
+			<div class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg2" src="../images/carr2.png"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg3" src="../images/carr3.jpg"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg4" src="../images/carr4.jpg"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
+					</div>
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+				    <div class="mui-indicator mui-active"></div>
+				    <div class="mui-indicator"></div>
+				    <div class="mui-indicator"></div>
+				    <div class="mui-indicator"></div>
+				    <div class="mui-indicator"></div>
+				</div>
+			</div>
+			<!--flex布局  分类-->
+			<div class="mui-row-flex mui-row-colour" id="niceBtn">
+		        <div class="mui-flex-item" id="mui-list-1">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		        <div class="mui-flex-item">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		        <div class="mui-flex-item">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		        <div class="mui-flex-item">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		        <div class="mui-flex-item">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		        <div class="mui-flex-item">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		        <div class="mui-flex-item">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		        <div class="mui-flex-item">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		        <div class="mui-flex-item">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		        <div class="mui-flex-item">
+		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
+		        	<div class="mui-flex-p">服饰鞋帽</div>
+		        </div>
+		    </div>
+		    
+		    <!--图片展示-->
+		    <div class="show">
+		    	<a href="#"><img src="../images/love.jpg" alt="" /></a>
+		    </div>
+		    <!--flex布局  商品-->
+		    <div class="mui-row-flex-comm">
+		    	<div class="mui-flex-sm">
+		    		<div class="mui-flex-xs">
+		    			<div class="mui-flex-h1">玩3C</div>
+		    			<div class="mui-flex-comp">iPhone 7红色</div>
+		    			<span class="mui-flex-hot">快来抢啊！</span>
+		    		</div>
+		    		<div class="mui-flex-xs">
+		    			<img src="../images/I7.jpg" alt="" />
+		    		</div>
+		        </div>
+		        <div class="mui-flex-sm">
+		        	<div class="mui-flex-xs">
+		    			<div class="mui-flex-h1">玩3C</div>
+		    			<div class="mui-flex-comp">iPhone 7红色</div>
+		    			<span class="mui-flex-hot">快来抢啊！</span>
+		    		</div>
+		    		<div class="mui-flex-xs">
+		    			<img src="../images/I7.jpg" alt="" />
+		    		</div>
+		        </div>
+		        <div class="mui-flex-sm">
+		        	<div class="mui-flex-xs">
+		    			<div class="mui-flex-h1">玩3C</div>
+		    			<div class="mui-flex-comp">iPhone 7红色</div>
+		    			<span class="mui-flex-hot">快来抢啊！</span>
+		    		</div>
+		    		<div class="mui-flex-xs">
+		    			<img src="../images/I7.jpg" alt="" />
+		    		</div>
+		        </div>
+		        <div class="mui-flex-sm">
+		        	<div class="mui-flex-xs">
+		    			<div class="mui-flex-h1">玩3C</div>
+		    			<div class="mui-flex-comp">iPhone 7红色</div>
+		    			<span class="mui-flex-hot">快来抢啊！</span>
+		    		</div>
+		    		<div class="mui-flex-xs">
+		    			<img src="../images/I7.jpg" alt="" />
+		    		</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        	</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        		<div>主打款</div>
+		        	</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        	</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        		<div>主打款</div>
+		        	</div>
+		        </div>
+		    </div>
+		    <!--小型轮播图-->
+		    <div class="mui-mix-marg">
+		    	<div class="mui-slider" id="mui-loop-mix">
+					<div class="mui-slider-group mui-slider-loop">
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#"><img class="muiitemimg5" src="http://www.biksc.com/mobile/images1/5b.jpg"/></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="muiitemimg1" src="http://www.biksc.com/mobile/images1/1b.jpg"/></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="muiitemimg5" src="http://www.biksc.com/mobile/images1/5b.jpg"/></a>
+						</div>
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#"><img class="muiitemimg1" src="http://www.biksc.com/mobile/images1/1b.jpg"/></a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+					    <div class="mui-indicator mui-active"></div>
+					    <div class="mui-indicator"></div>
+					</div>
+				</div>
+		    </div>
+		    <!--图片展示-->
+			<div class="mui-loop-nav">
+		    	<a href="#"><img src="../images/nav.png" alt="" /></a>
+		    </div>
+		    <!--flex布局  商品-->
+		    <div class="mui-row-flex-comm">
+		    	<div class="mui-flex-sm">
+		    		<div class="mui-flex-xs">
+		    			<div class="mui-flex-h1">玩3C</div>
+		    			<div class="mui-flex-comp">iPhone 7红色</div>
+		    			<span class="mui-flex-hot">快来抢啊！</span>
+		    		</div>
+		    		<div class="mui-flex-xs">
+		    			<img src="../images/I7.jpg" alt="" />
+		    		</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        	</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        	</div>
+		        </div>
+		        <div class="mui-flex-sm">
+		    		<div class="mui-flex-xs">
+		    			<div class="mui-flex-h1">玩3C</div>
+		    			<div class="mui-flex-comp">iPhone 7红色</div>
+		    			<span class="mui-flex-hot">快来抢啊！</span>
+		    		</div>
+		    		<div class="mui-flex-xs">
+		    			<img src="../images/I7.jpg" alt="" />
+		    		</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        	</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        	</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        		<div>主打款</div>
+		        	</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        		<div>主打款</div>
+		        	</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        		<div>主打款</div>
+		        	</div>
+		        </div>
+		        <div class="mui-flex-li">
+		        	<div class="mui-flex-h1"><strong>玩3C</strong></div>
+		        	<div class="mui-flex-comp">iPhone 7红色</div>
+		        	<div class="mui-flex-li-img">
+		        		<img src="../images/wawa.png" alt="" />
+		        		<div>主打款</div>
+		        	</div>
+		        </div>
+		    </div>
+		    <!--推荐提示-->
+		  	<div class="mui-gray-text">
+		  		<span class="mui-gray-layout">
+		  			<span class="gray-text-img"></span>
+		  			为您推荐
+		  		</span>
+		  	</div>
+		  	<!--ul列表推荐-->
+		  	<ul class="mui-cf" >
+				<li class="mui-similar-li">
+					<a href="#">
+						<div class="mui-similar-product">
+							<img src="https://m.360buyimg.com//mobilecms/s276x276_jfs/t337/337/2144748196/208531/4a383caf/5453d0dfN8b10c1f2.jpg!q70.jpg">
+							<span class="mui-similar-product-text">【精品推荐】福临门 葵花籽原香食用调和油5L 中粮出品</span>
+							<span class="mui-similar-product-price">
+								¥
+								<span class="mui-big-price">39</span><span class="mui-small-price">.90</span>
+								<span class="mui-guess-button" >
+									看相识
+								</span>
+								<span class="sam-space"></span>
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-similar-li">
+					<a href="#">
+						<div class="mui-similar-product">
+							<img src="https://m.360buyimg.com//mobilecms/s276x276_jfs/t337/337/2144748196/208531/4a383caf/5453d0dfN8b10c1f2.jpg!q70.jpg">
+							<span class="mui-similar-product-text">【精品推荐】福临门 葵花籽原香食用调和油5L 中粮出品</span>
+							<span class="mui-similar-product-price">
+								¥
+								<span class="mui-big-price">39</span><span class="mui-small-price">.90</span>
+								<span class="mui-guess-button">
+									看相识
+								</span>
+								<span class="sam-space"></span>
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-similar-li">
+					<a href="#">
+						<div class="mui-similar-product">
+							<img src="https://m.360buyimg.com//mobilecms/s276x276_jfs/t337/337/2144748196/208531/4a383caf/5453d0dfN8b10c1f2.jpg!q70.jpg">
+							<span class="mui-similar-product-text">【精品推荐】福临门 葵花籽原香食用调和油5L 中粮出品</span>
+							<span class="mui-similar-product-price">
+								¥
+								<span class="mui-big-price">39</span><span class="mui-small-price">.90</span>
+								<span class="mui-guess-button" >
+									看相识
+								</span>
+								<span class="sam-space"></span>
+							</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-similar-li">
+					<a href="#">
+						<div class="mui-similar-product">
+							<img src="https://m.360buyimg.com//mobilecms/s276x276_jfs/t337/337/2144748196/208531/4a383caf/5453d0dfN8b10c1f2.jpg!q70.jpg">
+							<span class="mui-similar-product-text">【精品推荐】福临门 葵花籽原香食用调和油5L 中粮出品</span>
+							<span class="mui-similar-product-price">
+								¥
+								<span class="mui-big-price">39</span><span class="mui-small-price">.90</span>
+								<span class="mui-guess-button" >
+									看相识
+								</span>
+								<span class="sam-space"></span>
+							</span>
+						</div>
+					</a>
+				</li>
+				
+				
+			</ul>
+			<!--底部到底-->
+		    <div id="btmHome" class="mui-bott-over">
+		    	更多请查看分类。。。。
+		    </div>
+		    <!--点击回到顶部-->
+		    <a href="javascript:;" id="mui-btn-top">
+		    	<img src="../images/top.png" alt="" />
+		    </a>
+		</div>
+	</body>
+	<script type="text/javascript" >
+			// 回到顶部
+			window.onload = function(){
+			    var obtn = document.getElementById('mui-btn-top');  //获取回到顶部按钮的ID
+			    var clientHeight = document.documentElement.clientHeight;   //获取可视区域的高度
+			    var timer = null; //定义一个定时器
+			    var isTop = true; //定义一个布尔值，用于判断是否到达顶部
+			    window.onscroll = function(){         //滚动条滚动事件
+			        //获取滚动条的滚动高度
+			        var osTop = document.documentElement.scrollTop || document.body.scrollTop; 
+		
+			        if(osTop >= clientHeight){  //如果滚动高度大于可视区域高度，则显示回到顶部按钮
+			            obtn.style.display = 'block';
+			        }else{         //否则隐藏
+			            obtn.style.display = 'none';
+			        }
+			        //主要用于判断当 点击回到顶部按钮后 滚动条在回滚过程中，若手动滚动滚动条，则清除定时器
+			        if(!isTop){
+			            clearInterval(timer);
+			        }
+			        isTop = false;
+			    }
+			    obtn.onclick = function(){    //回到顶部按钮点击事件
+			        //设置一个定时器
+			        timer = setInterval(function(){
+			            //获取滚动条的滚动高度
+			            var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+			            //用于设置速度差，产生缓动的效果
+			            var speed = Math.floor(-osTop / 6);
+			            document.documentElement.scrollTop = document.body.scrollTop = osTop + speed;
+			            isTop =true;  //用于阻止滚动事件清除定时器
+			            if(osTop == 0){
+			                clearInterval(timer);
+			            }
+			        },30);
+			    }
+			}
+		(function($, doc) {
+			$.init();
+			// 轮播图自动播放
+			var slider = mui('.mui-slider');
+			slider.slider({interval:2000});
+			
+			$.plusReady(function() {
+				// 备份单个 9宫格跳转新页面
+				/*
+				var muilistBut = document.getElementById('mui-list-1');
+				muilistBut.addEventListener('tap', function(event) {
+					$.openWindow({
+						url: "classifyPage.html",
+						id: "classifyPage",
+						preload: true,
+						show: {
+							aniShow: 'slide-in-right'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				*/
+				// 批量9宫格进入列表页
+//				var homeBtna = document.getElementById("#niceBtn");
+				mui("#niceBtn").on('tap','.mui-flex-item',function(event){
+					$.openWindow({
+						url: "classifyPage.html",
+						id: "classifyPage",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				// 单个商品跳转详情页面
+//				var muiflexBtn = document.getElementsByClassName('mui-flex-sm');
+//				muiflexBtn[0].addEventListener('tap', function(event) {
+//					$.openWindow({
+//						url: "details.html",
+//						id: "details",
+//						preload: true,
+//						show: {
+//							aniShow: 'pop-in'
+//						},
+//						styles: {
+//							popGesture: 'hide'
+//						},
+//						waiting: {
+//							autoShow: false
+//						}
+//					});
+//				}, false);
+				
+				// 批量进入商品详情页
+				mui("#homeBtna").on('tap','.mui-flex-sm',function(event){
+					$.openWindow({
+						url: "details.html",
+						id: "details",
+						preload: true,
+						createNew:true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				mui("#homeBtna").on('tap','.mui-flex-li',function(event){
+					$.openWindow({
+						url: "details.html",
+						id: "details",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				mui("#homeBtna").on('tap','.mui-similar-li',function(event){
+					$.openWindow({
+						url: "details.html",
+						id: "details",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				mui("#homeBtna").on('tap','.mui-slider-item',function(event){
+					$.openWindow({
+						url: "details.html",
+						id: "details",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				
+				//搜索框跳转
+				var muiinpBtn = document.getElementById('muiinp');
+				muiinpBtn.addEventListener('tap', function(event) {
+					$.openWindow({
+						url: "../contents/searchPage.html",
+						id: "searchPage",
+						preload: true,
+						show: {
+							aniShow: 'none'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				//登录页跳转
+				var homeLong = document.getElementById('homeLong');
+				function skipsPage(IdBtn,SkipPage,SkipsId){
+					IdBtn.addEventListener('tap', function(event) {
+						$.openWindow({
+							url: SkipPage,
+							id: SkipsId,
+							preload: true,
+							show: {
+								aniShow: 'none'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, false);
+				};
+				skipsPage(homeLong,"login.html","login");
+				
+			});
+			
+		}(mui, document));
+		
+	</script>
+
+</html>

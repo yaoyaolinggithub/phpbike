@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发现精彩</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*标题样式*/
+			.mui-bar {
+			    margin: 0;
+			    padding: 0;
+			    height: 45px;
+			}
+			.mui-bar .mui-title{
+			    height: 100%;
+			    line-height: 45px;
+			}
+			/*备份消息按钮*/
+			/*.mui-bar .mui-news-poi img {
+			    width: 5%;
+			    position: absolute;
+			    right: 5%;
+			    top: 0;
+			    bottom: 0;
+			    margin: auto;
+			}*/
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<header class="mui-bar">
+		    <h1 class="mui-title">发现精彩</h1>
+		    <!--备份消息按钮-->
+		    <!--<div class="mui-news-poi"><a href="#"><img src="../images/news.png"/></a></div>-->
+		</header>
+
+		
+		
+	</body>
+	<script type="text/javascript">
+		mui.init({
+			gestureConfig:{
+				doubletap:true
+			},
+			subpages:[{
+				url:'../contents/ndcont.html',
+				id:'ndcont',
+				styles:{
+					top:'46px',
+					bottom:'0px'
+				}
+			}]
+		});
+
+	</script>
+</html>
