@@ -1,0 +1,190 @@
+{
+  "contents/indents.html": {
+    "href": "contents/indents.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf"
+    ],
+    "priority": 0
+  },
+  "templete/details.html": {
+    "href": "templete/details.html",
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "font_about/iconfont.eot",
+      "font_about/iconfont.ttf",
+      "font_about/iconfont.svg"
+    ],
+    "refer": [
+      "contents/siteCity.html"
+    ],
+    "priority": 0
+  },
+  "contents/searchPage.html": {
+    "href": "contents/searchPage.html",
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "templete/details.html"
+    ],
+    "priority": 0
+  },
+  "templete/forget_password.html": {
+    "href": "templete/forget_password.html",
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "priority": 2
+  },
+  "templete/service.html": {
+    "href": "templete/service.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf"
+    ],
+    "priority": 5
+  },
+  "templete/about.html": {
+    "href": "templete/about.html",
+    "resources": [
+      "font_about/iconfont.eot",
+      "font_about/iconfont.ttf",
+      "font_about/iconfont.svg",
+      "images/aboutBJ.png"
+    ],
+    "refer": [
+      "templete/setting.html",
+      "templete/service.html"
+    ],
+    "priority": 3
+  },
+  "templete/setting.html": {
+    "href": "templete/setting.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/app.js",
+      "fonts/mui.ttf",
+      "images/iconfont-tianjia.png",
+      "images/bike.jpg",
+      "images/bikecode.png"
+    ],
+    "refer": [
+      "templete/about.html"
+    ],
+    "priority": 3
+  },
+  "templete/main.html": {
+    "href": "templete/main.html",
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": [],
+    "priority": 3
+  },
+  "templete/unlock.html": {
+    "href": "templete/unlock.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "js/mui.locker.js",
+      "js/app.js"
+    ],
+    "refer": [
+      "templete/login.html",
+      "templete/main.html"
+    ],
+    "priority": 4
+  },
+  "contents/deal2But.html": {
+    "href": "contents/deal2But.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/app.js",
+      "fonts/mui.ttf"
+    ],
+    "priority": 5
+  },
+  "contents/deal1But.html": {
+    "href": "contents/deal1But.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/app.js",
+      "fonts/mui.ttf"
+    ],
+    "priority": 6
+  },
+  "templete/login.html": {
+    "href": "templete/login.html",
+    "resources": [],
+    "refer": [
+      "templete/unlock.html"
+    ],
+    "priority": 2
+  },
+  "templete/home.html": {
+    "href": "templete/home.html",
+    "resources": [
+      "fonts/mui.ttf",
+      "images/carr5.jpg",
+      "images/carr2.png",
+      "images/carr4.jpg"
+    ],
+    "refer": [
+      "templete/login.html",
+      "templete/details.html"
+    ],
+    "priority": 0
+  },
+  "contents/ngcont.html": {
+    "href": "contents/ngcont.html",
+    "resources": [],
+    "refer": [
+      "templete/details.html"
+    ],
+    "priority": 1
+  },
+  "templete/guid.html": {
+    "href": "templete/guid.html",
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf"
+    ],
+    "priority": 2
+  },
+  "contents/ndcont.html": {
+    "href": "contents/ndcont.html",
+    "resources": [],
+    "refer": [
+      "templete/list.html"
+    ],
+    "priority": 4
+  },
+  "contents/fycont.html": {
+    "href": "contents/fycont.html",
+    "resources": [
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "templete/list.html"
+    ],
+    "priority": 6
+  },
+  "templete/classify.html": {
+    "href": "templete/classify.html",
+    "resources": [],
+    "refer": [
+      "contents/searchPage.html"
+    ],
+    "priority": 5
+  }
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*搜索分类*/
+			.homeCon1{
+			    background:white;
+			}
+			.homeCon1 .seaript {
+			    height: 100%;
+			    padding: 25px 5% 0px 5%;
+			    overflow: hidden;
+			}
+			/*备用搜索框
+			.homeCon1 .seaript input[type=text] {
+			    line-height: 21px;
+			    width: 85%;
+			    height: 35px;
+			    padding: 10px 15px;
+			    -webkit-user-select: text;
+			    border: 1px solid rgba(0,0,0,.2);
+			    border-radius: 3px 0px 0px 3px;
+			    outline: 0;
+			    background-color: #fff;
+			    -webkit-appearance: none;
+			    border: 1px solid rgb(132, 134, 137);
+			    margin: 2.5px 0px;
+			    float: left;
+			    font-size: 0.9rem;
+			}
+			*/
+			.homeCon1 .seaript .searspn1{
+			    line-height: 15px;
+			    width: 85%;
+			    height: 35px;
+			    padding: 10px 15px;
+			    -webkit-user-select: text;
+			    border: 1px solid rgba(0,0,0,.2);
+			    border-radius: 3px 0px 0px 3px;
+			    outline: 0;
+			    background-color: #fff;
+			    -webkit-appearance: none;
+			    border: 1px solid rgb(132, 134, 137);
+			    margin: 2.5px 0px;
+			    float: left;
+			    font-size: 0.9rem;
+			    color: #999;
+			}
+			.homeCon1 .seaript .searspn2 {
+			    display: inline-block;
+			    width: 35px;
+			    height: 35px;
+			    border: 1px solid rgb(132, 134, 137);
+			    border-left: 0px;
+			    float: left;
+			    margin: 2.5px 0px;
+			    border-radius: 0px 3px 3px 0px;
+			    background: url(../images/seapage.png) no-repeat center;
+			    background-size: 63%;
+			}
+			/*分类导航*/
+			.homeCon1 .mui-grid-view.mui-grid-9 {
+			    border-top: 0px solid #eee;
+			    border-left: 0px solid #eee;
+			    background-color: #ffffff;
+			}
+			.homeCon1 .mui-grid-view.mui-grid-9 .mui-table-view-cell {
+				width: 25%;
+			    border-right: 0px solid #eee;
+			    border-bottom: 0px solid #eee;
+			    padding:0px;
+			}
+			.homeCon1 .mui-table-view-cell img{
+			    width: 60%;
+			}
+			.homeCon1 .mui-table-view-cell .mui-icon{
+			    padding: 0px 15px;
+			}
+			.homeCon1 .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+			    font-size: 0.9rem;
+			    margin-top: 0px;
+			}
+			/*flex布局  商品图片展示*/
+			.homeCon2{
+				width: 100%;
+				margin-top: 5px;
+				background: white;
+				display:flex;
+				display: -webkit-flex; 
+				flex-wrap: wrap;
+  				align-content: space-between;
+			}
+			.homeCon2 .homeFlex1{
+				width: 50%;
+			}
+			.homeCon2 .homeFlex1 img{
+				width: 100%;
+			}
+			.homeCon2 .mui-flex-sm{
+				width: 50%;
+				padding: 5px 10px;
+				flex-wrap:wrap;
+				display:flex;
+			}
+			.homeCon2 .mui-flex-sm .mui-flex-xs{
+				width: 50%;
+				flex-wrap:wrap;
+			}
+			.mui-flex-xs .mui-flex-h1{
+				font-size: 1.3rem;
+				color: black;
+				font-weight:bold;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			}
+			.mui-flex-xs .mui-flex-comp{
+				font-size: 0.8rem;
+				margin-top: 5px;
+				color: gray;
+				font-weight:normal ;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			    display: box;
+			    line-clamp: 1;
+			    box-orient: vertical;
+			}
+			.mui-flex-xs .mui-flex-hot{
+				margin-top: 5px;
+				padding: 0px 3px;
+				font-size: 0.6rem;
+				color: white;
+				font-weight:normal ;
+				background: hotpink;
+				height: 16px;
+			    line-height: 17px;
+			    display: inline-block;
+			    text-align: center;
+			}
+			
+			.mui-flex-sm .mui-flex-xs img{
+				width: 100%;
+			}
+			.homeCon2 .homeFlex2 {
+			    width: 50%;
+			    flex-wrap: wrap;
+			    display: flex;
+			}
+			.homeCon2 .homeFlex2-sm {
+			    width: 100%;
+			    flex-wrap: wrap;
+			    display: flex;
+			}
+			.homeCon2 .homeFlex2-sm .mui-flex-xs {
+			    width: 50%;
+			    flex-wrap: wrap;
+			    padding-left: 10px;
+			}
+			.homeFlex2-sm .mui-flex-h1{
+				font-size: 1.3rem;
+				color: black;
+				font-weight:bold;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			}
+			.homeFlex2-sm .mui-flex-comp{
+				font-size: 0.8rem;
+				margin-top: 5px;
+				color: gray;
+				font-weight:normal ;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			    display: box;
+			    line-clamp: 1;
+			    box-orient: vertical;
+			}
+			.homeFlex2-sm .mui-flex-hot{
+				margin-top: 5px;
+				padding: 0px 3px;
+				font-size: 0.6rem;
+				color: white;
+				font-weight:normal ;
+				background: hotpink;
+				height: 16px;
+			    line-height: 17px;
+			    display: inline-block;
+			    text-align: center;
+			}
+			.homeFlex2-sm .mui-flex-xs img {
+			    width: 90%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--home1内容-->
+		<div class="mui-content">
+		    <!--轮播图-->
+			<div class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg2" src="../images/carr2.png"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg3" src="../images/carr3.jpg"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg4" src="../images/carr4.jpg"/></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
+					</div>
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+				    <div class="mui-indicator mui-active"></div>
+				    <div class="mui-indicator"></div>
+				    <div class="mui-indicator"></div>
+				    <div class="mui-indicator"></div>
+				    <div class="mui-indicator"></div>
+				</div>
+			</div>
+			<!--搜索分类-->
+			<div class="homeCon1">
+				<div class="seaript mui-cf">
+					<!--备用搜索框-->
+			    	<!--<input type="text" value placeholder="超级品牌日，全场底价" >-->
+			    	<span class="searspn1">请输入您所搜索的商品</span>
+			    	<span class="searspn2"></span>
+			    </div>
+			    <!--分类导航-->
+				<ul class="mui-table-view mui-grid-view mui-grid-9">
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+				        <img src="../images/homeC1.png"/>
+				        <p class="mui-media-body">全部分类</p></a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+				        <img src="../images/homeC2.png"/>
+				        <div class="mui-media-body">团购</div></a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+				        <img src="../images/homeC3.png"/>
+				        <div class="mui-media-body">购物车</div></a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3  mui-about-ser"><a href="#">
+				        <img src="../images/homeC4.png"/>
+				        <div class="mui-media-body">个人中心</div></a>
+				    </li>
+				</ul>
+			</div>
+			<!--flex布局  商品图片展示-->
+		    <div class="homeCon2">
+		    	<div class="homeFlex1">
+		    		<img src="../images/homeF1.jpg" alt="" />
+		        </div>
+		        <div class="homeFlex2">
+				    <!--<div class="homeFlex2-sm">
+				    	<div class="mui-flex-xs">
+				    		<div class="mui-flex-h1">玩3C</div>
+				    		<div class="mui-flex-comp">iPhone 7红色</div>
+				    		<span class="mui-flex-hot">快来抢啊！</span>
+				    	</div>
+				    	<div class="mui-flex-xs">
+				    		<img src="../images/I7.jpg" alt="" />
+				    	</div>
+				    </div>-->
+				    <!--<div class="homeFlex2-sm">
+				    	<div class="mui-flex-xs">
+				    		<div class="mui-flex-h1">玩3C</div>
+				    		<div class="mui-flex-comp">iPhone 7红色</div>
+				    		<span class="mui-flex-hot">快来抢啊！</span>
+				    	</div>
+				    	<div class="mui-flex-xs">
+				    		<img src="../images/I7.jpg" alt="" />
+				    	</div>
+				    </div>-->
+		        </div>
+		        <div class="mui-flex-sm">
+			    	<div class="mui-flex-xs">
+			    		<div class="mui-flex-h1">玩3C</div>
+			    		<div class="mui-flex-comp">iPhone 7红色</div>
+			    		<span class="mui-flex-hot">快来抢啊！</span>
+			    	</div>
+			    	<div class="mui-flex-xs">
+			    		<img src="../images/I7.jpg" alt="" />
+			    	</div>
+			    </div>
+			    <div class="mui-flex-sm">
+		    		<div class="mui-flex-xs">
+		    			<div class="mui-flex-h1">玩3C</div>
+		    			<div class="mui-flex-comp">iPhone 7红色</div>
+		    			<span class="mui-flex-hot">快来抢啊！</span>
+		    		</div>
+		    		<div class="mui-flex-xs">
+		    			<img src="../images/I7.jpg" alt="" />
+		    		</div>
+		        </div>
+		    </div>
+		    
+		<!--主体结束-->
+		</div>
+	</body>
+	<script type="text/javascript" >
+		(function($, doc) {
+			$.init();
+			// 轮播图自动播放
+			var slider = mui('.mui-slider');
+			slider.slider({interval:2000});
+			
+//			$.plusReady(function() {
+//			}	
+		}(mui, document));
+		
+	</script>
+
+</html>

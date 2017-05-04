@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分类主体</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				height: 100%;
+			}
+			.mui-col-xs-3,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			#fycontul .mui-fycon-item {
+				width: 100%;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				border-bottom: 1px solid gainsboro;
+			}
+			/*主体背景颜色*/
+			.mui-content{
+			    background: #fff;
+			}
+			/*点击变红色*/
+			#fycontul .fycont-active {
+			    background: #f3f5f7;
+			    color: #dd524d;
+			}
+			
+			/*左边列表样式*/
+			#segmentedControls ul li{
+				height: 46px;
+			    line-height: 46px;
+			    background: #fff;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    line-height: 46px;
+			    text-decoration: none;
+			    font-size: 0.8rem;
+			}
+			
+			/*图片展示*/
+			.mui-mix-marg{
+				padding: 7px 7px 0px 7px;
+			}
+			.mui-mix-marg a img{
+				width: 100%;
+			}
+			/*右边主体颜色*/
+			#segmentedControlContents{
+				background-color: #f3f5f7;
+				overflow-y: auto;
+			}
+			/*ul列表展示*/
+			.mui-category-div{
+			    display: block;
+			    margin: 19px 7px 0 7px;
+			}
+			.mui-category-div h4 {
+			    font-size: 1rem;
+			    margin: 0;
+			    padding: 0;
+			    line-height: 1em;
+			    color: #232326;
+			    font-weight: normal;
+			}
+			
+			.mui-category-div ul {
+			    margin-top: 9px;
+			    background-color: #fff;
+			}
+			.mui-category-style-1 {
+			    border: 0;
+			    font-size: 0;
+			    padding-top:5px ;
+			    overflow: hidden;
+			}
+			.mui-category-style-1 li {
+			    width: 32.5%;
+			    float: left;
+			    text-align: center;
+			}
+			
+			.mui-category-style-1 a {
+			    text-decoration: none;
+			    color: #252525;
+			}
+			.mui-category-style-1 img {
+			    width: 100%;
+			    border: 0;
+			}
+			.mui-category-style-1 span {
+			    font-size: 0.7rem;
+			    height: 31px;
+			    color: #686868;
+			    width: 100%;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    z-index: 2;
+			    position: relative;
+			}
+			
+			.mui-category-style-1:after {
+			    content: "";
+			    display: block;
+			    height: 0;
+			    width: 100%;
+			    clear: both;
+			    font-size: 0;
+			    line-height: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+
+		<div class="mui-content mui-row mui-fullscreen">
+			<!--左边列表-->
+			<div class="mui-col-xs-3">
+				<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+					<ul id="fycontul">
+						<li class="mui-fycon-item fycont-active"><strong>热门推荐</strong></li>
+						<li class="mui-fycon-item"><strong>服饰鞋帽</strong></li>
+						<li class="mui-fycon-item"><strong>美容美体</strong></li>
+						<li class="mui-fycon-item"><strong>箱包皮具</strong></li>
+						<li class="mui-fycon-item"><strong>3C  数码</strong></li>
+						<li class="mui-fycon-item"><strong>家用电器</strong></li>
+						<li class="mui-fycon-item"><strong>家具床品</strong></li>
+						<li class="mui-fycon-item"><strong>母婴玩具</strong></li>
+						<li class="mui-fycon-item"><strong>时尚礼品</strong></li>
+						<li class="mui-fycon-item"><strong>特色食品</strong></li>
+						<li class="mui-fycon-item"><strong>图书音像</strong></li>
+						<li class="mui-fycon-item"><strong>汽车配件</strong></li>
+						<li class="mui-fycon-item"><strong>奢侈品    </strong></li>
+						<li class="mui-fycon-item"><strong>成人用品</strong></li>
+						<li class="mui-fycon-item"><strong>海外代购</strong></li>
+						<li class="mui-fycon-item"><strong>五金建材</strong></li>
+						<li class="mui-fycon-item"><strong>自营品牌</strong></li>
+					</ul>
+				</div>
+			</div>
+			<!--右边列表-->
+			<div id="segmentedControlContents" class="mui-col-xs-9" >
+				<!--图片展示-->
+			    <div class="mui-mix-marg">
+			    	<a href="#"><img src="../images/carr1.jpg"/></a>
+			    </div> 
+			    <!--单个统一商品-->
+				<div class="mui-category-div cur">
+					<h4>钟表</h4>
+					<ul class="mui-category-style-1">
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<div style="clear:both"></div>
+					</ul>
+				</div>
+				<!--单个统一商品-->
+				<div class="mui-category-div cur">
+					<h4>钟表</h4>
+					<ul class="mui-category-style-1">
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<div style="clear:both"></div>
+					</ul>
+				</div>
+				<!--单个统一商品-->
+				<div class="mui-category-div cur">
+					<h4>钟表</h4>
+					<ul class="mui-category-style-1">
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<div style="clear:both"></div>
+					</ul>
+				</div>
+				<!--单个统一商品-->
+				<div class="mui-category-div cur">
+					<h4>钟表</h4>
+					<ul class="mui-category-style-1">
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<li class="mui-fycont-li">
+							<a  href="#">
+								<img src="https://m.360buyimg.com/mobile/s100x100_jfs/t2923/363/2104405134/6371/7047973c/579b5101Nc9d48af5.jpg" >
+								<span>瑞表</span>
+							</a>
+						</li>
+						<div style="clear:both"></div>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			// 左列表点击选中样式
+			var fycons = document.querySelectorAll(".mui-fycon-item");
+			mui("#fycontul").on("tap",".mui-fycon-item",function(){
+		        var current = document.querySelector("#fycontul>.mui-fycon-item.fycont-active");
+				if (this !== current) {
+					current.classList.remove('fycont-active');
+					this.classList.add('fycont-active');
+				}
+			})
+			// 小统一分类批量点击进入列表页事件
+			mui.plusReady(function() {
+				mui("#segmentedControlContents").on('tap','.mui-fycont-li',function(event){
+					mui.openWindow({
+						url: "../templete/list.html",
+						id: "list",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+			});
+		</script>
+	</body>
+</html>

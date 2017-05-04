@@ -1,0 +1,583 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../font_about/iconfont.css"/>
+		<style type="text/css">
+			/*头部样式*/
+			#detailsHead {
+			    height: 0px;
+			    position: absolute;
+			}
+			.mui-bar-nav~.mui-content {
+			    padding-top: 0px;
+			}
+			.mui-control-content {
+				background-color: white;
+				min-height: 215px;
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted {
+			    width: 65%;
+			    height: 45px;
+			    margin: auto;
+			}
+			#sliderProgressBar .mui-col-xs-4 {
+			    width: 10%;
+			    margin: 0;
+			}
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item {
+			    display: inline-block;
+			    width: 15%;
+    			margin: 0px 14px;
+			}
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+			    border-bottom: 2px solid #222;
+			    color: #222;
+			    height: 35px;
+			    font-weight: 600;
+			}
+			/*第一商品指导*/
+			#mui-details-li .mui-slider-indicator .mui-indicator{
+				width: 28px;
+				border-radius: 30px;
+				background: rgba(255,255,255,0.3);
+			}
+			#mui-details-li .mui-slider-indicator .mui-active{
+				background: #9E9E9E;
+			}
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {
+			    border-top: 0px solid #c8c7cc;
+			    border-bottom: 0px solid #c8c7cc;
+			}
+			/*测试查看status*/
+			.mui-control-content:nth-child(1) {
+			    background-color: #f0f2f5;
+			    min-height: 936px;
+			}
+			.mui-control-content:nth-child(2) {
+			    background-color: #f0f2f5;
+			    /*min-height: 1200px;*/
+			}
+			.mui-control-content:nth-child(3) {
+			    background-color: #f0f2f5;
+			    /*min-height: 568px;*/
+			}
+			/*测试查看end*/
+			/*商品说明*/
+			.mui-deta-all{
+				padding: 5px 10px;
+				background: #fff;
+			}
+			.mui-deta-all .deta-all-p{
+				color: black;
+				font-size: 1.1rem;
+				line-height: 25px;
+			}
+			.mui-deta-all .deta-all-mon{
+				margin-top:8px ;
+				font-size: 0.8rem;
+				color: #81838e;
+				font-weight: bold;
+			}
+			.mui-deta-all .deta-all-mon .deta-all-span1{
+				font-size:1rem;
+				color: #f23030;
+			}
+			.deta-all-mon .deta-all-span1 .deta-all-span2{
+				font-size:1.5rem;
+				font-weight: bold;
+			}
+			.deta-all-mon .deta-all-mo2{
+				margin-top:7px ;
+			}
+			.deta-all-mon .deta-all-span1 .deta-all-span4{
+				font-size:0.8rem;
+				color: #81838e;
+				font-weight: lighter;
+				text-decoration:line-through;
+			}
+			.deta-all-mon .deta-mo1-span1 {
+				color: #81838e;
+				font-weight: lighter;
+			}
+			/*商品分类*/
+			.deta-cla{
+				padding: 5px 10px;
+				background: #fff;
+				margin-top: 5px;
+			}
+			.deta-cla .deta-cla-li1{
+				position: relative;
+				line-height: 28px;
+			}
+			.deta-cla .deta-cla-li1 .deta-cla-sp1{
+				color: #81838e;
+				font-size: 0.8rem;
+				position: absolute;
+			}
+			.deta-cla .deta-sp1-d{
+				display: inline-block;
+				margin-left: 11%;
+			}
+			.deta-sp1-p,.deta-sp2-p,.deta-sp3-p{
+				height: 27px;
+			    border: 1px solid #bfbfbf;
+			    border-radius: 4px;
+			    line-height: 25px;
+			    font-size: 13px;
+			    color: #232326;
+			    float: left;
+			    margin-right: 10px;
+			    padding-left: 20px;
+			    padding-right: 20px;
+			    margin-bottom: 10px;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    min-width: 69px;
+			    max-width: 98%;
+			    box-sizing: border-box;
+			    text-align: center;
+			}
+			.addat{
+				border: 1px solid #f23030;
+    			color: #f23030;
+    			background:url(../images/detagou.gif) no-repeat bottom right;
+			}
+			/*数量*/
+			.deta-cla-li1 .mui-numbox{
+				margin-left: 11%;
+				height: 28px;
+			}
+			.deta-adv{
+				width: 100%;
+				height: 50px;
+				background: white;
+				text-align: center;
+				margin:10px 0px 50px;
+			}
+			/*第二页商品详情*/
+			.mui-scroll .spin-p{
+				background-color: #f2ebe3;
+			    border-top: 1px solid #ddd2c0;
+			    border-bottom: 1px solid #ddd2c0;
+			    box-shadow: inset 0 1px 0 #fff;
+			    padding: 5px 10px;
+			    margin-bottom:10px;
+			}
+			.mui-scroll .spin-lis #spin-ul {
+			    margin: 5px 10px;
+				padding: 5px;
+			}
+			.mui-scroll .spin-lis #spin-ul .spin-li{
+				width: 100%;
+			}
+			.mui-scroll .spin-lis #spin-ul .spin-li img{
+				width: 100%;
+			}
+			/*第三商品评价*/
+			#spin3{
+				width: 100%;
+				padding: 0px 5px; 
+				
+			}
+			#spin3 .spin3-ul{
+				width: 100%;
+			}
+			#spin3 .spin3-ul {
+				padding: 0;
+				width: 100%;
+			}
+			#spin3 .spin3-ul .spin3-li{
+				width: 100%;
+				height: 35px;
+			    padding: 5px;
+				border: 1px solid gainsboro;
+				border-radius: 5px;
+				margin-bottom: 10px;
+			}
+			/*底部固定栏*/
+			.mui-nav-sop{
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				bottom: 0;
+			}
+			.mui-nav-sop #details-nav,.mui-nav-sop #details-nav .mui-table-view{
+				height: 100%;
+			}
+			.mui-grid-view.mui-grid-9 {
+			    border-top: 0px solid #eee;
+			    border-left: 0px solid #eee;
+			}
+			/*底部方格样式*/
+			#details-nav  .mui-table-view-cell {
+				height: 100%;
+			    width: 15.88%;
+			    padding: 0;
+			    margin: 0;
+			    border-right: 0px solid #eee;
+    			border-bottom: 0px solid #eee;
+    			min-height: 0px;
+			}
+			.mui-table-view:after {
+			    height: 0px;
+			}
+			#details-nav  .mui-table-view-cell a{
+				height: 100%;
+				font-size: 0.7rem;
+				padding:5px 0px;
+			}
+			#details-nav.mui-grid-9 .mui-media .mui-icon {
+			    font-size: 1.4rem;
+			}
+			#details-nav  .mui-table-view-cell a  .mui-med-div{
+				font-size: 0.7rem;
+				margin-top: 0px;
+			}
+			#details-nav .mui-table-view-cell:nth-child(4) {
+			    width: 26.18%;
+			}
+			#details-nav   #mui-detal-a1{
+				background: #efc532;
+				line-height: 50px;
+			}
+			#details-nav   #mui-detal-a1 .mui-med-li{
+				color: white;
+				line-height: 39px;
+			    font-size: 1rem;
+			    height: 100%;
+			    margin: 0;
+			}
+			#details-nav   #mui-detal-a2{
+				background: #f23030;
+				line-height: 50px;
+			}
+			#details-nav   #mui-detal-a2 .mui-med-li{
+				color: white;
+				line-height: 39px;
+			    font-size: 1rem;
+			    height: 100%;
+			    margin: 0;
+			}
+			#details-nav .mui-table-view-cell:nth-child(5) {
+			    width: 26.18%;
+			}
+			.mui-icon .mui-badge {
+			    display: inline-block;
+			    position: absolute;
+			    top: -5px;
+			    background-color: #f23030;
+			    line-height: 10px;
+			    font-style: normal;
+			    border-radius: 8px;
+			    padding: 0 4px;
+			    font-size: 8px;
+			    color: #fff;
+			    right: -9px;
+			    border: 1px solid #fff;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" id="detailsHead">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		</header>
+		<div class="mui-content">
+			
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1mobile">
+						商品
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						详情
+					</a>
+					<a class="mui-control-item" href="#item3mobile">
+						评价
+					</a>
+				</div>
+				<!--<div id="sliderProgressBar"   class="mui-slider-progress-bar mui-col-xs-4"></div>-->
+				<!--商品指导总体-->
+				<div class="mui-slider-group">
+					<!--第一商品指导-->
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<!--轮播图-->
+								<div id="mui-details-li" class="mui-slider" >
+									<div class="mui-slider-group">
+										<!-- 第一张 -->
+										<div class="mui-slider-item">
+											<img src="../images/detail.jpg">
+										</div>
+										<!-- 第二张 -->
+										<div class="mui-slider-item">
+											<img src="../images/detail.jpg">
+										</div>
+										<!-- 第三张 -->
+										<div class="mui-slider-item">
+											<img src="../images/detail.jpg">
+										</div>
+										<!-- 第四张 -->
+										<div class="mui-slider-item">
+											<img src="../images/detail.jpg">
+										</div>
+									</div>
+									<div class="mui-slider-indicator">
+										<div class="mui-indicator mui-active"></div>
+										<div class="mui-indicator"></div>
+										<div class="mui-indicator"></div>
+										<div class="mui-indicator"></div>
+									</div>
+								</div>
+								<!--商品说明-->
+								<div class="mui-deta-all">
+									<div class="deta-all-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div>
+									<div class="deta-all-mon">
+										<div class="deta-all-mo1">
+											<span class="deta-all-span1">￥<span class="deta-all-span2">129</span><span class="deta-all-span3">.00</span>
+												<span class="deta-all-span4">￥139.00</span>
+										</span>
+										</div>
+										<div class="deta-all-mo2">
+											<span class="deta-mo1-span1">商品编号：
+												<span class="deta-mo1-span2">JEX00991006</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<!--商品分类-->
+								<div class="deta-cla">
+									<div class="deta-cla-li1">
+										<span class="deta-cla-sp1">类型</span>
+										<div class="deta-sp1-d">
+											<span class="deta-sp1-p addat">123</span>
+											<span class="deta-sp1-p">123</span>
+											<span class="deta-sp1-p">123</span>
+											<span class="deta-sp1-p">123</span>
+											<span class="deta-sp1-p">123</span>
+											<span class="deta-sp1-p">123</span>
+										</div>
+									</div>
+									<div class="deta-cla-li1">
+										<span class="deta-cla-sp1">颜色</span>
+										<div class="deta-sp1-d">
+											<span class="deta-sp2-p addat">123</span>
+											<span class="deta-sp2-p">123</span>
+											<span class="deta-sp2-p">123</span>
+											<span class="deta-sp2-p">123</span>
+											<span class="deta-sp2-p">123</span>
+											<span class="deta-sp2-p">123</span>
+										</div>
+									</div>
+									<div class="deta-cla-li1">
+										<span class="deta-cla-sp1">规格</span>
+										<div class="deta-sp1-d">
+											<span class="deta-sp3-p addat">123</span>
+											<span class="deta-sp3-p">123</span>
+											<span class="deta-sp3-p">123</span>
+											<span class="deta-sp3-p">123</span>
+											<span class="deta-sp3-p">123</span>
+											<span class="deta-sp3-p">123</span>
+										</div>
+									</div>
+									<!--购买数量-->
+									<div class="deta-cla-li1">
+										<span class="deta-cla-sp1">数量</span>
+										<div class="mui-numbox" data-numbox-min='1' data-numbox-max='20'>
+											<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+											<input id="test" class="mui-input-numbox" type="number" value="1" />
+											<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+										</div>
+									</div>
+									
+								</div>
+								<!--广告-->
+								<div class="deta-adv">
+									新人大礼包
+								</div>
+								
+
+								
+								
+							</div>
+						</div>
+					</div>
+					<!--第二商品详情-->
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+										
+										
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--第三商品评价-->
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+										
+										
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+			</div>
+			<!--底部固定栏-->
+			<div class="mui-nav-sop">
+				<ul class="mui-table-view mui-grid-view mui-grid-9" id="details-nav">
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+				        <span class="mui-icon iconfont icon-kefu"></span>
+				        <div class="mui-media-body mui-med-div">客服咨询</div></a></li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+				        <span class="mui-icon iconfont icon-xinxing"></span>
+				        <div class="mui-media-body  mui-med-div">关注</div></a></li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+				        <span class="mui-icon iconfont icon-huodong"><span class="mui-badge">1</span></span>
+				        <div class="mui-media-body mui-med-div">购物车</div></a></li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#" id="mui-detal-a1">
+
+				        <div class="mui-media-body mui-med-li">加入购物车</div></a></li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3" id="detailsBtnli"><a href="#" id="mui-detal-a2">
+
+				        <div class="mui-media-body mui-med-li">立即购买</div></a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		(function($) {
+			$.init({
+				swipeBack: false
+			});
+			//获得slider插件对象轮播图片
+			var gallery = mui('#mui-details-li');
+			gallery.slider({
+				interval:0//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			$('.mui-scroll-wrapper').scroll({
+				indicators: true //是否显示滚动条
+			});
+			var html2 = '<div class="spin-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div><div class="spin-lis"><ul id="spin-ul"><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li></ul></div>';
+			var html3 = '<div class="spin-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div><div id="spin3"><ul class="spin3-ul"><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li></ul></div>';
+			var item2 = document.getElementById('item2mobile');
+			var item3 = document.getElementById('item3mobile');
+			document.getElementById('slider').addEventListener('slide', function(e) {
+				if (e.detail.slideNumber === 1) {
+					if (item2.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							item2.querySelector('.mui-scroll').innerHTML = html2;
+						}, 500);
+					}
+				} else if (e.detail.slideNumber === 2) {
+					if (item3.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							item3.querySelector('.mui-scroll').innerHTML = html3;
+						}, 500);
+					}
+				}
+			});	
+			// 选取样式
+			function thisClass(elem,elems,elemclass){
+				for(var i = 0; i<elem.length; i++){
+					elem[i].addEventListener("click",function(){
+						for (var i = 0; i < elem.length; i++) {
+							elem[i].className = elems;
+							if(this.className != elemclass){
+								this.classList.add(elemclass);
+							}
+						}
+					})
+				}
+			}
+			var detaP1 = document.querySelectorAll(".deta-sp1-p");
+			var detaP2 = document.querySelectorAll(".deta-sp2-p");
+			var detaP3 = document.querySelectorAll(".deta-sp3-p");
+			thisClass(detaP1,"deta-sp1-p","addat");
+			thisClass(detaP2,"deta-sp2-p","addat");
+			thisClass(detaP3,"deta-sp3-p","addat");
+			//跳转结算页面
+			$.plusReady(function() {
+				// 让内容区域高度自适应
+				mui('.mui-scroll-wrapper').scroll({
+			        indicators: true //是否显示滚动条
+			    });
+			    var resolutionHeight = window.innerHeight;
+			    resolutionHeight = resolutionHeight-95;
+				document.getElementById("item1mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
+				document.getElementById("item2mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
+				document.getElementById("item3mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
+				//单个跳转有bug
+//				var detaSopBtn = document.getElementById('detailsBtnli');
+//				detaSopBtn.addEventListener('tap',function(event){
+//					alert("测试跳转");
+//					$.openWindow({
+//						url: "../contents/siteCity.html",
+//						id: "siteCity",
+//						preload: true,
+//						show: {
+//							aniShow: 'pop-in'
+//						},
+//						styles: {
+//							popGesture: 'hide'
+//						},
+//						waiting: {
+//							autoShow: false
+//						}
+//					});
+//					// 冒泡管理 
+////					event.stopPropagation();
+//				}, false);
+
+				// 绑定跳转试试
+				mui("#details-nav").on('tap','#mui-detal-a2',function(event){
+					$.openWindow({
+						url: "../contents/siteCity.html",
+						id: "siteCity",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				
+			});
+				
+			
+		})(mui);
+
+			
+	</script>
+</html>

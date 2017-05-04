@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*头部样式*/
+			#homeHd{
+				height: 45px;
+				background:#E71F19 ;
+				padding-right: 5px;
+    			padding-left: 5px;
+    			-webkit-box-shadow: 0 0px 0px #ccc;
+    			box-shadow: 0 0px 0px #ccc;
+			}
+			#homeHd .mui-title{
+				font-size: 1.2rem;
+				color: white;
+				line-height: 45px;
+			}
+			#homeHd .mui-icon {
+				margin: 0;
+				padding: 0;
+				width: 45px;
+    			height: 45px;
+			}
+			#homeHd .mui-icon img{
+				width: 30px;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav" id="homeHd">
+		    <a class="mui-action-back mui-icon mui-pull-left">
+		    	<img src="../images/flg1.png"/>
+		    </a>
+		    <h1 class="mui-title">比客网商</h1>
+		    <a class="mui-action-back mui-icon mui-pull-right">
+		    	<img src="../images/flg2.png"/>
+		    </a>
+		</header>
+	</body>
+	<script type="text/javascript" >
+		mui.init({
+			subpages:[{
+				url:"homeConts.html",
+				id:"homeConts",
+				styles:{
+					top:"45px",
+					bottom:"0px"
+				}
+			}]
+		});
+	</script>
+
+</html>
