@@ -66,6 +66,16 @@
 				margin-right: 5%;
 			    
 			}
+			/*蒙版遮住inpu弹出输入法*/
+			#classifySou{
+				width: 95%;
+			    height: 100%;
+			    position: absolute;
+			    left: 0;
+			    right: 0;
+			    top: 0;
+			    margin: auto;
+			}
 
 
 
@@ -74,53 +84,55 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<div class="mui-input-row mui-search">
-			    <input id="classifySou" type="search" class="mui-input-clear" placeholder="点击热货搜索">
+			    <input type="search" class="mui-input-clear" placeholder="点击热货搜索">
 			    	<!--备用点击消息-->
 				<!--<a href="#">
 					<span class="mui-span-inform">消息</span>
 				</a>-->
 			</div>
+			<!--蒙版遮住inpu弹出输入法-->
+			<div id="classifySou"></div>
 		</header>
-		<script type="text/javascript">
-			// 子页面
-			mui.init({
-				subpages:[{
-					url:'../contents/fycont.html',
-					id:'fycont',
-					styles:{
-						top:'45px',
-						bottom:'0px'
-					}
-				}]
-			});
-			// 跳转页面
-			(function($, doc) {
-				$.init();
-				$.plusReady(function() {
-					//登录页跳转
-					var classifyBtn = document.getElementById('classifySou');
-					function skipsPage(IdBtn,SkipPage,SkipsId){
-						IdBtn.addEventListener('tap', function(event) {
-							$.openWindow({
-								url: SkipPage,
-								id: SkipsId,
-								preload: true,
-								show: {
-									aniShow: 'none'
-								},
-								styles: {
-									popGesture: 'hide'
-								},
-								waiting: {
-									autoShow: false
-								}
-							});
-						}, false);
-					};
-					skipsPage(classifyBtn,"../contents/searchPage.html","searchPage");
-					
-				});
-			}(mui, document));
-		</script>
+		
 	</body>
+	<script type="text/javascript">
+		// 子页面
+		mui.init({
+			subpages:[{
+				url:'../contents/fycont.html',
+				id:'fycont',
+				styles:{
+					top:'45px',
+					bottom:'0px'
+				}
+			}]
+		});
+		// 跳转页面
+		(function($, doc) {
+			$.init();
+			$.plusReady(function() {
+				//登录页跳转
+				var classifyBtn = document.getElementById('classifySou');
+				function skipsPage(IdBtn,SkipPage,SkipsId){
+					IdBtn.addEventListener('tap', function(event) {
+						$.openWindow({
+							url: SkipPage,
+							id: SkipsId,
+							preload: true,
+							show: {
+								aniShow: 'none'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, false);
+				};
+				skipsPage(classifyBtn,"../contents/searchPage.html","searchPage");				
+			});
+		}(mui, document));
+	</script>
 </html>

@@ -9,6 +9,11 @@
 		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
 		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
+			/*轮播图样式*/
+			/*.mui-slider-indicator .mui-indicator {
+			    background: rgba(251, 248, 248, 0);
+			    border: 1px solid white;
+			}*/
 			/*搜索分类*/
 			.homeCon1{
 			    background:white;
@@ -18,24 +23,6 @@
 			    padding: 25px 5% 0px 5%;
 			    overflow: hidden;
 			}
-			/*备用搜索框
-			.homeCon1 .seaript input[type=text] {
-			    line-height: 21px;
-			    width: 85%;
-			    height: 35px;
-			    padding: 10px 15px;
-			    -webkit-user-select: text;
-			    border: 1px solid rgba(0,0,0,.2);
-			    border-radius: 3px 0px 0px 3px;
-			    outline: 0;
-			    background-color: #fff;
-			    -webkit-appearance: none;
-			    border: 1px solid rgb(132, 134, 137);
-			    margin: 2.5px 0px;
-			    float: left;
-			    font-size: 0.9rem;
-			}
-			*/
 			.homeCon1 .seaript .searspn1{
 			    line-height: 15px;
 			    width: 85%;
@@ -283,24 +270,24 @@
 			    line-height: 1.4;
 			}
 			.homeCon3 .mui-flex-sm .homeCont3-span{
-			    display: flex;
-			    justify-content: space-between;
 			    padding: 5px 0px;
 			}
 			.homeCon3 .homeCont3-span .homeCont3-sp1{
-				margin-top: 5px;
+				width: 65%;
+				height: 100%;
+			    margin-top: 3px;
 			    font-size: 0.95rem;
 			    color: #F23015;
-			    line-height: 20px;
+			    display: inline-block;
+			    float: left;
 			}
-			
 			.homeCon3 .homeCont3-span .homeCont3-sp2{
+				display: inline-block;
 				float: right;
-				width: 23px;
+			    width: 23px;
 			    height: 23px;
 			    margin-top: 2px;
 			    background: #f23;
-			    display: inline-block;
 			    border-radius: 50%;
 			}
 			/*图片展示*/
@@ -317,29 +304,39 @@
 			    width: 50%;
 			    line-height: 1px;
 			    border-right: 1px solid #eeeeee;
-			    padding-right: 1px;
+			    padding-right: -1px;
 			}
 			.homeCon4 .homeFlex1 img{
 			    width: 100%;
 			}
 			.homeCon4 .homeFlex2 {
 			    width: 50%;
-			    flex-wrap: wrap;
-			    display: flex;
 			}
-			.homeCon4 .homeFlex2-sm {
+			.homeCon4 .homeFlex2 .homeFlex2-sm{
 			    width: 100%;
 			    height: 50%;
+			}
+			.homeCon4 .homeFlex2-sm img{
+			    width: 100%;
+			    height: 100%;
 			}
 			.homeCon4 .homeFlex2-sm:nth-child(1) {
 			    border-bottom: 1px solid #eeeeee;
 			    padding-bottom: -1px;
 			}
-			.homeCon4 .homeFlex2-sm img{
-			    width: 100%;
-			    height:100%;
-			}
 			/*滚动列表图*/
+			.homeCon5{
+				margin-top:10px;
+			}
+			.homeCon5 .homeCont5-con{
+				padding: 0px 10px;
+			}
+			.homeCon5 .homeCon3-con {
+			    padding: 0px;
+			}
+			.homeCon5 .mui-flex-sm {
+			    padding: 0px 3px;
+			}
 			.homeCon5 .mui-slider-indicator {
 			    position: static; 
 			    width: 100%;
@@ -361,349 +358,949 @@
 		    .homeCon5 .mui-slider-indicator .mui-active.mui-indicator {
 			    background: #fd4c42;
 		    }
+		    /*大图广告图滚动*/
+			.homeCon6{
+				margin:10px 5px 0px;
+			}
+			/*推荐样式*/
+	    	.mui-gray-text {
+	    		position: relative;
+	        	display: -webkit-box;
+	        	margin: 14px 15%;
+	        	color: #999;
+    			font-size: 1rem;
+	        	-webkit-box-pack: center;
+	      	}
+	      	.mui-content .homeCon7:after {
+			    background-color: #999;
+			}
+	      	.mui-gray-layout {
+	          	padding: 0 10px;
+	          	background-color: #f0f2f5;
+	          	z-index: 9;
+	          	position: relative;
+	          	display: block;
+	      	}
+	      	.gray-text-img {
+	          	background: url(../images/top_ni.png);
+	          	background-repeat: no-repeat;
+	          	background-size: 13px 13px;
+	          	width: 13px;
+	          	height: 13px;
+	          	display: block;
+	          	margin-right: 10px;
+	          	position: relative;
+	          	top: 3px;
+	          	float: left;
+	      	}
+	      	.mui-gray-text:after {
+	          	content: "";
+	          	height: 1px;
+	          	width: 100%;
+	          	position: absolute;
+	          	top: 50%;
+	          	left: 0;
+	          	background-color: #cbcbcb;
+	          	-webkit-transform: scaleY(0.5);
+	      	}
+	      	/*ul列表推荐*/
+	      	.mui-content ul{
+	        	padding:0;
+	        	margin: 0;
+	      	}
+	      	.mui-similar-li:nth-child(2n+1) {
+	          	padding-right: 3px;
+	      	}
+	      	.mui-similar-li:nth-child(2n) {
+	          	padding-left: 3px;
+	      	}
+	      	.mui-similar-li {
+	          	float: left;
+	          	width: 50%;
+	          	box-sizing: border-box;
+	          	padding-bottom: 5px;
+	          	position: relative;
+	      	}
+	      	.mui-similar-product {
+	          	background-color: white;
+	          	padding-bottom: 6px;
+	          	font-size: 0;
+	      	}
+	      	.mui-similar-product img {
+	          	width: 100%;
+	          	display: block;
+	      	}
+	      	.mui-similar-product-text {
+	          	height: 33px;
+	          	font-size: 13px;
+	          	overflow: hidden;
+	          	text-overflow: ellipsis;
+	          	display: -webkit-box;
+	          	-webkit-line-clamp: 2;
+	          	-webkit-box-orient: vertical;
+	          	word-break: break-word;
+	          	color: #232326;
+	          	margin-top: 5px;
+	          	line-height: 17px;
+	          	margin-bottom: 3px;
+	          	padding: 0 4px;
+	      	}
+	      	.mui-similar-product-price {
+	          	color: #f23030;
+	          	font-size: 13px;
+	          	display: block;
+	          	padding: 0 4px;
+	          	position: relative;
+	          	top: 1px;
+	          	height: 25px;
+	          	line-height: 25px;
+	      	}
+	      	.mui-similar-product-price .mui-big-price {
+	          	font-size: 18px;
+	      	}
+	      	.mui-guess-button {
+	          	display: block;
+	          	position: absolute;
+	          	top: 0;
+	          	right: 8px;
+			    width: 23px;
+			    height: 23px;
+			    margin-top: 2px;
+			    background: #f23;
+			    border-radius: 50%;
+	      	}
+	      	/*回到顶部样式*/
+			#mui-btn-top {
+				z-index: 20;
+				width:40px; 
+				height:40px; 
+				border-radius: 50%;
+				position:fixed; 
+				right:25px; 
+				bottom:10px; 
+				display:none; 
+				background: rgba(255, 255, 255,0.3);
+			}
+			#mui-btn-top img{
+				width: 100%;
+			}
+	      	
 		</style>
 	</head>
 	<body>
 		<!--home1内容-->
-		<div class="mui-content">
-		    <!--轮播图-->
-			<div class="mui-slider loop-slider">
-				<div class="mui-slider-group mui-slider-loop">
-					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<!--内容滚动区域-->
+			<div class="mui-scroll">
+			    <!--轮播图-->
+				<div class="mui-slider loop-slider">
+					<div class="mui-slider-group mui-slider-loop">
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="muiitemimg2" src="../images/carr2.png"/></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="muiitemimg3" src="../images/carr3.jpg"/></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="muiitemimg4" src="../images/carr4.jpg"/></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
+						</div>
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
+						</div>
 					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img class="muiitemimg2" src="../images/carr2.png"/></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img class="muiitemimg3" src="../images/carr3.jpg"/></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img class="muiitemimg4" src="../images/carr4.jpg"/></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
-					</div>
-					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
+					<div class="mui-slider-indicator">
+					    <div class="mui-indicator mui-active"></div>
+					    <div class="mui-indicator"></div>
+					    <div class="mui-indicator"></div>
+					    <div class="mui-indicator"></div>
+					    <div class="mui-indicator"></div>
 					</div>
 				</div>
-				<div class="mui-slider-indicator">
-				    <div class="mui-indicator mui-active"></div>
-				    <div class="mui-indicator"></div>
-				    <div class="mui-indicator"></div>
-				    <div class="mui-indicator"></div>
-				    <div class="mui-indicator"></div>
+				<!--搜索分类-->
+				<div class="homeCon1">
+					<div class="seaript mui-cf">
+				    	<span class="searspn1">请输入您所搜索的商品</span>
+				    	<span class="searspn2"></span>
+				    </div>
+				    <!--分类导航-->
+					<ul class="mui-table-view mui-grid-view mui-grid-9">
+					    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+					        <img src="../images/homeC1.png"/>
+					        <p class="mui-media-body">全部分类</p></a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+					        <img src="../images/homeC2.png"/>
+					        <div class="mui-media-body">团购</div></a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+					        <img src="../images/homeC3.png"/>
+					        <div class="mui-media-body">购物车</div></a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3  mui-about-ser"><a href="#">
+					        <img src="../images/homeC4.png"/>
+					        <div class="mui-media-body">个人中心</div></a>
+					    </li>
+					</ul>
 				</div>
-			</div>
-			<!--搜索分类-->
-			<div class="homeCon1">
-				<div class="seaript mui-cf">
-					<!--备用搜索框-->
-			    	<!--<input type="text" value placeholder="超级品牌日，全场底价" >-->
-			    	<span class="searspn1">请输入您所搜索的商品</span>
-			    	<span class="searspn2"></span>
+				<!--flex布局  商品图片展示-->
+			    <div class="homeCon2">
+			    	<div class="homeFlex1">
+			    		<img src="../images/homeF1.jpg" alt="" />
+			        </div>
+			        <div class="homeFlex2">
+					    <div class="homeFlex2-sm">
+					    	<div class="mui-flex-xs">
+					    		<div class="mui-flex-h1">玩3C</div>
+					    		<div class="mui-flex-comp">iPhone 7红色</div>
+					    		<span class="mui-flex-hot">快来抢啊！</span>
+					    	</div>
+					    	<div class="mui-flex-xs">
+					    		<img src="../images/I7.jpg" alt="" />
+					    	</div>
+					    </div>
+					    <div class="homeFlex2-sm">
+					    	<div class="mui-flex-xs">
+					    		<div class="mui-flex-h1">玩3C</div>
+					    		<div class="mui-flex-comp">iPhone 7红色</div>
+					    		<span class="mui-flex-hot">快来抢啊！</span>
+					    	</div>
+					    	<div class="mui-flex-xs">
+					    		<img src="../images/I7.jpg" alt="" />
+					    	</div>
+					    </div>
+			        </div>
+			        <div class="mui-row-flex-comm">
+				        <div class="mui-flex-sm">
+					    	<div class="mui-flex-xs">
+					    		<div class="mui-flex-h1">玩3C</div>
+					    		<div class="mui-flex-comp">iPhone 7红色</div>
+					    		<span class="mui-flex-hot">快来抢啊！</span>
+					    	</div>
+					    	<div class="mui-flex-xs">
+					    		<img src="../images/I7.jpg" alt="" />
+					    	</div>
+					    </div>
+					    <div class="mui-flex-sm">
+				    		<div class="mui-flex-xs">
+				    			<div class="mui-flex-h1">玩3C</div>
+				    			<div class="mui-flex-comp">iPhone 7红色</div>
+				    			<span class="mui-flex-hot">快来抢啊！</span>
+				    		</div>
+				    		<div class="mui-flex-xs">
+				    			<img src="../images/I7.jpg" alt="" />
+				    		</div>
+				        </div>
+				    </div>
 			    </div>
-			    <!--分类导航-->
-				<ul class="mui-table-view mui-grid-view mui-grid-9">
-				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-				        <img src="../images/homeC1.png"/>
-				        <p class="mui-media-body">全部分类</p></a>
-				    </li>
-				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-				        <img src="../images/homeC2.png"/>
-				        <div class="mui-media-body">团购</div></a>
-				    </li>
-				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-				        <img src="../images/homeC3.png"/>
-				        <div class="mui-media-body">购物车</div></a>
-				    </li>
-				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3  mui-about-ser"><a href="#">
-				        <img src="../images/homeC4.png"/>
-				        <div class="mui-media-body">个人中心</div></a>
-				    </li>
+			    <!--促销商品-->
+			    <div class="homeCon3">
+			    	<h4 class="homeCont3-p">促销商品</h4>
+			    	<div class="homeCon3-con">
+			    		<div class="mui-flex-sm">
+					    	<div class="mui-flex-xs">
+					    		<p class="flexEmp">7天12小时36分51秒</p>
+					    		<img src="../images/cuxiao.jpg" alt="" />
+					    	</div>
+					    	<div class="mui-flex-xs">
+				    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+				    			<div class="homeCont3-span mui-cf">
+				    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+				    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+				    			</div>
+				    			
+				    		</div>
+					    </div>
+					    <div class="mui-flex-sm">
+				    		<div class="mui-flex-xs">
+				    			<p class="flexEmp">7天12小时36分51秒</p>
+				    			<img src="../images/cuxiao.jpg" alt="" />
+				    		</div>
+				    		<div class="mui-flex-xs">
+				    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+				    			<div class="homeCont3-span mui-cf">
+				    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+				    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+				    			</div>
+				    		</div>
+				        </div>
+				        <div class="mui-flex-sm">
+				    		<div class="mui-flex-xs">
+				    			<p class="flexEmp">7天12小时36分51秒</p>
+				    			<img src="../images/cuxiao.jpg" alt="" />
+				    		</div>
+				    		<div class="mui-flex-xs">
+				    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+				    			<div class="homeCont3-span mui-cf">
+				    				
+				    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+				    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+				    			</div>
+				    		</div>
+				        </div>
+			    	</div>
+			    </div>
+			    <!--图片展示-->
+				<div class="homeCon4">
+					<div class="homeFlex1">
+			    		<img src="../images/homeF1.jpg" alt="" />
+			        </div>
+			        <div class="homeFlex2">
+					    <div class="homeFlex2-sm">
+					    	<img src="../images/homeF2.jpg"/>
+					    </div>
+					    <div class="homeFlex2-sm">
+					    	<img src="../images/homeF3.jpg"/>
+					    </div>
+			        </div>
+				</div>
+				<!--滚动列表图-->
+				<div class="homeCon5 homeCon3">
+					<h4 class="homeCont3-p">精品推荐</h4>
+					<div class="homeCont5-con">
+						<div id="Gallery1" class="mui-slider">
+							<div class="mui-slider-group mui-slider-loop">
+								<div class="mui-slider-item">
+							    	<div class="homeCon3-con">
+							    		<div class="mui-flex-sm">
+									    	<div class="mui-flex-xs">
+									    		<img src="../images/cuxiao.jpg" alt="" />
+									    	</div>
+									    	<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    			
+								    		</div>
+									    </div>
+									    <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+								        <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+							    	</div>
+								</div>
+								<div class="mui-slider-item">
+							    	<div class="homeCon3-con">
+							    		<div class="mui-flex-sm">
+									    	<div class="mui-flex-xs">
+									    		<img src="../images/cuxiao1.jpg" alt="" />
+									    	</div>
+									    	<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    			
+								    		</div>
+									    </div>
+									    <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao1.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+								        <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao1.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+							    	</div>
+								</div>
+								<div class="mui-slider-item">
+							    	<div class="homeCon3-con">
+							    		<div class="mui-flex-sm">
+									    	<div class="mui-flex-xs">
+									    		<img src="../images/cuxiao2.jpg" alt="" />
+									    	</div>
+									    	<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    			
+								    		</div>
+									    </div>
+									    <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao2.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+								        <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao2.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+							    	</div>
+								</div>
+			
+							</div>
+							<div class="mui-slider-indicator">
+								<div class="mui-indicator mui-active">1</div>
+								<div class="mui-indicator">2</div>
+								<div class="mui-indicator">3</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--滚动列表图-->
+				<div class="homeCon5 homeCon3">
+					<h4 class="homeCont3-p">新品上市</h4>
+					<div class="homeCont5-con">
+						<div id="Gallery2" class="mui-slider">
+							<div class="mui-slider-group mui-slider-loop">
+								<div class="mui-slider-item">
+							    	<div class="homeCon3-con">
+							    		<div class="mui-flex-sm">
+									    	<div class="mui-flex-xs">
+									    		<img src="../images/cuxiao.jpg" alt="" />
+									    	</div>
+									    	<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    			
+								    		</div>
+									    </div>
+									    <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+								        <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+							    	</div>
+								</div>
+								<div class="mui-slider-item">
+							    	<div class="homeCon3-con">
+							    		<div class="mui-flex-sm">
+									    	<div class="mui-flex-xs">
+									    		<img src="../images/cuxiao1.jpg" alt="" />
+									    	</div>
+									    	<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    			
+								    		</div>
+									    </div>
+									    <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao1.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+								        <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao1.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+							    	</div>
+								</div>
+								<div class="mui-slider-item">
+							    	<div class="homeCon3-con">
+							    		<div class="mui-flex-sm">
+									    	<div class="mui-flex-xs">
+									    		<img src="../images/cuxiao2.jpg" alt="" />
+									    	</div>
+									    	<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    			
+								    		</div>
+									    </div>
+									    <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao2.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+								        <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao2.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+							    	</div>
+								</div>
+			
+							</div>
+							<div class="mui-slider-indicator">
+								<div class="mui-indicator mui-active">1</div>
+								<div class="mui-indicator">2</div>
+								<div class="mui-indicator">3</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--滚动列表图-->
+				<div class="homeCon5 homeCon3">
+					<h4 class="homeCont3-p">热销单品</h4>
+					<div class="homeCont5-con">
+						<div id="Gallery3" class="mui-slider">
+							<div class="mui-slider-group mui-slider-loop">
+								<div class="mui-slider-item">
+							    	<div class="homeCon3-con">
+							    		<div class="mui-flex-sm">
+									    	<div class="mui-flex-xs">
+									    		<img src="../images/cuxiao.jpg" alt="" />
+									    	</div>
+									    	<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    			
+								    		</div>
+									    </div>
+									    <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+								        <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+							    	</div>
+								</div>
+								<div class="mui-slider-item">
+							    	<div class="homeCon3-con">
+							    		<div class="mui-flex-sm">
+									    	<div class="mui-flex-xs">
+									    		<img src="../images/cuxiao1.jpg" alt="" />
+									    	</div>
+									    	<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    			
+								    		</div>
+									    </div>
+									    <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao1.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+								        <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao1.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+							    	</div>
+								</div>
+								<div class="mui-slider-item">
+							    	<div class="homeCon3-con">
+							    		<div class="mui-flex-sm">
+									    	<div class="mui-flex-xs">
+									    		<img src="../images/cuxiao2.jpg" alt="" />
+									    	</div>
+									    	<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    			
+								    		</div>
+									    </div>
+									    <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao2.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+								        <div class="mui-flex-sm">
+								    		<div class="mui-flex-xs">
+								    			<img src="../images/cuxiao2.jpg" alt="" />
+								    		</div>
+								    		<div class="mui-flex-xs">
+								    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
+								    			<div class="homeCont3-span mui-cf">
+								    				
+								    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
+								    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
+								    			</div>
+								    		</div>
+								        </div>
+							    	</div>
+								</div>
+			
+							</div>
+							<div class="mui-slider-indicator">
+								<div class="mui-indicator mui-active">1</div>
+								<div class="mui-indicator">2</div>
+								<div class="mui-indicator">3</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--大图广告图滚动-->
+				<div class="homeCon6">
+					<div class="mui-slider loop-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#"><img class="muiitemimg2" src="../images/carr2.png"/></a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#"><img class="muiitemimg3" src="../images/carr3.jpg"/></a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#"><img class="muiitemimg4" src="../images/carr4.jpg"/></a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
+							</div>
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--推荐提示-->
+			  	<div class="mui-gray-text homeCon7">
+			  		<span class="mui-gray-layout">
+			  			<!--去掉小图标-->
+			  			<!--<span class="gray-text-img"></span>-->
+			  			猜您喜欢
+			  		</span>
+			  	</div>
+			  	<!--ul列表推荐-->
+			  	<ul class="mui-cf homeCon8" >
+					<li class="mui-similar-li">
+						<a href="#">
+							<div class="mui-similar-product">
+								<img src="../images/homeCont8.jpg">
+								<span class="mui-similar-product-text">【精品推荐】福临门 葵花籽原香食用调和油5L 中粮出品</span>
+								<span class="mui-similar-product-price">
+									¥
+									<span class="mui-big-price">39</span><span class="mui-small-price">.90</span>
+									<span class="mui-guess-button" >
+										<img src="../images/minsop.png"/>
+									</span>
+									<span class="sam-space"></span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="mui-similar-li">
+						<a href="#">
+							<div class="mui-similar-product">
+								<img src="../images/homeCont8.jpg">
+								<span class="mui-similar-product-text">【精品推荐】福临门 葵花籽原香食用调和油5L 中粮出品</span>
+								<span class="mui-similar-product-price">
+									¥
+									<span class="mui-big-price">39</span><span class="mui-small-price">.90</span>
+									<span class="mui-guess-button" >
+										<img src="../images/minsop.png"/>
+									</span>
+									<span class="sam-space"></span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="mui-similar-li">
+						<a href="#">
+							<div class="mui-similar-product">
+								<img src="../images/homeCont8.jpg">
+								<span class="mui-similar-product-text">【精品推荐】福临门 葵花籽原香食用调和油5L 中粮出品</span>
+								<span class="mui-similar-product-price">
+									¥
+									<span class="mui-big-price">39</span><span class="mui-small-price">.90</span>
+									<span class="mui-guess-button" >
+										<img src="../images/minsop.png"/>
+									</span>
+									<span class="sam-space"></span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="mui-similar-li">
+						<a href="#">
+							<div class="mui-similar-product">
+								<img src="../images/homeCont8.jpg">
+								<span class="mui-similar-product-text">【精品推荐】福临门 葵花籽原香食用调和油5L 中粮出品</span>
+								<span class="mui-similar-product-price">
+									¥
+									<span class="mui-big-price">39</span><span class="mui-small-price">.90</span>
+									<span class="mui-guess-button" >
+										<img src="../images/minsop.png"/>
+									</span>
+									<span class="sam-space"></span>
+								</span>
+							</div>
+						</a>
+					</li>
 				</ul>
-			</div>
-			
-			<!--滚动列表图-->
-			<div id="Gallery" class="mui-slider homeCon3 homeCon5" style="margin-top:10px;">
-				<h4 class="homeCont3-p">精品推荐</h4>
-				<div class="mui-slider-group">
-					<div class="mui-slider-item">
-				    	<div class="homeCon3-con">
-				    		<div class="mui-flex-sm">
-						    	<div class="mui-flex-xs">
-						    		<img src="../images/cuxiao.jpg" alt="" />
-						    	</div>
-						    	<div class="mui-flex-xs">
-					    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-					    			<div class="homeCont3-span mui-cf">
-					    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-					    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-					    			</div>
-					    			
-					    		</div>
-						    </div>
-						    <div class="mui-flex-sm">
-					    		<div class="mui-flex-xs">
-					    			<img src="../images/cuxiao.jpg" alt="" />
-					    		</div>
-					    		<div class="mui-flex-xs">
-					    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-					    			<div class="homeCont3-span mui-cf">
-					    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-					    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-					    			</div>
-					    		</div>
-					        </div>
-					        <div class="mui-flex-sm">
-					    		<div class="mui-flex-xs">
-					    			<img src="../images/cuxiao.jpg" alt="" />
-					    		</div>
-					    		<div class="mui-flex-xs">
-					    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-					    			<div class="homeCont3-span mui-cf">
-					    				
-					    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-					    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-					    			</div>
-					    		</div>
-					        </div>
-				    	</div>
-					</div>
-					<div class="mui-slider-item">
-				    	<div class="homeCon3-con">
-				    		<div class="mui-flex-sm">
-						    	<div class="mui-flex-xs">
-						    		<img src="../images/cuxiao.jpg" alt="" />
-						    	</div>
-						    	<div class="mui-flex-xs">
-					    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-					    			<div class="homeCont3-span mui-cf">
-					    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-					    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-					    			</div>
-					    			
-					    		</div>
-						    </div>
-						    <div class="mui-flex-sm">
-					    		<div class="mui-flex-xs">
-					    			<img src="../images/cuxiao.jpg" alt="" />
-					    		</div>
-					    		<div class="mui-flex-xs">
-					    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-					    			<div class="homeCont3-span mui-cf">
-					    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-					    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-					    			</div>
-					    		</div>
-					        </div>
-					        <div class="mui-flex-sm">
-					    		<div class="mui-flex-xs">
-					    			<img src="../images/cuxiao.jpg" alt="" />
-					    		</div>
-					    		<div class="mui-flex-xs">
-					    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-					    			<div class="homeCont3-span mui-cf">
-					    				
-					    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-					    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-					    			</div>
-					    		</div>
-					        </div>
-				    	</div>
-					</div>
-					<div class="mui-slider-item">
-				    	<div class="homeCon3-con">
-				    		<div class="mui-flex-sm">
-						    	<div class="mui-flex-xs">
-						    		<img src="../images/cuxiao.jpg" alt="" />
-						    	</div>
-						    	<div class="mui-flex-xs">
-					    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-					    			<div class="homeCont3-span mui-cf">
-					    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-					    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-					    			</div>
-					    			
-					    		</div>
-						    </div>
-						    <div class="mui-flex-sm">
-					    		<div class="mui-flex-xs">
-					    			<img src="../images/cuxiao.jpg" alt="" />
-					    		</div>
-					    		<div class="mui-flex-xs">
-					    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-					    			<div class="homeCont3-span mui-cf">
-					    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-					    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-					    			</div>
-					    		</div>
-					        </div>
-					        <div class="mui-flex-sm">
-					    		<div class="mui-flex-xs">
-					    			<img src="../images/cuxiao.jpg" alt="" />
-					    		</div>
-					    		<div class="mui-flex-xs">
-					    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-					    			<div class="homeCont3-span mui-cf">
-					    				
-					    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-					    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-					    			</div>
-					    		</div>
-					        </div>
-				    	</div>
-					</div>
-
-				</div>
-				<div class="mui-slider-indicator">
-					<div class="mui-indicator mui-active">1</div>
-					<div class="mui-indicator">2</div>
-					<div class="mui-indicator">3</div>
-				</div>
-			</div>
-			
-			<!--flex布局  商品图片展示-->
-		    <div class="homeCon2">
-		    	<div class="homeFlex1">
-		    		<img src="../images/homeF1.jpg" alt="" />
-		        </div>
-		        <div class="homeFlex2">
-				    <div class="homeFlex2-sm">
-				    	<div class="mui-flex-xs">
-				    		<div class="mui-flex-h1">玩3C</div>
-				    		<div class="mui-flex-comp">iPhone 7红色</div>
-				    		<span class="mui-flex-hot">快来抢啊！</span>
-				    	</div>
-				    	<div class="mui-flex-xs">
-				    		<img src="../images/I7.jpg" alt="" />
-				    	</div>
-				    </div>
-				    <div class="homeFlex2-sm">
-				    	<div class="mui-flex-xs">
-				    		<div class="mui-flex-h1">玩3C</div>
-				    		<div class="mui-flex-comp">iPhone 7红色</div>
-				    		<span class="mui-flex-hot">快来抢啊！</span>
-				    	</div>
-				    	<div class="mui-flex-xs">
-				    		<img src="../images/I7.jpg" alt="" />
-				    	</div>
-				    </div>
-		        </div>
-		        <div class="mui-row-flex-comm">
-			        <div class="mui-flex-sm">
-				    	<div class="mui-flex-xs">
-				    		<div class="mui-flex-h1">玩3C</div>
-				    		<div class="mui-flex-comp">iPhone 7红色</div>
-				    		<span class="mui-flex-hot">快来抢啊！</span>
-				    	</div>
-				    	<div class="mui-flex-xs">
-				    		<img src="../images/I7.jpg" alt="" />
-				    	</div>
-				    </div>
-				    <div class="mui-flex-sm">
-			    		<div class="mui-flex-xs">
-			    			<div class="mui-flex-h1">玩3C</div>
-			    			<div class="mui-flex-comp">iPhone 7红色</div>
-			    			<span class="mui-flex-hot">快来抢啊！</span>
-			    		</div>
-			    		<div class="mui-flex-xs">
-			    			<img src="../images/I7.jpg" alt="" />
-			    		</div>
-			        </div>
-			    </div>
-		    </div>
-		    <!--促销商品-->
-		    <div class="homeCon3">
-		    	<h4 class="homeCont3-p">促销商品</h4>
-		    	<div class="homeCon3-con">
-		    		<div class="mui-flex-sm">
-				    	<div class="mui-flex-xs">
-				    		<p class="flexEmp">7天12小时36分51秒</p>
-				    		<img src="../images/cuxiao.jpg" alt="" />
-				    	</div>
-				    	<div class="mui-flex-xs">
-			    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-			    			<div class="homeCont3-span mui-cf">
-			    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-			    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-			    			</div>
-			    			
-			    		</div>
-				    </div>
-				    <div class="mui-flex-sm">
-			    		<div class="mui-flex-xs">
-			    			<p class="flexEmp">7天12小时36分51秒</p>
-			    			<img src="../images/cuxiao.jpg" alt="" />
-			    		</div>
-			    		<div class="mui-flex-xs">
-			    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-			    			<div class="homeCont3-span mui-cf">
-			    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-			    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-			    			</div>
-			    		</div>
-			        </div>
-			        <div class="mui-flex-sm">
-			    		<div class="mui-flex-xs">
-			    			<p class="flexEmp">7天12小时36分51秒</p>
-			    			<img src="../images/cuxiao.jpg" alt="" />
-			    		</div>
-			    		<div class="mui-flex-xs">
-			    			<div class="mui-flex-comp">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</div>
-			    			<div class="homeCont3-span mui-cf">
-			    				
-			    				<span class="homeCont3-sp1">￥<span  class="homeCont3-sp11">3400.00</span></span>
-			    				<span class="homeCont3-sp2"><img src="../images/minsop.png"/></span>
-			    			</div>
-			    		</div>
-			        </div>
-		    	</div>
-		    </div>
-		    <!--图片展示-->
-			<div class="homeCon4">
-				<div class="homeFlex1">
-		    		<img src="../images/homeF1.jpg" alt="" />
-		        </div>
-		        <div class="homeFlex2">
-				    <div class="homeFlex2-sm">
-				    	<img src="../images/carr1.jpg"/>
-				    </div>
-				    <div class="homeFlex2-sm">
-				    	<img src="../images/carr1.jpg"/>
-				    </div>
-		        </div>
-			</div>
+					
 		<!--主体结束-->
-		</div>
+			</div>
+			<!--回到顶部按钮-->
+			<a href="javascript:;" id="mui-btn-top">
+			    <img src="../images/top.png" alt="" />
+			</a>
+		</div> 
 	</body>
 	<script type="text/javascript" >
 		(function($, doc) {
-			$.init();
+			$.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						contentnomore:'更多精品点击分类',
+						callback: renovate
+					}
+				}
+			});
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			var homeContul = document.querySelector(".homeCon8"); 
+			var conts = 0;
+			function renovate() {
+				setTimeout(function(){
+					mui.plusReady(function() { // 解析数据
+						mui.ajax("http://c.m.163.com/nc/article/list/T1348649580692/"+conts+"-10.html", {
+							dataType: 'json', // 返回的数据类型 json
+							type: 'get', // HTTP请求方式
+							success: function(data) {
+								// 数据对象
+								var arr = data["T1348649580692"];
+								// console.log(arr.length);
+								mui.each(arr, function(index, item) {
+									// 创建标签 li分级标签
+									var lis = document.createElement("li");
+									lis.className = "mui-similar-li";
+									// 创建a子级标签
+									var lia = document.createElement("a");
+									lis.appendChild(lia);
+									// 创建lia子级标签
+									var lia_divs = document.createElement("div");
+									lia_divs.className = "mui-similar-product";
+									lia.appendChild(lia_divs);
+									// 创建lia_divs子级标签
+									var liaDiv_img = document.createElement("img");
+									var liaDiv_spn1 = document.createElement("span");
+									var liaDiv_spn2 = document.createElement("span");
+									liaDiv_img.src = item.imgsrc;
+									liaDiv_spn1.className = "mui-similar-product-text";
+									liaDiv_spn2.className = "mui-similar-product-price";
+									liaDiv_spn1.innerHTML = item.digest;
+									liaDiv_spn2.innerHTML = "¥";
+									lia_divs.appendChild(liaDiv_img);
+									lia_divs.appendChild(liaDiv_spn1);
+									lia_divs.appendChild(liaDiv_spn2);
+									// 创建liaDiv_spn2子级标签
+									var liaspn1 = document.createElement("span");
+									var liaspn2 = document.createElement("span");
+									var liaspn3 = document.createElement("span");
+									var liaspn4 = document.createElement("span");
+									liaspn1.className = "mui-big-price";
+									liaspn2.className = "mui-small-price";
+									liaspn3.className = "mui-guess-button";
+									liaspn4.className = "sam-space";
+									liaspn1.innerHTML = item.priority;
+									liaspn2.innerHTML = item.lmodify;
+									var liaspn3_img = document.createElement("img");
+									liaspn3_img.src= "../images/minsop.png";
+									liaspn3.appendChild(liaspn3_img);
+									liaDiv_spn2.appendChild(liaspn1);
+									liaDiv_spn2.appendChild(liaspn2);
+									liaDiv_spn2.appendChild(liaspn3);
+									liaDiv_spn2.appendChild(liaspn4);
+									// 插入li标签
+									homeContul.appendChild(lis);
+								});
+								conts += arr.length;
+							}
+						});
+					});
+					
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+					if(conts >= 50) {
+						mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
+					} else {
+						mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
+					};
+				},1500);	
+			};
+			
 			// 轮播图自动播放
 			var slider = mui('.loop-slider');
 			slider.slider({interval:2000});
-			mui.ready(function() {
+			$.ready(function() {
 				// 滚动列表图循环
-				var slider = document.getElementById('Gallery');
-				var group = slider.querySelector('.mui-slider-group');
-				var items = mui('.mui-slider-item', group);
-				//克隆第一个节点
-				var first = items[0].cloneNode(true);
-				first.classList.add('mui-slider-item-duplicate');
-				//克隆最后一个节点
-				var last = items[items.length - 1].cloneNode(true);
-				last.classList.add('mui-slider-item-duplicate');
-				//处理是否循环逻辑，若支持循环，需支持两点：
-				//1、在.mui-slider-group节点上增加.mui-slider-loop类
-				//2、重复增加2个循环节点，图片顺序变为：N、1、2...N、1
-				var sliderApi = mui(slider).slider();
-	
-				function toggleLoop(loop) {
+				function homeloop(sliders){
+					var group = sliders.querySelector('.mui-slider-group');
+					var items = mui('.mui-slider-item', group);
+					//克隆第一个节点
+					var first = items[0].cloneNode(true);
+					first.classList.add('mui-slider-item-duplicate');
+					//克隆最后一个节点
+					var last = items[items.length - 1].cloneNode(true);
+					last.classList.add('mui-slider-item-duplicate');
+					var sliderApi = mui(slider).slider();
+					function toggleLoop(loop) {
 						if (loop) {
 							group.classList.add('mui-slider-loop');
 							group.insertBefore(last, group.firstChild);
@@ -718,11 +1315,53 @@
 							sliderApi.gotoItem(0);
 						}
 					}
-				// 执行循环
-				toggleLoop(true);
+					// 执行循环
+					toggleLoop(true);
+				}
+				var slider1 = document.getElementById('Gallery1');
+				var slider2 = document.getElementById('Gallery2');
+				var slider3 = document.getElementById('Gallery3');
+				homeloop(slider1);
+				homeloop(slider2);
+				homeloop(slider3);
 			});
+			
 		}(mui, document));
-		
+		// 回到顶部
+		window.onload = function(){
+		    var obtn = document.getElementById('mui-btn-top');  //获取回到顶部按钮的ID
+		    var clientHeight = document.documentElement.clientHeight;   //获取可视区域的高度
+		    var timer = null; //定义一个定时器
+		    var isTop = true; //定义一个布尔值，用于判断是否到达顶部
+		    window.onscroll = function(){         //滚动条滚动事件
+		        //获取滚动条的滚动高度
+		        var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+		        if(osTop >= clientHeight){  //如果滚动高度大于可视区域高度，则显示回到顶部按钮
+			        obtn.style.display = 'block';
+		        }else{         //否则隐藏
+		            obtn.style.display = 'none';
+		        }
+			    //主要用于判断当 点击回到顶部按钮后 滚动条在回滚过程中，若手动滚动滚动条，则清除定时器
+		        if(!isTop){
+		            clearInterval(timer);
+		        }
+		        isTop = false;
+		    }
+			obtn.addEventListener('tap', function(event) {
+				//设置一个定时器
+		        timer = setInterval(function(){
+		            //获取滚动条的滚动高度
+		            var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+		            //用于设置速度差，产生缓动的效果
+		            var speed = Math.floor(-osTop / 6);
+		            document.documentElement.scrollTop = document.body.scrollTop = osTop + speed;
+		            isTop =true;  //用于阻止滚动事件清除定时器
+		            if(osTop == 0){
+		                clearInterval(timer);
+		            }
+		        },30);
+			}, false);
+		}
 	</script>
 
 </html>

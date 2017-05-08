@@ -7,7 +7,7 @@
 		function jumpPage() {
 			//跳转页面
 			var subpages = [
-				'templete/home.html',
+				'templete/home1.html',
 				'templete/classify.html', 
 				'templete/find.html', 
 				'templete/shopping.html',
