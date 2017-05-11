@@ -125,6 +125,13 @@
 			    font-size: 0;
 			    line-height: 0;
 			}
+			/*显示右边第一个div*/
+			#segmentedControlContents .mui-fycont-right{
+				display: none;
+			}
+			#segmentedControlContents .mui-fycont-right:nth-child(1){
+				display: block;
+			}
 		</style>
 	</head>
 
@@ -3157,47 +3164,48 @@
 			</div>
 		</div>
 
-		<script src="../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init();
-			// 左列表点击选中样式
-			var fyconli = document.querySelectorAll(".mui-fycon-item");
-			var fycons = document.querySelectorAll(".mui-fycont-right");
-			for(var i=0; i<fyconli.length; i++){
-				fyconli[i].index = i;
-				fyconli[i].addEventListener('tap', function(event) {
-					for (var i = 0; i < fycons.length; i++) {
-						fycons[i].style.display = "none";
-					}
-					fycons[this.index].style.display = "block";
-				}, false);	
-			}
-			mui("#fycontul").on("tap",".mui-fycon-item",function(){
-		        var current = document.querySelector("#fycontul>.mui-fycon-item.fycont-active");
-				if (this !== current) {
-					current.classList.remove('fycont-active');
-					this.classList.add('fycont-active');
-				}
-			})
-			// 小统一分类批量点击进入列表页事件
-			mui.plusReady(function() {
-				mui("#segmentedControlContents").on('tap','.mui-fycont-li',function(event){
-					mui.openWindow({
-						url: "../templete/list.html",
-						id: "list",
-						preload: true,
-						show: {
-							aniShow: 'pop-in'
-						},
-						styles: {
-							popGesture: 'hide'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-				}, false);
-			});
-		</script>
+		
 	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		// 左列表点击选中样式
+		var fyconli = document.querySelectorAll(".mui-fycon-item");
+		var fycons = document.querySelectorAll(".mui-fycont-right");
+		for(var i=0; i<fyconli.length; i++){
+			fyconli[i].index = i;
+			fyconli[i].addEventListener('tap', function(event) {
+				for (var i = 0; i < fycons.length; i++) {
+					fycons[i].style.display = "none";
+				}
+				fycons[this.index].style.display = "block";
+			}, false);	
+		}
+		mui("#fycontul").on("tap",".mui-fycon-item",function(){
+	        var current = document.querySelector("#fycontul>.mui-fycon-item.fycont-active");
+			if (this !== current) {
+				current.classList.remove('fycont-active');
+				this.classList.add('fycont-active');
+			}
+		})
+		// 小统一分类批量点击进入列表页事件
+		mui.plusReady(function() {
+			mui("#segmentedControlContents").on('tap','.mui-fycont-li',function(event){
+				mui.openWindow({
+					url: "../templete/list.html",
+					id: "list",
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}, false);
+		});
+	</script>
 </html>

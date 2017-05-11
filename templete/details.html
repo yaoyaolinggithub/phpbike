@@ -26,9 +26,10 @@
 				margin-top: 50px;
 			}
 			.mui-segmented-control.mui-segmented-control-inverted {
-			    width: 65%;
+			    width: 100%;
 			    height: 45px;
 			    margin: auto;
+			    line-height: 11px;
 			}
 			#sliderProgressBar .mui-col-xs-4 {
 			    width: 10%;
@@ -36,32 +37,53 @@
 			}
 			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item {
 			    display: inline-block;
-			    width: 15%;
+			    width: 18%;
     			margin: 0px 14px;
+    			line-height: 45px;
 			}
 			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
-			    border-bottom: 2px solid #222;
-			    color: #222;
-			    height: 35px;
-			    font-weight: 600;
+			    border-bottom: 2px solid #dd2726;
+			    color: #dd2726;
+			    height: 45px;
+			}
+			
+			#detailsHead .mui-icon img{
+				width: 30px;
+			    position: absolute;
+			    top: 7.5px;
+			    right: 15px;
+			}
+			#detailsHead .mui-icon .mui-badge {
+			    position: absolute;
+			    top: 3px;
+			    bottom: -1px;
+			    left: -3px;
+			    right: 5px;
+			    text-align: center;
+			    line-height: 17.5px;
+			    z-index: 1;
 			}
 			/*第一商品指导*/
+			#mui-details-li .mui-slider-indicator {
+				height:35px;
+			}
 			#mui-details-li .mui-slider-indicator .mui-indicator{
-				width: 28px;
-				border-radius: 30px;
-				background: rgba(255,255,255,0.3);
+				width: 10px;
+			    height: 10px;
+			    background: #b5b5b5;
 			}
 			#mui-details-li .mui-slider-indicator .mui-active{
-				background: #9E9E9E;
+				background: #C00;
 			}
 			.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {
 			    border-top: 0px solid #c8c7cc;
 			    border-bottom: 0px solid #c8c7cc;
+			    line-height: 1;
 			}
 			/*测试查看status*/
 			.mui-control-content:nth-child(1) {
 			    background-color: #f0f2f5;
-			    min-height: 936px;
+			    /*min-height: 936px;*/
 			}
 			.mui-control-content:nth-child(2) {
 			    background-color: #f0f2f5;
@@ -72,43 +94,155 @@
 			    /*min-height: 568px;*/
 			}
 			/*测试查看end*/
+			
 			/*商品说明*/
 			.mui-deta-all{
-				padding: 5px 10px;
+				padding: 12px 0px;
 				background: #fff;
 			}
-			.mui-deta-all .deta-all-p{
+			#item1mobile .deta-all-p{
 				color: black;
 				font-size: 1.1rem;
 				line-height: 25px;
+				padding: 15px 0px;
+				position: relative;
+			}
+			#item1mobile .deta-all-p .detaP-P1{
+				width: 80%;
+			    padding: 0% 3%;
+			    font-size: 1rem;
+			    border-right: 1px solid #bec0c2;
+			    overflow: hidden;
+			    display: -webkit-box;
+			    text-overflow: ellipsis;
+			    -webkit-box-orient: vertical;
+			    -webkit-line-clamp: 2;
+			}
+			#item1mobile .deta-all-p .detaP-P2{
+				display: inline-block;
+			    position: absolute;
+			    right: 3%;
+			    top: 0;
+			    bottom: 0;
+			    margin: auto;
+			    width: 50px;
+			    height: 50px;
+			    background: url(../images/homeC2.png) no-repeat center;
+			    background-size: 100%;
 			}
 			.mui-deta-all .deta-all-mon{
-				margin-top:8px ;
 				font-size: 0.8rem;
 				color: #81838e;
 				font-weight: bold;
 			}
 			.mui-deta-all .deta-all-mon .deta-all-span1{
-				font-size:1rem;
+				font-size:1.6rem;
 				color: #f23030;
 			}
 			.deta-all-mon .deta-all-span1 .deta-all-span2{
-				font-size:1.5rem;
+				font-size:1.6rem;
 				font-weight: bold;
 			}
 			.deta-all-mon .deta-all-mo2{
-				margin-top:7px ;
+				margin: 15px 5px 0px;
+				font-weight: normal;
+			}
+			.deta-all-mon .deta-all-mo2 span{
+				display: inline-block;
+				width: 32%;
+			}
+			.deta-all-mon .deta-all-mo2 .deta-mo1-span2{
+				text-align: center;
+			}
+			.deta-all-mon .deta-all-mo2 .deta-mo1-span3{
+				text-align: right;
 			}
 			.deta-all-mon .deta-all-span1 .deta-all-span4{
-				font-size:0.8rem;
-				color: #81838e;
-				font-weight: lighter;
-				text-decoration:line-through;
+				font-size: 0.8rem;
+			    color: white;
+			    font-weight: lighter;
+			    background: #ef0625;
+			    padding: 1px 6px;
 			}
-			.deta-all-mon .deta-mo1-span1 {
-				color: #81838e;
-				font-weight: lighter;
+			.deta-all-mo1 .deta-allTime {
+				color:#F00 ;
+				font-size: 0.8rem;
+				font-weight: normal;
 			}
+			/*商品下来详情*/
+			#detaCommodity .mui-table-view-cell.mui-collapse>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse>.mui-push-right:after {
+			    content: '\e583';
+			    font-size: 1.5rem;
+			}
+			#detaCommodity .mui-table-view-cell.mui-collapse.mui-active>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse.mui-active>.mui-push-right:after {
+			    content: '\e581';
+			}
+			#detaCommodity .mui-table-view-cell:after {
+			    left: 9px;
+			}
+			#detaCommodity .mui-collapse {
+			    color: #666;
+			    line-height: 20px;
+			}
+			#detaCommodity .detaViewSp {
+			    background: red;
+			    color: white;
+			    display: inline-block;
+			    width: 23px;
+			    height: 23px;
+			    text-align: center;
+			    line-height: 23px;
+			    border-radius: 50%;
+			    font-size: 0.85rem;
+			    margin-right: 10px;
+			}
+			#detaCommodity .mui-table-view-cell {
+			    padding: 11px 65px 11px 10px;
+			    font-size: 1rem;
+			    color: #666;
+			    background: white;
+			}
+			#detaCommodity .mui-table-view-cell .mui-table-view .mui-table-view-cell{
+			    padding: 10px ;
+			}
+			#detaCommodity .dcmmodli1{
+			    background: #f2f2f2;
+			}
+			#detaCommodity .dcmmodli1 ul{
+			    background: #f2f2f2;
+			}
+			#detaCommodity .dcmmodli1 .mui-table-view .mui-table-view-cell{
+			    font-size: 0.9rem;
+			}
+			.dcmmodli1 img{
+				float: left;
+				max-width: 25px;
+    			height: 25px;
+    			margin-right: 10px;
+			}
+			#detaCommodity .dcmmodli2 .mui-table-view .mui-table-view-cell{
+			    padding: 0;
+			    margin: 0;
+			}
+			#detaCommodity .dcmmodli2 .deta-cla {
+			    padding:15px 10px 15px 15px;
+			    background: #fff;
+			    margin-top: 0px; 
+			}
+			#detaCommodity .dcmmodli3 button{
+			    color: #dd2724;
+			    font-size: 1.6rem;
+			}  
+			.dcmmodli4 .detaliView1{
+				margin-left: 3%;
+				font-size: 0.96rem;
+			}
+			.dcmmodli4 .detaliView1 .detaliView1-p1{
+				color: #dd2724;
+				font-size: 1.1rem;
+				font-weight:bold;
+			}   
+			
 			/*商品分类*/
 			.deta-cla{
 				padding: 5px 10px;
@@ -155,8 +289,7 @@
 			}
 			/*数量*/
 			.deta-cla-li1 .mui-numbox{
-				margin-left: 11%;
-				height: 28px;
+				height: 35px;
 			}
 			.deta-adv{
 				width: 100%;
@@ -166,17 +299,22 @@
 				margin:10px 0px 50px;
 			}
 			/*第二页商品详情*/
-			.mui-scroll .spin-p{
-				background-color: #f2ebe3;
-			    border-top: 1px solid #ddd2c0;
-			    border-bottom: 1px solid #ddd2c0;
-			    box-shadow: inset 0 1px 0 #fff;
-			    padding: 5px 10px;
-			    margin-bottom:10px;
+			#item2mobile,#item3mobile{
+				background: white;
+			}
+			.mui-scroll .spin-p1{
+			    border-left: 3px solid #f23015;
+			    margin: 10px;
+			    padding: 0px 5px;
+			    font-size: 1rem;
+			    color: #535353;
+			}
+			.mui-scroll .spin-p2{
+			    padding:0px 10px;
 			}
 			.mui-scroll .spin-lis #spin-ul {
-			    margin: 5px 10px;
-				padding: 5px;
+			    margin: 10px 0px;
+				padding: 0px 5px;
 			}
 			.mui-scroll .spin-lis #spin-ul .spin-li{
 				width: 100%;
@@ -188,22 +326,51 @@
 			#spin3{
 				width: 100%;
 				padding: 0px 5px; 
-				
-			}
-			#spin3 .spin3-ul{
-				width: 100%;
 			}
 			#spin3 .spin3-ul {
 				padding: 0;
 				width: 100%;
 			}
 			#spin3 .spin3-ul .spin3-li{
+				margin-top: 20px;
+			    padding-bottom: 10px;
+			    border-bottom: 1px solid #d3d3d5;
+			}
+			#spin3 .spin3d1 .spin3d1l{
+				width: 50px;
+			}
+			#spin3 .spin3-li .spin3d1 .spin3d1l{
+				float: left;
+				margin-right: 15px;
+			}
+			.spin3d1 .spin3d1l img{
 				width: 100%;
-				height: 35px;
-			    padding: 5px;
-				border: 1px solid gainsboro;
-				border-radius: 5px;
-				margin-bottom: 10px;
+			}
+			#spin3 .spin3d1r .spin3d1rp1 {
+				border-bottom: 1px solid #f2f2f2;
+    			padding-bottom: 10px;
+			}
+			#spin3 .spin3d1r .spin3d1rp1s1{
+				font-size:1.2rem;
+				color: black;
+			}
+			#spin3 .spin3d1 .spin3d1r .spin3d1rp1s2{
+				float: right;
+			}
+			#spin3 .spin3d1 .spin3d1rp2 img{
+				width: 100px;
+			}
+			#spin3 .spin3-li .spin3P1{
+				margin: 10px 0px; 
+			}
+			#spin3 .spin3d1rp1 .spin3d1rp2{
+				display: block;
+				margin-top: 10px;
+			}
+			#spin3 .spin3-li .spin3d2 img{
+				float: left;
+				width: 70px;
+				margin: 5px;
 			}
 			/*底部固定栏*/
 			.mui-nav-sop{
@@ -293,6 +460,10 @@
 	<body>
 		<header class="mui-bar mui-bar-nav" id="detailsHead">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <a class="mui-action-back mui-icon mui-pull-right">
+		    	<span class="mui-badge mui-badge-danger">5</span>
+		    	<img src="../images/flg2.png"/>
+		    </a>
 		</header>
 		<div class="mui-content">
 			
@@ -343,73 +514,102 @@
 									</div>
 								</div>
 								<!--商品说明-->
+								<div class="deta-all-p">
+									<span class="detaP-P1">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</span>
+									<span class="detaP-P2"></span>
+								</div>
 								<div class="mui-deta-all">
-									<div class="deta-all-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div>
+									
 									<div class="deta-all-mon">
 										<div class="deta-all-mo1">
-											<span class="deta-all-span1">￥<span class="deta-all-span2">129</span><span class="deta-all-span3">.00</span>
-												<span class="deta-all-span4">￥139.00</span>
-										</span>
+											<span class="deta-all-span1">
+												￥<span class="deta-all-span2">129</span><span class="deta-all-span3">.00</span>
+												<span class="deta-all-span4">限时团购</span>
+											</span>
+											<span class="deta-allTime">3962天7小时8分56秒</span>
 										</div>
 										<div class="deta-all-mo2">
-											<span class="deta-mo1-span1">商品编号：
-												<span class="deta-mo1-span2">JEX00991006</span>
-											</span>
+											<span class="deta-mo1-span1">折扣：6.3折</span>
+											<span class="deta-mo1-span2">3人评价</span>
+											<span class="deta-mo1-span3">30人已参团</span>
 										</div>
 									</div>
 								</div>
-								<!--商品分类-->
-								<div class="deta-cla">
-									<div class="deta-cla-li1">
-										<span class="deta-cla-sp1">类型</span>
-										<div class="deta-sp1-d">
-											<span class="deta-sp1-p addat">123</span>
-											<span class="deta-sp1-p">123</span>
-											<span class="deta-sp1-p">123</span>
-											<span class="deta-sp1-p">123</span>
-											<span class="deta-sp1-p">123</span>
-											<span class="deta-sp1-p">123</span>
-										</div>
-									</div>
-									<div class="deta-cla-li1">
-										<span class="deta-cla-sp1">颜色</span>
-										<div class="deta-sp1-d">
-											<span class="deta-sp2-p addat">123</span>
-											<span class="deta-sp2-p">123</span>
-											<span class="deta-sp2-p">123</span>
-											<span class="deta-sp2-p">123</span>
-											<span class="deta-sp2-p">123</span>
-											<span class="deta-sp2-p">123</span>
-										</div>
-									</div>
-									<div class="deta-cla-li1">
-										<span class="deta-cla-sp1">规格</span>
-										<div class="deta-sp1-d">
-											<span class="deta-sp3-p addat">123</span>
-											<span class="deta-sp3-p">123</span>
-											<span class="deta-sp3-p">123</span>
-											<span class="deta-sp3-p">123</span>
-											<span class="deta-sp3-p">123</span>
-											<span class="deta-sp3-p">123</span>
-										</div>
-									</div>
-									<!--购买数量-->
-									<div class="deta-cla-li1">
-										<span class="deta-cla-sp1">数量</span>
-										<div class="mui-numbox" data-numbox-min='1' data-numbox-max='20'>
-											<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
-											<input id="test" class="mui-input-numbox" type="number" value="1" />
-											<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
-										</div>
-									</div>
-									
-								</div>
-								<!--广告-->
-								<div class="deta-adv">
-									新人大礼包
-								</div>
+								<!--商品详情-->
+								<ul class="mui-table-view mui-table-view-chevron" id="detaCommodity">
+									<li class="mui-table-view-cell mui-collapse dcmmodli1"><a class="mui-navigate-right" href="#"><span class="detaViewSp">团</span>团购活动</a>
+										<ul class="mui-table-view mui-table-view-chevron">
+											<li class="mui-table-view-cell mui-cf">
+												<img src="../images/details-hui.png"/>订单满300送代金券30元  (活动时间：05月21日 - 05月01日)
+											</li>
+										</ul>
+									</li>
+									<li class="mui-table-view-cell mui-collapse dcmmodli2"><a class="mui-navigate-right" href="#">选择产品属性</a>
+										<ul class="mui-table-view mui-table-view-chevron">
+											<li class="mui-table-view-cell">
+												<div class="deta-cla">
+													<div class="deta-cla-li1">
+														<span class="deta-cla-sp1">类型</span>
+														<div class="deta-sp1-d">
+															<span class="deta-sp1-p addat">123</span>
+															<span class="deta-sp1-p">123</span>
+															<span class="deta-sp1-p">123</span>
+															<span class="deta-sp1-p">123</span>
+															<span class="deta-sp1-p">123</span>
+															<span class="deta-sp1-p">123</span>
+														</div>
+													</div>
+													<div class="deta-cla-li1">
+														<span class="deta-cla-sp1">颜色</span>
+														<div class="deta-sp1-d">
+															<span class="deta-sp2-p addat">123</span>
+															<span class="deta-sp2-p">123</span>
+															<span class="deta-sp2-p">123</span>
+															<span class="deta-sp2-p">123</span>
+															<span class="deta-sp2-p">123</span>
+															<span class="deta-sp2-p">123</span>
+														</div>
+													</div>
+													<div class="deta-cla-li1">
+														<span class="deta-cla-sp1">规格</span>
+														<div class="deta-sp1-d">
+															<span class="deta-sp3-p addat">123</span>
+															<span class="deta-sp3-p">123</span>
+															<span class="deta-sp3-p">123</span>
+															<span class="deta-sp3-p">123</span>
+															<span class="deta-sp3-p">123</span>
+															<span class="deta-sp3-p">123</span>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li class="mui-table-view-cell mui-collapse dcmmodli3"><a class="mui-navigate-right" href="#">购买数量</a>
+										<ul class="mui-table-view mui-table-view-chevron">
+											<li class="mui-table-view-cell">
+												<!--购买数量-->
+												<div class="deta-cla-li1">
+													<div class="mui-numbox" data-numbox-min='1' data-numbox-max='20'>
+														<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+														<input id="test" class="mui-input-numbox" type="number" value="1" />
+														<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li class="mui-table-view-cell mui-collapse dcmmodli4"><a class="mui-navigate-right" href="#">会员专享价</a>
+										<ul class="mui-table-view mui-table-view-chevron">
+											<li class="mui-table-view-cell">
+												<p class="detaliView1">铜牌会员：<span class="detaliView1-p1">9.8折</span></p>
+												<p class="detaliView1">金牌会员：<span class="detaliView1-p1">8.8折</span></p>
+												<p class="detaliView1">钻石会员：<span class="detaliView1-p1">7.8折</span></p>
+											</li>
+										</ul>
+									</li>
+								</ul>
 								
-
 								
 								
 							</div>
@@ -445,7 +645,7 @@
 					</div>
 				</div>
 				
-
+			
 			</div>
 			<!--底部固定栏-->
 			<div class="mui-nav-sop">
@@ -484,8 +684,8 @@
 			$('.mui-scroll-wrapper').scroll({
 				indicators: true //是否显示滚动条
 			});
-			var html2 = '<div class="spin-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div><div class="spin-lis"><ul id="spin-ul"><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li></ul></div>';
-			var html3 = '<div class="spin-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div><div id="spin3"><ul class="spin3-ul"><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li></ul></div>';
+			var html2 = '<div class="spin-lis"><ul id="spin-ul"><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li></ul></div><div class="spin-p1">商品详情</div><div class="spin-p2"><p>三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</p><p>品牌:佳能</p><p>单反级别:入门级</p><p>屏幕尺寸:3英寸</p><p>储存介质:SD卡</p><p>像素:2416万</p><p>上架时间：2016-04-21 13:55</p></div>';
+			var html3 = '<div id="spin3"><ul class="spin3-ul"><li class="spin3-li"><div class="spin3d1"><div class="spin3d1l"><img src="../images/homeC4.png"></div><div class="spin3d1r"><p class="spin3d1rp1 mui-cf"><span class="spin3d1rp1s1">钱***2</span><span class="spin3d1rp1s2">2016-04-21 20:59</span><span class="spin3d1rp2"><img src="../images/detaxping.png"></span></p></div></div><div class="spin3P1">钱***2 评论：宝贝很好，很喜欢	</div><div class="spin3d2 mui-cf"><img src="../images/cuxiao.jpg"><img src="../images/cuxiao.jpg"><img src="../images/cuxiao.jpg"><img src="../images/cuxiao.jpg"></div></li><li class="spin3-li"><div class="spin3d1"><div class="spin3d1l"><img src="../images/homeC4.png"></div><div class="spin3d1r"><p class="spin3d1rp1 mui-cf"><span class="spin3d1rp1s1">钱***2</span><span class="spin3d1rp1s2">2016-04-21 20:59</span><span class="spin3d1rp2"><img src="../images/detaxping.png"></span></p></div></div><div class="spin3P1">钱***2 评论：宝贝很好，很喜欢	</div></li><li class="spin3-li"><div class="spin3d1"><div class="spin3d1l"><img src="../images/homeC4.png"></div><div class="spin3d1r"><p class="spin3d1rp1 mui-cf"><span class="spin3d1rp1s1">钱***2</span><span class="spin3d1rp1s2">2016-04-21 20:59</span><span class="spin3d1rp2"><img src="../images/detaxping.png"></span></p></div></div><div class="spin3P1">钱***2 评论：宝贝很好，很喜欢	</div></li></ul></div>';
 			var item2 = document.getElementById('item2mobile');
 			var item3 = document.getElementById('item3mobile');
 			document.getElementById('slider').addEventListener('slide', function(e) {

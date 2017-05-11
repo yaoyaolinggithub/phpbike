@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>团购列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*头部*/
+			.mui-bar .mui-icon-left-nav{
+				color: gray;
+				font-size: 35px;
+			    padding: 5px;
+			}
+			/*主体*/
+			#buyingCont {
+				background: #fff;
+			}
+			#buyingCont .buying-title{
+				margin: 20px 10px;
+			    border-left: 3px solid red;
+			    text-indent: 5px;
+			    color: #f23030;
+			    font-size: 1.2rem;
+			}
+			#buyingCont .mui-table-view:before,#buyingCont .mui-table-view:after,#buyingCont .mui-table-view-cell:after {
+			    height: 0px;
+			}
+			#buyingCont .mui-table-view .mui-media-object {
+			    max-width: 110px;
+			    height: 110px;
+			}
+			#buyingCont .mui-table-view-cell>a:not(.mui-btn) {
+			     margin: 0px; 
+			}
+			#buyingCont .mui-table-view .mui-media {
+			   	padding: 6px;
+			   	margin: 10px;
+			   	background: #f3f3f3;
+			   	border: 1px solid #ddd;
+			}
+			.buyMed1 .ellMedred1{
+				font-size: 1rem;
+				color: black;
+				margin-bottom: 5px;
+			}
+			.buyMed1 .ellMedred2{
+				color: #FF2233;
+				margin-bottom: 5px;
+				padding-bottom: 5px;
+    			border-bottom: 1px solid #a6a6aa;
+			}
+			.buyMed1 .ellMedred2 .buyMedP1{
+				color: white;
+				background: #e12228;
+				padding: 0px 3px;
+				margin-right: 5px;
+			}
+			.buyMed1 .ellMedred2 .buyMedP3{
+				text-decoration: line-through;
+				margin-left: 13px;
+			}
+			.buyMed2 .ellMedred3{
+				font-size: 12px;
+			}
+			.buyMed2 .ellMedred4 {
+				background: url(../images/mitime.png) no-repeat  left;
+				background-size: 13px;
+			    text-indent: 17px;
+			    line-height: 12px;
+			    margin-top: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" id="buyingHead">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">今天团购</h1>
+		</header>
+		<div class="mui-content mui-scroll-wrapper" id="buyingCont">
+			<div class="mui-scroll">
+				<!--这里放置真实显示的DOM内容-->
+				<div class="buying-title">
+					今日团购
+				</div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/buying1.jpg">
+							<div class="mui-media-body">
+								<div class="buyMed1">
+									<p class='mui-ellipsis ellMedred1'>布雷尔 床 皮床 双人床 真皮床 软床 皮艺床 1.8米婚床</p>
+									<p class='mui-ellipsis ellMedred2'><span class="buyMedP1">2.5折</span>￥<span class="buyMedP2">228.00</span>元<span class="buyMedP3">￥1580.00元</span></p>
+								</div>
+								<div class="buyMed2">
+									<p class='mui-ellipsis ellMedred3'>已售21件</p>
+									<p class='mui-ellipsis ellMedred4' id="ellMTime1">
+										0天0时0分0秒
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/buying1.jpg">
+							<div class="mui-media-body">
+								<div class="buyMed1">
+									<p class='mui-ellipsis ellMedred1'>布雷尔 床 皮床 双人床 真皮床 软床 皮艺床 1.8米婚床</p>
+									<p class='mui-ellipsis ellMedred2'><span class="buyMedP1">2.5折</span>￥<span class="buyMedP2">228.00</span>元<span class="buyMedP3">￥1580.00元</span></p>
+								</div>
+								<div class="buyMed2">
+									<p class='mui-ellipsis ellMedred3'>已售21件</p>
+									<p class='mui-ellipsis ellMedred4' id="ellMTime2">
+										0天0时0分0秒
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/buying1.jpg">
+							<div class="mui-media-body">
+								<div class="buyMed1">
+									<p class='mui-ellipsis ellMedred1'>布雷尔 床 皮床 双人床 真皮床 软床 皮艺床 1.8米婚床</p>
+									<p class='mui-ellipsis ellMedred2'><span class="buyMedP1">2.5折</span>￥<span class="buyMedP2">228.00</span>元<span class="buyMedP3">￥1580.00元</span></p>
+								</div>
+								<div class="buyMed2">
+									<p class='mui-ellipsis ellMedred3'>已售21件</p>
+									<p class='mui-ellipsis ellMedred4' id="ellMTime3">
+										0天0时0分0秒
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/buying1.jpg">
+							<div class="mui-media-body">
+								<div class="buyMed1">
+									<p class='mui-ellipsis ellMedred1'>布雷尔 床 皮床 双人床 真皮床 软床 皮艺床 1.8米婚床</p>
+									<p class='mui-ellipsis ellMedred2'><span class="buyMedP1">2.5折</span>￥<span class="buyMedP2">228.00</span>元<span class="buyMedP3">￥1580.00元</span></p>
+								</div>
+								<div class="buyMed2">
+									<p class='mui-ellipsis ellMedred3'>已售21件</p>
+									<p class='mui-ellipsis ellMedred4' id="ellMTime4">
+										0天0时0分0秒
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/buying1.jpg">
+							<div class="mui-media-body">
+								<div class="buyMed1">
+									<p class='mui-ellipsis ellMedred1'>布雷尔 床 皮床 双人床 真皮床 软床 皮艺床 1.8米婚床</p>
+									<p class='mui-ellipsis ellMedred2'><span class="buyMedP1">2.5折</span>￥<span class="buyMedP2">228.00</span>元<span class="buyMedP3">￥1580.00元</span></p>
+								</div>
+								<div class="buyMed2">
+									<p class='mui-ellipsis ellMedred3'>已售21件</p>
+									<p class='mui-ellipsis ellMedred4' id="ellMTime5">
+										0天0时0分0秒
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../images/buying1.jpg">
+							<div class="mui-media-body">
+								<div class="buyMed1">
+									<p class='mui-ellipsis ellMedred1'>布雷尔 床 皮床 双人床 真皮床 软床 皮艺床 1.8米婚床</p>
+									<p class='mui-ellipsis ellMedred2'><span class="buyMedP1">2.5折</span>￥<span class="buyMedP2">228.00</span>元<span class="buyMedP3">￥1580.00元</span></p>
+								</div>
+								<div class="buyMed2">
+									<p class='mui-ellipsis ellMedred3'>已售21件</p>
+									<p class='mui-ellipsis ellMedred4' id="ellMTime6">
+										0天0时0分0秒
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					
+
+	
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" >
+		mui.init();
+		mui('.mui-scroll-wrapper').scroll({
+			deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+		});
+		// 团购倒计时
+		var buYinDay = new Array();
+		function buYinClcio(key){
+			var daysms = 24 * 60 * 60 * 1000;
+			var hoursms = 60 * 60 * 1000;
+			var Secondms = 60 * 1000;
+			var microsecond = 1000;
+			var DifferHour = -1;
+			var DifferMinute = -1;
+			var DifferSecond = -1;
+			var time = new Date()
+			var hour = time.getHours()
+			var minute = time.getMinutes()
+		   	var second = time.getSeconds()
+		   	var timevalue = ""+((hour > 12) ? hour-12:hour)
+		   	timevalue +=((minute < 10) ? ":0":":")+minute
+		   	timevalue +=((second < 10) ? ":0":":")+second
+		   	timevalue +=((hour >12 ) ? " PM":" AM")
+		   	var convertHour = DifferHour
+		   	var convertMinute = DifferMinute
+		   	var convertSecond = DifferSecond
+		   	var Diffms = buYinDay[key].getTime() - time.getTime()
+		   	DifferHour = Math.floor(Diffms / daysms)
+		   	Diffms -= DifferHour * daysms
+		   	DifferMinute = Math.floor(Diffms / hoursms)
+		   	Diffms -= DifferMinute * hoursms
+		   	DifferSecond = Math.floor(Diffms / Secondms)
+		   	Diffms -= DifferSecond * Secondms
+		   	var dSecs = Math.floor(Diffms / microsecond)
+		  
+			if(convertHour != DifferHour) e=DifferHour;
+		   	if(convertMinute != DifferMinute) f=DifferMinute;
+		   	if(convertSecond != DifferSecond) g=DifferSecond;
+		    h=dSecs;
+		    if (DifferHour>0){
+		    	e=e
+		    }else{
+		    	e='0'
+		    }
+		    document.getElementById("ellMTime"+key).innerHTML = e+"天" + f+"时" + g+"分" + h+"秒"; 
+		}
+		buYinDay['1'] = new Date('2017/08/16 10:50:43');
+		buYinDay['2'] = new Date('2017/05/10 14:33:00');
+		buYinDay['3'] = new Date('2017/05/13 21:32:55');
+		buYinDay['4'] = new Date('2017/08/16 10:50:43');
+		buYinDay['5'] = new Date('2017/05/10 16:45:16');
+		buYinDay['6'] = new Date('2017/05/13 21:32:55');
+		window.setInterval(function(){
+			buYinClcio('1');
+			buYinClcio('2');
+			buYinClcio('3');
+			buYinClcio('4');
+			buYinClcio('5');
+			buYinClcio('6');
+		}, 1000);
+		mui.plusReady(function() {
+			mui("#buyingCont").on('tap','.mui-table-view-cell',function(event){
+				mui.openWindow({
+					url: "details.html",
+					id: "details",
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}, false);
+		});
+	</script>
+</html>

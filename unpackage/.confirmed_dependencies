@@ -118,7 +118,8 @@
 			"css/mui.min.css",
 			"fonts/mui.ttf",
 			"contents/fycont.html",
-			"js/mui.min.js"
+			"js/mui.min.js",
+			"images/seapage.png"
 		],
 		"refer": [
 			"contents/fycont.html",
@@ -129,7 +130,11 @@
 		"resources": [
 			"css/mui.min.css",
 			"images/carr1.jpg",
-			"js/mui.min.js"
+			"js/mui.min.js",
+			"images/carr2.jpg",
+			"images/carr4.jpg",
+			"images/carr3.jpg",
+			"images/carr5.jpg"
 		],
 		"refer": [
 			"templete/list.html"
@@ -330,7 +335,8 @@
 			"font_about/iconfont.woff",
 			"font_about/iconfont.css",
 			"images/carr1.jpg",
-			"js/mui.min.js"
+			"js/mui.min.js",
+			"images/detagou.gif"
 		],
 		"refer": [
 			"templete/shopping.html",
@@ -452,7 +458,13 @@
 			"images/homeC3.png",
 			"css/mui.min.css",
 			"images/homeCont8.jpg",
-			"images/carr1.jpg"
+			"images/carr1.jpg",
+			"images/homeF2.jpg",
+			"images/top.png",
+			"images/cuxiao2.jpg",
+			"images/homeF3.jpg",
+			"images/cuxiao1.jpg",
+			"images/carr2.jpg"
 		]
 	}
 }
