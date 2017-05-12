@@ -18,7 +18,7 @@ header{
 li{list-style: none;}
 /*选项卡调色*/
 .mui-bar .mui-tab-item span{
-   	color: gray;
+   	color: #232326;
    	font-weight: bold; 
    	opacity: 0.6;
 }

@@ -1,0 +1,482 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车主体</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			/*登录购物车*/
+			.mui-scroll .mui-sop-int{
+				width: 100%;
+				padding: 10px 45px;
+				background: white;
+				text-align: center;
+			}
+			.mui-scroll .mui-sop-int .mui-sop1{
+				display: inline-block;
+			    width: 30px;
+			    height: 30px;
+			    background: url(../images/sop.png) 0 0 no-repeat;
+			    background-size: 100%;
+			    vertical-align: top;
+			}
+			.mui-scroll .mui-sop-int .mui-sop2{
+				font-size: 12px;
+				line-height: 2rem;
+				color: #abaaaa;
+				margin-left: 10px;
+			}
+			.mui-scroll .mui-sop-int .mui-sop3{
+				margin-left: 20px;
+				background:#f23030;	
+				display: inline-block;
+			    font-size: 12px;
+			    padding: 0 17px;
+			    line-height: 29px;
+			}
+			/*购物车商品*/
+			#ngCom{
+				width: 100%;
+			    height: 100%;				
+			    background: white;
+			    margin-top: 10px;
+			    padding: 0;
+			}
+			.Supplier {
+				border-bottom: 1px solid #ebebeb;
+			    font-size: 0.9rem;
+			    font-weight: bolder;
+			    padding: 10px 0px;
+			}
+			.Supplier .Supplier1{
+				display: inline-block;
+			    height: 30px;
+			    line-height: 30px;
+			    text-indent: 30px;
+			    background: url(../images/ngconG1.png) no-repeat center left;
+			    background-size: 30%;
+			    margin-left: 10px;
+			}
+			#ngCom .ngcontLi1{
+				border-bottom:2px solid #ebebeb;
+			}
+			#ngCom .mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio] {
+			    left: 7px;
+			    top: 55%;
+			}
+			.mui-checkbox input[type=checkbox]:checked:before, .mui-radio input[type=radio]:checked:before {
+			    color: rgb(242, 48, 48);
+			}
+			#ngCom .mui-rig-con{
+				margin: 10px 0px 6px 40px;
+				position: relative;
+			}
+			#ngCom .mui-input-row img{
+				width: 80px;
+    			height: 80px;
+			    border: 1px solid #e3e5e9;
+			}
+			#ngCom .mui-rig-con .mui-rig-h1{
+				padding-left: 90px;
+				position: absolute;
+				top: 0;
+			}
+			#ngCom .mui-rig-con .mui-rig-h1 .mui-rig1{
+				margin-bottom: 3px;
+				font-size: 1rem;
+			    vertical-align: middle;
+			    display: -webkit-box;
+			    -webkit-box-pack: center;
+			    -webkit-box-align: start;
+			    color: #232326;
+			    word-break: break-all;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    line-height: 17px;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			}
+			#ngCom .mui-rig2{
+			    margin-bottom: 3px;
+			    white-space: nowrap;
+			    display: -webkit-box;
+			}
+			#ngCom .mui-rig2 .mui-pri-spn1{
+				margin-right: 5px;
+				display: block;
+			    -webkit-box-flex: 1;
+			    -webkit-flex: 1;
+			    -ms-flex: 1;
+			    flex: 1;
+			    -webkit-flex-basis: 0;
+			    -ms-flex-preferred-size: 0;
+			    flex-basis: 0;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    font-size: 0.9rem;
+    			color: #f23030;
+			}
+			#ngCom .mui-rig2 .mui-pri-spn1 strong{
+				font-size: 1.2rem;
+    			font-weight: normal;
+			}
+			#ngCom .mui-rig2 .mui-rig2-spn2{
+				display: block;
+			    -webkit-box-flex: 1;
+			    -webkit-flex: 1;
+			    -ms-flex: 1;
+			    flex: 1;
+			    -webkit-flex-basis: 0;
+			    -ms-flex-preferred-size: 0;
+			    flex-basis: 0;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    font-size: 1rem;
+    			color: #999;
+    			text-decoration: line-through;
+			}
+			#ngCom .mui-rig-price{
+				margin-top: 11px;
+				position: relative;
+			}
+			#ngCom .mui-rig-price .mui-pri-spn1{
+				font-size: 0.9rem;
+    			color: #f23030;
+			}
+			#ngCom .mui-rig-price .mui-pri-spn1 strong{
+				font-size: 1.2rem;
+				font-weight: normal;
+			}
+			#ngCom .mui-rig-price .mui-pri-box{
+				width: 84px;
+				height: 24px;
+				padding: 0 25px;
+				background: white;
+				margin: 0;
+    			float: none;
+			}
+			#ngCom .mui-rig-price button{
+				width: 25px;
+			}
+			#ngCom .mui-rig-price .mui-pri-box #mui-pri-num{
+				font-size: 1rem;
+				float: left;
+			}
+			#ngCom .mui-pri-spn2{
+				display: inline-block;
+			    width: 30px;
+			    height: 30px;
+			    background: url(../images/ngcontG2.png) no-repeat center;
+			    background-size: 85%;
+			    position: absolute;
+			    right: 10px;
+			    bottom: 0;
+			}
+			/*底部购物车结算*/
+			.mui-sop-bot{
+				width: 100%;
+				height: 50px;
+				position: fixed;
+				bottom: -1px;
+				z-index: 10;
+				margin: 0px;
+			    border: 0px solid #ddd;
+			    border-radius: 0px;
+			}
+			.mui-sop-bot .mui-input-group,.mui-sop-bot .mui-input-row{
+				height: 100%;
+			}
+			.mui-sop-bot .mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio] {
+			    left: 8px;
+			    top: 8px;
+			}
+			.mui-sop-bot .mui-botP1{
+			    font-size: 0.8rem;
+			    color: #232326;
+			    display: table-cell;
+			    vertical-align: middle;
+			    line-height: 44px;
+			    font-weight: bold;
+			    position: absolute;
+			    left: 39px;
+			}
+			.mui-sop-bot .mui-botP2{
+				margin-left: 26%;
+			    font-size: 0.9rem;
+			    color: #232326;
+			    line-height: 44px;
+			    font-weight: bold;
+			}
+			.mui-sop-bot .mui-botP4{
+				display: inline-block;
+			    max-width: 98px;
+			    line-height: 50px;
+			    text-align: center;
+			    background: #f23030;
+			    color: #fff;
+			    font-size: 16px;
+			    height: 100%;
+			    width: 100px;
+			    position: absolute;
+			    right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<!--登录购物车-->
+				<div class="mui-sop-int">
+					<span class="mui-sop1"></span>
+					<span class="mui-sop2">登录挑选更多精品</span>
+					<button type="button" class="mui-btn mui-btn-danger mui-sop3" id="nglong">登录</button>
+				</div>
+				<!--购物车商品-->
+				<ul id="ngCom">
+					<li class="ngcontLi1">
+						
+						<div class="mui-input-row mui-checkbox mui-left">
+							<div class="Supplier">
+								<span class="Supplier1">供货商：</span>
+								<span class="Supplier2">比客商城</span>
+							</div>
+							<input name="checkbox" value="Item 1" type="checkbox" checked>
+							<div class="mui-rig-con">
+								<a href="#">
+									<img src="../images/comm.jpg" alt="图片" />
+								</a>
+								<div class="mui-rig-h1">
+									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+									<div class="mui-rig2">
+										<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+										<span class="mui-rig2-spn2">¥1499.00</span>
+									</div>
+									<div class="mui-rig-price">
+										<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+											<button class="mui-btn-numbox-minus" type="button">-</button>
+											<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+											<button class="mui-btn-numbox-plus" type="button">+</button>
+										</div>
+										<span class="mui-pri-spn2 mui-btn"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="ngcontLi1">
+						
+						<div class="mui-input-row mui-checkbox mui-left">
+							<div class="Supplier">
+								<span class="Supplier1">供货商：</span>
+								<span class="Supplier2">比客商城</span>
+							</div>
+							<input name="checkbox" value="Item 1" type="checkbox" checked>
+							<div class="mui-rig-con">
+								<a href="#">
+									<img src="../images/comm.jpg" alt="图片" />
+								</a>
+								<div class="mui-rig-h1">
+									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+									<div class="mui-rig2">
+										<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+										<span class="mui-rig2-spn2">¥1499.00</span>
+									</div>
+									<div class="mui-rig-price">
+										<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+											<button class="mui-btn-numbox-minus" type="button">-</button>
+											<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+											<button class="mui-btn-numbox-plus" type="button">+</button>
+										</div>
+										<span class="mui-pri-spn2 mui-btn"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="ngcontLi1">
+						
+						<div class="mui-input-row mui-checkbox mui-left">
+							<div class="Supplier">
+								<span class="Supplier1">供货商：</span>
+								<span class="Supplier2">比客商城</span>
+							</div>
+							<input name="checkbox" value="Item 1" type="checkbox" checked>
+							<div class="mui-rig-con">
+								<a href="#">
+									<img src="../images/comm.jpg" alt="图片" />
+								</a>
+								<div class="mui-rig-h1">
+									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+									<div class="mui-rig2">
+										<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+										<span class="mui-rig2-spn2">¥1499.00</span>
+									</div>
+									<div class="mui-rig-price">
+										<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+											<button class="mui-btn-numbox-minus" type="button">-</button>
+											<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+											<button class="mui-btn-numbox-plus" type="button">+</button>
+										</div>
+										<span class="mui-pri-spn2 mui-btn"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="ngcontLi1">
+						
+						<div class="mui-input-row mui-checkbox mui-left">
+							<div class="Supplier">
+								<span class="Supplier1">供货商：</span>
+								<span class="Supplier2">比客商城</span>
+							</div>
+							<input name="checkbox" value="Item 1" type="checkbox" checked>
+							<div class="mui-rig-con">
+								<a href="#">
+									<img src="../images/comm.jpg" alt="图片" />
+								</a>
+								<div class="mui-rig-h1">
+									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+									<div class="mui-rig2">
+										<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+										<span class="mui-rig2-spn2">¥1499.00</span>
+									</div>
+									<div class="mui-rig-price">
+										<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+											<button class="mui-btn-numbox-minus" type="button">-</button>
+											<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+											<button class="mui-btn-numbox-plus" type="button">+</button>
+										</div>
+										<span class="mui-pri-spn2 mui-btn"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+
+				</ul>
+				
+					
+			</div>
+				
+		</div>
+			
+		</div>
+		<!--底部购物车结算-->
+		<div class="mui-sop-bot mui-card">
+			<form class="mui-input-group">
+				<div class="mui-input-row mui-checkbox mui-left">
+					<input name="checkbox" value="Item 1" type="checkbox" >
+					<span class="mui-botP1">全选</span>
+					<span class="mui-botP2">总额：¥<span class="mui-botP3"> 9197.00</span></span>
+					<span class="mui-botP4">
+						去结算
+					</span>
+				</div>
+			</form>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '',
+						callback: pullupRefresh
+					}
+				}
+			});
+			
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+			}
+			mui.plusReady(function(){
+				// 跳转登录页
+				var ngBtn = document.getElementById("nglong");
+				ngBtn.addEventListener("tap",function(event){
+					mui.openWindow({
+						url:"../templete/login.html",
+						id:"login",
+						preload:true,
+						show:{
+							aniShow:"none"
+						},
+						styles:{
+							popGesture:"hide"
+						},
+						waiting:{
+							autoShow:false
+						}
+					})
+				},false);
+				// 跳转购买  填写地址页
+				var botP4Btn = document.querySelector(".mui-botP4");
+				botP4Btn.addEventListener('tap', function(event) {
+					mui.openWindow({
+						url: 'siteCity.html',
+						id: 'siteCity',
+						preload: true,
+						show: {
+							aniShow: 'none'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				
+				// 推荐LI批量进入详情页
+				mui("#ngCom").on('tap','.mui-rig1',function(event){
+					mui.openWindow({
+						url: "../templete/details.html",
+						id: "details",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				
+			})
+			//购物车商品demo，拖拽后显示操作图标，点击操作图标删除元素；
+			var btnArray = ['确认', '取消'];
+			mui('#ngCom').on('tap', '.mui-btn', function(event) {
+				var elem = this;
+				var li = elem.parentNode.parentNode.parentNode.parentNode.parentNode;
+				console.log(li);
+				mui.confirm('确认删除该商品？', '比客网商', btnArray, function(e) {
+					if (e.index == 0) {
+						li.parentNode.removeChild(li);
+					} else {
+						setTimeout(function() {
+							mui.swipeoutClose(li);
+						}, 0);
+					}
+				});
+			});
+//			mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
+		</script>
+</html>

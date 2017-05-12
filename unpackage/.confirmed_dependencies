@@ -336,7 +336,9 @@
 			"font_about/iconfont.css",
 			"images/carr1.jpg",
 			"js/mui.min.js",
-			"images/detagou.gif"
+			"images/detagou.gif",
+			"images/details-hui.png",
+			"images/detaxping.png"
 		],
 		"refer": [
 			"templete/shopping.html",
@@ -465,6 +467,19 @@
 			"images/homeF3.jpg",
 			"images/cuxiao1.jpg",
 			"images/carr2.jpg"
+		],
+		"refer": [
+			"templete/buying.html",
+			"templete/details.html"
+		]
+	},
+	"templete/buying.html": {
+		"resources": [
+			"css/mui.min.css",
+			"images/buying1.jpg"
+		],
+		"refer": [
+			"templete/details.html"
 		]
 	}
 }

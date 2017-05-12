@@ -602,7 +602,9 @@
 					"font_about/iconfont.eot",
 					"font_about/iconfont.ttf",
 					"font_about/iconfont.svg",
-					"images/detagou.gif"
+					"images/detagou.gif",
+					"images/details-hui.png",
+					"images/detaxping.png"
 				],
 				"refer": [
 					"templete/shopping.html",
@@ -740,7 +742,20 @@
 					"images/cuxiao1.jpg",
 					"images/carr2.jpg"
 				],
-				"refer": [],
+				"refer": [
+					"templete/buying.html",
+					"templete/details.html"
+				],
+				"priority": 0
+			},
+			"templete/buying.html": {
+				"resources": [
+					"css/mui.min.css",
+					"images/buying1.jpg"
+				],
+				"refer": [
+					"templete/details.html"
+				],
 				"priority": 0
 			}
 		},
