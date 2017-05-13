@@ -10,13 +10,13 @@
 		<link href="../css/mui.min.css" rel="stylesheet" />
 		<style type="text/css">
 			/*登录购物车*/
-			.mui-scroll .mui-sop-int{
+			#ngContScr .mui-sop-int{
 				width: 100%;
 				padding: 10px 45px;
 				background: white;
 				text-align: center;
 			}
-			.mui-scroll .mui-sop-int .mui-sop1{
+			#ngContScr .mui-sop-int .mui-sop1{
 				display: inline-block;
 			    width: 30px;
 			    height: 30px;
@@ -24,13 +24,13 @@
 			    background-size: 100%;
 			    vertical-align: top;
 			}
-			.mui-scroll .mui-sop-int .mui-sop2{
+			#ngContScr .mui-sop-int .mui-sop2{
 				font-size: 12px;
 				line-height: 2rem;
 				color: #abaaaa;
 				margin-left: 10px;
 			}
-			.mui-scroll .mui-sop-int .mui-sop3{
+			#ngContScr .mui-sop-int .mui-sop3{
 				margin-left: 20px;
 				background:#f23030;	
 				display: inline-block;
@@ -45,6 +45,7 @@
 			    background: white;
 			    margin-top: 10px;
 			    padding: 0;
+			    margin-bottom: 50px;
 			}
 			.Supplier {
 				border-bottom: 1px solid #ebebeb;
@@ -190,7 +191,7 @@
 			    border: 0px solid #ddd;
 			    border-radius: 0px;
 			}
-			.mui-sop-bot .mui-input-group,.mui-sop-bot .mui-input-row{
+			.mui-sop-bot .mui-input-row{
 				height: 100%;
 			}
 			.mui-sop-bot .mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio] {
@@ -230,253 +231,326 @@
 		</style>
 	</head>
 	<body>
-		<!--下拉刷新容器-->
-		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
-			<div class="mui-scroll">
-				<!--数据列表-->
-				<!--登录购物车-->
-				<div class="mui-sop-int">
-					<span class="mui-sop1"></span>
-					<span class="mui-sop2">登录挑选更多精品</span>
-					<button type="button" class="mui-btn mui-btn-danger mui-sop3" id="nglong">登录</button>
-				</div>
-				<!--购物车商品-->
-				<ul id="ngCom">
-					<li class="ngcontLi1">
-						
-						<div class="mui-input-row mui-checkbox mui-left">
-							<div class="Supplier">
-								<span class="Supplier1">供货商：</span>
-								<span class="Supplier2">比客商城</span>
-							</div>
-							<input name="checkbox" value="Item 1" type="checkbox" checked>
-							<div class="mui-rig-con">
-								<a href="#">
-									<img src="../images/comm.jpg" alt="图片" />
-								</a>
-								<div class="mui-rig-h1">
-									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
-									<div class="mui-rig2">
-										<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
-										<span class="mui-rig2-spn2">¥1499.00</span>
-									</div>
-									<div class="mui-rig-price">
-										<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
-											<button class="mui-btn-numbox-minus" type="button">-</button>
-											<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
-											<button class="mui-btn-numbox-plus" type="button">+</button>
-										</div>
-										<span class="mui-pri-spn2 mui-btn"></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="ngcontLi1">
-						
-						<div class="mui-input-row mui-checkbox mui-left">
-							<div class="Supplier">
-								<span class="Supplier1">供货商：</span>
-								<span class="Supplier2">比客商城</span>
-							</div>
-							<input name="checkbox" value="Item 1" type="checkbox" checked>
-							<div class="mui-rig-con">
-								<a href="#">
-									<img src="../images/comm.jpg" alt="图片" />
-								</a>
-								<div class="mui-rig-h1">
-									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
-									<div class="mui-rig2">
-										<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
-										<span class="mui-rig2-spn2">¥1499.00</span>
-									</div>
-									<div class="mui-rig-price">
-										<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
-											<button class="mui-btn-numbox-minus" type="button">-</button>
-											<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
-											<button class="mui-btn-numbox-plus" type="button">+</button>
-										</div>
-										<span class="mui-pri-spn2 mui-btn"></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="ngcontLi1">
-						
-						<div class="mui-input-row mui-checkbox mui-left">
-							<div class="Supplier">
-								<span class="Supplier1">供货商：</span>
-								<span class="Supplier2">比客商城</span>
-							</div>
-							<input name="checkbox" value="Item 1" type="checkbox" checked>
-							<div class="mui-rig-con">
-								<a href="#">
-									<img src="../images/comm.jpg" alt="图片" />
-								</a>
-								<div class="mui-rig-h1">
-									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
-									<div class="mui-rig2">
-										<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
-										<span class="mui-rig2-spn2">¥1499.00</span>
-									</div>
-									<div class="mui-rig-price">
-										<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
-											<button class="mui-btn-numbox-minus" type="button">-</button>
-											<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
-											<button class="mui-btn-numbox-plus" type="button">+</button>
-										</div>
-										<span class="mui-pri-spn2 mui-btn"></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="ngcontLi1">
-						
-						<div class="mui-input-row mui-checkbox mui-left">
-							<div class="Supplier">
-								<span class="Supplier1">供货商：</span>
-								<span class="Supplier2">比客商城</span>
-							</div>
-							<input name="checkbox" value="Item 1" type="checkbox" checked>
-							<div class="mui-rig-con">
-								<a href="#">
-									<img src="../images/comm.jpg" alt="图片" />
-								</a>
-								<div class="mui-rig-h1">
-									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
-									<div class="mui-rig2">
-										<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
-										<span class="mui-rig2-spn2">¥1499.00</span>
-									</div>
-									<div class="mui-rig-price">
-										<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
-											<button class="mui-btn-numbox-minus" type="button">-</button>
-											<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
-											<button class="mui-btn-numbox-plus" type="button">+</button>
-										</div>
-										<span class="mui-pri-spn2 mui-btn"></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					
-
-				</ul>
-				
-					
+		<div class="mui-content" id="ngContScr">
+			<!--数据列表-->
+			<!--登录购物车-->
+			<div class="mui-sop-int">
+				<span class="mui-sop1"></span>
+				<span class="mui-sop2">登录挑选更多精品</span>
+				<button type="button" class="mui-btn mui-btn-danger mui-sop3" id="nglong">登录</button>
 			</div>
-				
-		</div>
+			<!--购物车商品-->
 			
+			<ul id="ngCom">
+				<li class="ngcontLi1">				
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="Supplier">
+							<span class="Supplier1">供货商：</span>
+							<span class="Supplier2">比客商城</span>
+						</div>
+						<input name="checkbox" value="Item 1" type="checkbox" checked>
+						<div class="mui-rig-con">
+							<a href="#">
+								<img src="../images/comm.jpg" alt="图片" />
+							</a>
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+									<span class="mui-rig2-spn2">¥1499.00</span>
+								</div>
+								<div class="mui-rig-price">
+									<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+										<button class="mui-btn-numbox-minus" type="button">-</button>
+										<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+										<button class="mui-btn-numbox-plus" type="button">+</button>
+									</div>
+									<span class="mui-pri-spn2 mui-btn"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="ngcontLi1">				
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="Supplier">
+							<span class="Supplier1">供货商：</span>
+							<span class="Supplier2">比客商城</span>
+						</div>
+						<input name="checkbox" value="Item 1" type="checkbox" checked>
+						<div class="mui-rig-con">
+							<a href="#">
+								<img src="../images/comm.jpg" alt="图片" />
+							</a>
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+									<span class="mui-rig2-spn2">¥2499.00</span>
+								</div>
+								<div class="mui-rig-price">
+									<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+										<button class="mui-btn-numbox-minus" type="button">-</button>
+										<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+										<button class="mui-btn-numbox-plus" type="button">+</button>
+									</div>
+									<span class="mui-pri-spn2 mui-btn"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="ngcontLi1">				
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="Supplier">
+							<span class="Supplier1">供货商：</span>
+							<span class="Supplier2">比客商城</span>
+						</div>
+						<input name="checkbox" value="Item 1" type="checkbox" checked>
+						<div class="mui-rig-con">
+							<a href="#">
+								<img src="../images/comm.jpg" alt="图片" />
+							</a>
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+									<span class="mui-rig2-spn2">¥3499.00</span>
+								</div>
+								<div class="mui-rig-price">
+									<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+										<button class="mui-btn-numbox-minus" type="button">-</button>
+										<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+										<button class="mui-btn-numbox-plus" type="button">+</button>
+									</div>
+									<span class="mui-pri-spn2 mui-btn"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="ngcontLi1">				
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="Supplier">
+							<span class="Supplier1">供货商：</span>
+							<span class="Supplier2">比客商城</span>
+						</div>
+						<input name="checkbox" value="Item 1" type="checkbox" checked>
+						<div class="mui-rig-con">
+							<a href="#">
+								<img src="../images/comm.jpg" alt="图片" />
+							</a>
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+									<span class="mui-rig2-spn2">¥4499.00</span>
+								</div>
+								<div class="mui-rig-price">
+									<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+										<button class="mui-btn-numbox-minus" type="button">-</button>
+										<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+										<button class="mui-btn-numbox-plus" type="button">+</button>
+									</div>
+									<span class="mui-pri-spn2 mui-btn"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="ngcontLi1">				
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="Supplier">
+							<span class="Supplier1">供货商：</span>
+							<span class="Supplier2">比客商城</span>
+						</div>
+						<input name="checkbox" value="Item 1" type="checkbox" checked>
+						<div class="mui-rig-con">
+							<a href="#">
+								<img src="../images/comm.jpg" alt="图片" />
+							</a>
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+									<span class="mui-rig2-spn2">¥5499.00</span>
+								</div>
+								<div class="mui-rig-price">
+									<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+										<button class="mui-btn-numbox-minus" type="button">-</button>
+										<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+										<button class="mui-btn-numbox-plus" type="button">+</button>
+									</div>
+									<span class="mui-pri-spn2 mui-btn"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="ngcontLi1">				
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="Supplier">
+							<span class="Supplier1">供货商：</span>
+							<span class="Supplier2">比客商城</span>
+						</div>
+						<input name="checkbox" value="Item 1" type="checkbox" checked>
+						<div class="mui-rig-con">
+							<a href="#">
+								<img src="../images/comm.jpg" alt="图片" />
+							</a>
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+									<span class="mui-rig2-spn2">¥6499.00</span>
+								</div>
+								<div class="mui-rig-price">
+									<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+										<button class="mui-btn-numbox-minus" type="button">-</button>
+										<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+										<button class="mui-btn-numbox-plus" type="button">+</button>
+									</div>
+									<span class="mui-pri-spn2 mui-btn"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="ngcontLi1">				
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="Supplier">
+							<span class="Supplier1">供货商：</span>
+							<span class="Supplier2">比客商城</span>
+						</div>
+						<input name="checkbox" value="Item 1" type="checkbox" checked>
+						<div class="mui-rig-con">
+							<a href="#">
+								<img src="../images/comm.jpg" alt="图片" />
+							</a>
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499</strong>.00</span>
+									<span class="mui-rig2-spn2">¥7499.00</span>
+								</div>
+								<div class="mui-rig-price">
+									<div class="mui-numbox mui-pri-box mui-cf" data-numbox-min='1' data-numbox-max='9'>
+										<button class="mui-btn-numbox-minus" type="button">-</button>
+										<input id="mui-pri-num" class="mui-input-numbox" type="number" value="1" />
+										<button class="mui-btn-numbox-plus" type="button">+</button>
+									</div>
+									<span class="mui-pri-spn2 mui-btn"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				
+			</ul>    
 		</div>
 		<!--底部购物车结算-->
 		<div class="mui-sop-bot mui-card">
-			<form class="mui-input-group">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<input name="checkbox" value="Item 1" type="checkbox" >
-					<span class="mui-botP1">全选</span>
-					<span class="mui-botP2">总额：¥<span class="mui-botP3"> 9197.00</span></span>
-					<span class="mui-botP4">
-						去结算
-					</span>
-				</div>
-			</form>
+			<div class="mui-input-row mui-checkbox mui-left">
+				<input name="checkbox" value="Item 1" type="checkbox" >
+				<span class="mui-botP1">全选</span>
+				<span class="mui-botP2">总额：¥<span class="mui-botP3"> 9197.00</span></span>
+				<span class="mui-botP4">
+					去结算
+				</span>
+			</div>
 		</div>
 	</body>
 	<script src="../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init();
-			mui.init({
-				pullRefresh: {
-					container: '#pullrefresh',
-					up: {
-						contentrefresh: '',
-						callback: pullupRefresh
-					}
+	<script type="text/javascript">
+		mui.init();
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				up: {
+					contentrefresh: '',
+					callback: pullupRefresh
 				}
-			});
-			
-			/**
-			 * 上拉加载具体业务实现
-			 */
-			function pullupRefresh() {
 			}
-			mui.plusReady(function(){
-				// 跳转登录页
-				var ngBtn = document.getElementById("nglong");
-				ngBtn.addEventListener("tap",function(event){
-					mui.openWindow({
-						url:"../templete/login.html",
-						id:"login",
-						preload:true,
-						show:{
-							aniShow:"none"
-						},
-						styles:{
-							popGesture:"hide"
-						},
-						waiting:{
-							autoShow:false
-						}
-					})
-				},false);
-				// 跳转购买  填写地址页
-				var botP4Btn = document.querySelector(".mui-botP4");
-				botP4Btn.addEventListener('tap', function(event) {
-					mui.openWindow({
-						url: 'siteCity.html',
-						id: 'siteCity',
-						preload: true,
-						show: {
-							aniShow: 'none'
-						},
-						styles: {
-							popGesture: 'hide'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-				}, false);
-				
-				// 推荐LI批量进入详情页
-				mui("#ngCom").on('tap','.mui-rig1',function(event){
-					mui.openWindow({
-						url: "../templete/details.html",
-						id: "details",
-						preload: true,
-						show: {
-							aniShow: 'pop-in'
-						},
-						styles: {
-							popGesture: 'hide'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-				}, false);
-				
-			})
-			//购物车商品demo，拖拽后显示操作图标，点击操作图标删除元素；
-			var btnArray = ['确认', '取消'];
-			mui('#ngCom').on('tap', '.mui-btn', function(event) {
-				var elem = this;
-				var li = elem.parentNode.parentNode.parentNode.parentNode.parentNode;
-				console.log(li);
-				mui.confirm('确认删除该商品？', '比客网商', btnArray, function(e) {
-					if (e.index == 0) {
-						li.parentNode.removeChild(li);
-					} else {
-						setTimeout(function() {
-							mui.swipeoutClose(li);
-						}, 0);
+		});
+		
+		/**
+		 * 上拉加载具体业务实现
+		 */
+		function pullupRefresh() {
+		}
+		
+		mui.plusReady(function(){
+			// 跳转登录页
+			var ngBtn = document.getElementById("nglong");
+			ngBtn.addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"../templete/login.html",
+					id:"login",
+					preload:true,
+					show:{
+						aniShow:"none"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false);
+			// 跳转购买  填写地址页
+			var botP4Btn = document.querySelector(".mui-botP4");
+			botP4Btn.addEventListener('tap', function(event) {
+				mui.openWindow({
+					url: 'siteCity.html',
+					id: 'siteCity',
+					preload: true,
+					show: {
+						aniShow: 'none'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: false
 					}
 				});
+			}, false);		
+			// 推荐LI批量进入详情页
+			mui("#ngCom").on('tap','.mui-rig1',function(event){
+				mui.openWindow({
+					url: "../templete/details.html",
+					id: "details",
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}, false);	
+		})
+		//购物车商品demo，拖拽后显示操作图标，点击操作图标删除元素；
+		var btnArray = ['确认', '取消'];
+		mui('#ngCom').on('tap', '.mui-btn', function(event) {
+			var elem = this;
+			var li = elem.parentNode.parentNode.parentNode.parentNode.parentNode;
+			console.log(li);
+			mui.confirm('确认删除该商品？', '比客网商', btnArray, function(e) {
+				if (e.index == 0) {
+					li.parentNode.removeChild(li);
+				} else {
+					setTimeout(function() {
+						mui.swipeoutClose(li);
+					}, 0);
+				}
 			});
-//			mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
-		</script>
+		});	
+		
+		mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
+	</script>
 </html>

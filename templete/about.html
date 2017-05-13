@@ -11,36 +11,47 @@
 		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			/*头部*/
-			#abouthead{
+			.aboutUl1{
 				width: 100%;
-				height: 135px;
+				height: auto;
 				background: url(../images/aboutBJ.png) no-repeat;
-				font-size: 100%;
+				background-size: 100%;
 			}
-			
-			#abouthead .mui-left-se{
+			.aboutUl1 .mui-left-se1,.aboutUl1 .mui-left-se2{
 				width: 100%;
-				height: 50px;
-				overflow: hidden;
+				position: relative;
 			}
-			#abouthead .mui-left-se span{
-				width: 25px;
-				height: 25px;
-				display: block;
-				float: right;
-				margin:10px;
+			.aboutUl1 .mui-left-se1 .mui-se1{
+				width: 48px;
+			    height: 28px;
+			    text-align: center;
+			    line-height: 29px;
+			    font-size: 0.95rem;
+			    display: block;
+			    float: right;
+			    margin: 10px 5px;
+			    color: white;
+			    border-radius: 13px;
+			    background: rgba(51, 47, 47, 0.39);
 			}
-			#abouthead .mui-left-se .mui-se1{
-				background: url(../images/set.png) no-repeat;
-				background-size: 95%;
+			.aboutUl1 .mui-left-se2 .mui-se2{
+			    height: 28px;
+			    text-align: center;
+			    font-size: 0.95rem;
+			    float: right;
+			    margin: 0px 5px;
+			    color: white;
 			}
-			#abouthead .mui-left-se .mui-se2{
-				background: url(../images/newsl.png) no-repeat;
-				background-size: 95%;
+			.aboutUl1 .mui-left-se2 img{
+			    height: 80px;
+			    border-radius: 50%;
+			    margin: 0px 5%;
+			    position: absolute;
+			    bottom: -35px;
 			}
-			#abouthead .mui-hed-left{
+			.aboutUl1 .mui-hed-left{
 				width: 100%;
-				
+				text-align: center;
 			} 
 			.mui-hed-left:after {
 			    content: "";
@@ -49,164 +60,358 @@
 			    clear: both;
 			    visibility: hidden;
 			}
-			#abouthead .mui-hed-left .mui-left-head{
-				float: left;
-				width: 70px;
-				height: 70px;
-				border-radius: 50%;
-				box-shadow: 0 0 0 5px rgba(243, 238, 236, .4);
-			}
-			#abouthead .mui-hed-left .mui-left-head img{
-				width: 100%;
-				height: 100%;
-				border-radius: 50%;
-			}
-			#abouthead .mui-hed-left .mui-left-zu{
-				margin-left: 23px;
+			.aboutUl1 .mui-hed-left .mui-left-zu{
+				color:#fff ;
 				line-height: 4rem;
 				font-size: 1rem;
 			}
-			.mui-left-zu a{
-				color:#ffffff ;
+			/*信息列表*/
+			.aboutUl2{
+				width:100%;
+				margin: 0;
+				padding: 0;
+				background-color: #ffc7c7;;
+				display: flex;
+			}
+			.aboutUl2 .aboutLi1:nth-child(1){
+			    width: 31%;
+			}
+			.aboutUl2 .aboutLi1:nth-child(2),.aboutUl2 .aboutLi1:nth-child(3){
+			    border-right:1px solid gainsboro;
 			}
 			
-			/*主体头部*/
-			.mui-bar-nav~.mui-content {
-			    padding-top: 135px;
+			.aboutUl2 .aboutLi1{
+				display: inline-block;
+				margin: 10px 0px;
+			    width: 23%;
+			    text-align: center;
+			    font-size:0.9rem ;
+			   
+			}
+			.aboutUl2 .aboutLi1 .abLi1p1{
+				font-size:1.2rem ;
+				margin: 10px 0px 1px; 
+				color: #4a4646;
+			}
+			.aboutUl2 .aboutLi1 .abLi1p2{
+				font-size: 0.9rem;
+				margin: 0px 0px 5px; 
+				color: black;
 			}
 			/*订单列表*/
-			.mui-content>.mui-table-view:first-child {
-			    margin-top: 0px;
+			#indent .aboutUl3{
+				margin: 10px 0px;
+				border: 0px;
+				background-color: white;
 			}
-			.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+			#indent .mui-table-view-cell.mui-active,#indent .mui-navigate-right.mui-active{
+			    background-color: #fff;
+			}
+			#indent .aboutUl3 .mui-table-view-cell {
 			    padding:5px 0 ;
-			    width: 20%;
-			    background-color: white;
+			    width: 33.3%;
+			    border: 0px;
 			}
-			.mui-grid-view.mui-grid-9 .mui-media .mui-icon {
-			    font-size: 2em;
-
+			#indent .aboutUl3 .mui-table-view-cell:nth-child(4) {
+			    width: 96%;
+			    margin: 0px 2%;
+			    padding: 5px;
+			    border-top: 1px solid gainsboro;
 			}
-			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
-			    margin: 15px 0px 0px 0px;
+			#indent .aboutUl3 .mui-media .mui-icon {
+			    font-size: 0.8rem;
+			    color:#e41735 ;
+			}
+			#indent .aboutUl3 .mui-table-view-cell .mui-media-body{
+			    margin-top: 3px;
 			    font-size: 0.8rem;
 			}
-			.mui-grid-view.mui-grid-9 .mui-table-view-cell {
-			    border-right: 1px solid white; 
+			.aboutUl3 .mui-navigate-right:after {
+			    right: -5px;
+    			font-size: 1.3rem;
+			    content: '\e583';
 			}
-			.mui-grid-view .mui-table-view-cell:nth-child(5) {
-			    border-left: 1px solid lightgray; 
+			#indent .aboutUl3 .mui-table-view-cell>a:not(.mui-btn) {
+			    margin: 0;
+			    padding: 5px 0;
 			}
-			/*优惠列表列表*/
-			#regalia{
-				margin: 10px 0;
+			#indent .aboutUl3 .mui-table-view-cell:nth-child(1)>a:not(.mui-btn),#indent .aboutUl3 .mui-table-view-cell:nth-child(2)>a:not(.mui-btn) {
+			    border-right: 1px solid darkgray;
 			}
-			#regalia .mui-table-view-cell .mui-icon {
-			    font-size: 1.2em;
+			.aboutUl3 .aboutU3S1{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 0px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
 			}
-			/*相关活动*/
-			#acti .mui-table-view-cell {
-			    width: 25%;
+			.aboutUl3 .aboutU3S2{
+			    display: inline-block;
+			    float: right;
+			    margin-right: 22px;
+			    font-size: 0.8rem;
+			    line-height: 30px;
+			    color: rgba(95, 91, 91, 0.54);
 			}
-			#acti .mui-table-view-cell:nth-child(5) {
-			    border-left: 0px solid lightgray; 
+			/*列表信息1*/
+			#indent .aboutUl4{
+				margin: 10px 0px;
+				border: 0px;
+				background-color: white;
 			}
-			#acti .mui-table-view-cell .icon-xinxing{
-				color: #fa3c3c;
+			#indent .aboutUl4 .mui-table-view-cell {
+			    padding: 5px 10px;
 			}
-			#acti .mui-table-view-cell .icon-dianpu{
-				color: #ffc800;
+			.aboutUl4 .mui-table-view-cell:after {
+			    left: 46px;
 			}
-			#acti .mui-table-view-cell .icon-jiaoyin-copy{
-				color: #ff7e45;
+			#indent .aboutUl4 .mui-table-view-cell>a:not(.mui-btn) {
+			    margin: 0;
+			    padding: 5px 0;
 			}
-			#acti .mui-table-view-cell .icon-kefu{
-				color: #fc6a70;
+			.aboutUl4 .mui-navigate-right:after {
+			    right: -5px;
+    			font-size: 1.3rem;
+			    content: '\e583';
 			}
-			#acti .mui-table-view-cell .icon-huodong{
-				color: #fe8652;
+			.aboutUl4 .aboutU3S2{
+			    display: inline-block;
+			    float: right;
+			    margin-right: 22px;
+			    font-size: 0.8rem;
+			    line-height: 30px;
+			    color: rgba(95, 91, 91, 0.54);
 			}
-		
+			.aboutUl4 .aboutU3S1p1{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 -43px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
+			}
+			.aboutUl4 .aboutU3S1p2{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 -86px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
+			}
+			.aboutUl4 .aboutU3S1p3{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 -129px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
+			}
+			.aboutUl4 .aboutU3S1p4{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 -434px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
+			}
+			.aboutUl4 .aboutU3S1p5{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 -215px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
+			}
+			/*列表信息2*/
+			#indent .aboutUl5{
+				margin: 10px 0px;
+				border: 0px;
+				background-color: white;
+			}
+			#indent .aboutUl5 .mui-table-view-cell {
+			    padding: 5px 10px;
+			}
+			.aboutUl5 .mui-table-view-cell:after {
+			    left: 46px;
+			}
+			#indent .aboutUl5 .mui-table-view-cell>a:not(.mui-btn) {
+			    margin: 0;
+			    padding: 5px 0;
+			}
+			.aboutUl5 .mui-navigate-right:after {
+			    right: -5px;
+    			font-size: 1.3rem;
+			    content: '\e583';
+			}
+			.aboutUl5 .aboutU3S2p1{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 -172px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
+			}
+			.aboutUl5 .aboutU3S2p2{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 -215px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
+			}
+			.aboutUl5 .aboutU3S2p3{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 -390px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
+			}
+			.aboutUl5 .aboutU3S2p4{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    background: url(../images/about-li1.png) 0 0px no-repeat;
+			    background-size: 100%;
+			    float: left;
+			    text-indent: 38px;
+			    font-size: 1.1rem;
+			    line-height: 30px;
+			    color: #484242;
+			}
 		</style>
 	</head>
 	<body>
-		<!--头部-->
-		<header class="mui-bar mui-bar-nav" id="abouthead">
-			<div class="mui-left-se mui-cf">
-				<span class="mui-se2"></span>
-				<span class="mui-se1"></span>
-			</div>
-			<div class="mui-hed-left">
-				<div class="mui-left-head">
-					<img src="../images/user-photo.png"/>
+		
+		<div class="mui-content" id="indent">
+			<!--头部-->
+			<div  class="aboutUl1">
+				<div class="mui-left-se1 mui-cf">
+					<span class="mui-se1">设置</span>
 				</div>
-				<span class="mui-left-zu"><a href="#" id="abolog">登录/注册 > </a></span>
+				<div class="mui-hed-left">
+					<span class="mui-left-zu">用户名</span>
+				</div>
+				<div class="mui-left-se2 mui-cf">
+					<img src="../images/user-photo.png"/>
+					<span class="mui-se2">黄金会员</span>
+				</div>
 			</div>
-		</header>
-		<div class="mui-content">
+			<!--信息列表-->
+			<ul class="aboutUl2">
+				<li  class="aboutLi1">
+					
+				</li>
+				<li  class="aboutLi1">
+					<p class="abLi1p1">3333</p>
+					<p class="abLi1p2">我的订单</p>
+				</li>
+				<li  class="aboutLi1">
+					<p class="abLi1p1">3333</p>
+					<p class="abLi1p2">我的收藏</p>
+				</li>
+				<li  class="aboutLi1">
+					<p class="abLi1p1">3333</p>
+					<p class="abLi1p2">我的评价</p>
+				</li>
+				
+			</ul>
 		    <!--订单列表-->
-			<ul class="mui-table-view mui-grid-view mui-grid-9" id="indent">
+			<ul class="mui-table-view mui-grid-view mui-grid-9 aboutUl3">
 			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon iconfont  icon-yinxingqia"></span>
-			        <div class="mui-media-body">代付款</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon iconfont icon-huoche"><span class="mui-badge">5</span></span>
-			        <div class="mui-media-body">待收货</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon iconfont icon-daipingjia"></span>
+			        <span class="mui-icon">3333</span>
 			        <div class="mui-media-body">待评价</div></a></li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon iconfont icon-gongju"></span>
+			        <span class="mui-icon">3333</span>
 			        <div class="mui-media-body">退换/售后</div></a></li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon iconfont icon-xingzhuang88kaobei3-copy"></span>
+			        <span class="mui-icon">3333</span>
 			        <div class="mui-media-body">我的订单</div></a></li>
-			</ul> 
-			<!--优惠列表列表-->
-			<ul class="mui-table-view mui-grid-view mui-grid-9" id="regalia">
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon ">0</span>
-			        <div class="mui-media-body">积分</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3" id="favoBtn"><a href="#">
-			        <span class="mui-icon ">0</span>
-			        <div class="mui-media-body">优惠卷</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon ">0</span>
-			        <div class="mui-media-body">白条</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon ">0</span>
-			        <div class="mui-media-body">会员卡</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon  iconfont icon-qianbao"></span>
-			        <div class="mui-media-body">我的钱包</div></a></li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right"><span class="aboutU3S1">我的钱包</span><span class="aboutU3S2">查看我的钱包</span></a>
+			    </li>
 			</ul>
-			<!--相关活动-->
-			<ul class="mui-table-view mui-grid-view mui-grid-9" id="acti">
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon iconfont icon-xinxing"></span>
-			        <div class="mui-media-body">商品关注</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon iconfont icon-dianpu"></span>
-			        <div class="mui-media-body">店铺关注</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon iconfont icon-jiaoyin-copy"></span>
-			        <div class="mui-media-body">浏览记录</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3  mui-about-ser"><a href="#">
-			        <span class="mui-icon iconfont icon-kefu"></span>
-			        <div class="mui-media-body">客服服务</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon iconfont icon-huodong"></span>
-			        <div class="mui-media-body">我的活动</div></a></li>
+			<!--列表信息1-->
+			<ul class="mui-table-view aboutUl4">
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right"><span class="aboutU3S1p1">全部订单</span><span class="aboutU3S2">查看订单</span></a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			       	<a class="mui-navigate-right"><span class="aboutU3S1p2">我的优惠券</span></a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right"><span class="aboutU3S1p3">我的评价</span><span class="aboutU3S2">查看评价</span></a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right"><span class="aboutU3S1p4">我的收藏</span></a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right"><span class="aboutU3S1p5">申请体现</span></a>
+			    </li>
 			</ul>
+			<!--列表信息2-->
+			<ul class="mui-table-view aboutUl5">
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right"><span class="aboutU3S2p1">地址管理</span></a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			       	<a class="mui-navigate-right"><span class="aboutU3S2p2">积分余额</span></a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right"><span class="aboutU3S2p3">售后服务</span></a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right"><span class="aboutU3S2p4">我的发展收益</span></a>
+			    </li>
+			</ul>
+			
 		</div>
 		
 	</body>
 	<script type="text/javascript">
 		mui.init();
-		var abologBtn = document.getElementById('abolog');
-		var favoBtn = document.getElementById('favoBtn');
-		var muiSeBtn = document.getElementsByClassName("mui-se1");
-		var aboutserBtn = document.getElementsByClassName("mui-about-ser");
+		var abologBtn = document.querySelector('.mui-left-zu');
+		var favoBtn = document.querySelector('.aboutU3S1p2');
+		var muiSeBtn = document.querySelector(".mui-se1");
+		var aboutserBtn = document.querySelector(".aboutU3S2p3");
+		alert(aboutserBtn)
 		mui.plusReady(function(){
 			// 跳转到登录页面
 			abologBtn.addEventListener('tap',function(){
@@ -226,7 +431,7 @@
 				})
 			})
 			// 跳转到设置页面
-			muiSeBtn[0].addEventListener("tap",function(event){
+			muiSeBtn.addEventListener("tap",function(event){
 				mui.openWindow({
 					url:"setting.html",
 					id:"setting",
@@ -243,7 +448,8 @@
 				})
 			},false)
 			// 跳转到客服页面
-			aboutserBtn[0].addEventListener("tap",function(event){
+			aboutserBtn.addEventListener("tap",function(event){
+				alert(1)
 				mui.openWindow({
 					url:"service.html",
 					id:"service",
@@ -261,6 +467,7 @@
 			},false)
 			// 跳转到优惠劵
 			favoBtn.addEventListener("tap",function(event){
+				alert(2)
 				mui.openWindow({
 					url:"favorable.html",
 					id:"favorable",
