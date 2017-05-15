@@ -72,6 +72,7 @@
 				padding: 0;
 				background-color: #ffc7c7;;
 				display: flex;
+				border-bottom: 1px solid #d4d4d4;
 			}
 			.aboutUl2 .aboutLi1:nth-child(1){
 			    width: 31%;
@@ -136,7 +137,7 @@
 			    padding: 5px 0;
 			}
 			#indent .aboutUl3 .mui-table-view-cell:nth-child(1)>a:not(.mui-btn),#indent .aboutUl3 .mui-table-view-cell:nth-child(2)>a:not(.mui-btn) {
-			    border-right: 1px solid darkgray;
+			    border-right: 1px solid gainsboro;
 			}
 			.aboutUl3 .aboutU3S1{
 				width: 30px;
@@ -146,7 +147,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -195,7 +196,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -207,7 +208,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -219,7 +220,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -231,7 +232,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -243,7 +244,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -276,7 +277,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -288,7 +289,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -300,7 +301,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -312,7 +313,7 @@
 			    background-size: 100%;
 			    float: left;
 			    text-indent: 38px;
-			    font-size: 1.1rem;
+			    font-size: 1rem;
 			    line-height: 30px;
 			    color: #484242;
 			}
@@ -411,7 +412,6 @@
 		var favoBtn = document.querySelector('.aboutU3S1p2');
 		var muiSeBtn = document.querySelector(".mui-se1");
 		var aboutserBtn = document.querySelector(".aboutU3S2p3");
-		alert(aboutserBtn)
 		mui.plusReady(function(){
 			// 跳转到登录页面
 			abologBtn.addEventListener('tap',function(){
@@ -437,7 +437,7 @@
 					id:"setting",
 //					preload:true,
 					show:{
-						aniShow:"none"
+						aniShow:"pop-in"
 					},
 					styles:{
 						popGesture:"hide"
@@ -449,13 +449,12 @@
 			},false)
 			// 跳转到客服页面
 			aboutserBtn.addEventListener("tap",function(event){
-				alert(1)
 				mui.openWindow({
 					url:"service.html",
 					id:"service",
 //					preload:true,
 					show:{
-						aniShow:"none"
+						aniShow:"pop-in"
 					},
 					styles:{
 						popGesture:"hide"
@@ -467,13 +466,12 @@
 			},false)
 			// 跳转到优惠劵
 			favoBtn.addEventListener("tap",function(event){
-				alert(2)
 				mui.openWindow({
 					url:"favorable.html",
 					id:"favorable",
 //					preload:true,
 					show:{
-						aniShow:"none"
+						aniShow:"pop-in"
 					},
 					styles:{
 						popGesture:"hide"

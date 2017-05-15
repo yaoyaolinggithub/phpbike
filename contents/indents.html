@@ -17,18 +17,32 @@
 				background-color: #fff;
     			padding: 14px 13px 12px 10px;
 			}
+			.indet-site::after {
+			    content: '';
+			    display: inline-block;
+			    width: 10px;
+			    height: 10px;
+			    position: absolute;
+			    right: 10px;
+			    top: 40%;
+			    border-right: 1px solid #fff;
+			    border-top: 1px solid #fff;
+			    -webkit-transform: rotate(45deg);
+			}
 			/*收货信息*/
 			#indetCon .indet-site .si-name span{
-				margin-left: 23px;
-				font-size: 1rem;
-			    color: #252525;
+				font-size: 0.9rem;
+			    color: white;
 			    font-weight: bold;
+			}
+			.si-name .si-name1{
+				margin-left: 22px;
 			}
 			#indetCon .indet-site .si-name .si-name2{
 				margin-left: 50px;
 			}
 			#indetCon .indet-site .si-name{
-				padding-bottom: 10px;
+				padding-bottom: 5px;
 			}
 			#indetCon .indet-site .si-site{
 			    padding-left: 22px;
@@ -46,28 +60,31 @@
 			    top: 5px;
 			}
 			#indetCon .si-site .si-site2{
-				font-size: 0.95rem;
-			    color: #232326;
+				font-size: 0.9rem;
+			    color: white;
 			    line-height: 22px;
 			}
 			#indetCon .indet-site{
 				position: relative;
-			}
-			#indetCon .si-bot{
-				position: absolute;
-			    bottom: 1px;
-			    left: 0;
-			    height: 3px;
-			    width: 100%;
-			    background: url(../images/cai.png) repeat-x;
-			    background-size: 80px 4px;
-			    margin-bottom: 0px;
+				background: #5e6b85;
+				padding-right: 20px;
 			}
 			/*商品信息*/
 			#indetCon .indet-comm{
 				position: relative;
-				margin-top: 10px;
-				padding-top: 1px;
+				padding-top: 0px;
+			}
+			.indet-comm-ulHead {
+				padding: 10px 0px;
+				border-bottom: 1px solid gainsboro;
+			}
+			.indet-comm-ulHead .ulHead-P{
+				display: inline-block;
+			    text-indent: 20px;
+			    background: url(../images/ngconG1.png) no-repeat center left;
+			    background-size: 22%;
+			    font-size: 0.95rem;
+			    font-weight: bold;
 			}
 			#indetCon .indet-comm .indet-comm-ul{
 				padding: 0;
@@ -75,7 +92,9 @@
 			}
 			#indetCon .indet-comm .indet-comm-ul .indet-comm-li{
 				position: relative;
-				margin-top: 13px;
+			    margin-top: 12px;
+			    padding-bottom: 8px;
+			    border-bottom: 1px solid gainsboro;
 			}
 			#indetCon .indet-comm img{
 				width: 80px;
@@ -88,7 +107,7 @@
 			    top: 0;
 			}
 			#indetCon .mui-rig-h1 .mui-rig1{
-			    margin-bottom: 7px;
+			    margin-bottom: 10px;
 			    font-size: 0.9rem;
 			    vertical-align: middle;
 			    display: -webkit-box;
@@ -100,7 +119,7 @@
 			    text-overflow: ellipsis;
 			    line-height: 15px;
 			    display: -webkit-box;
-			    -webkit-line-clamp: 1;
+			    -webkit-line-clamp: 2;
 			    -webkit-box-orient: vertical;
 			}
 			#indetCon .mui-rig-h1 .mui-rig2{
@@ -140,8 +159,7 @@
 			    white-space: nowrap;
 			}
 			#indetCon .mui-rig-price {
-			    margin-top: 8px;
-			    line-height: 28px;
+			    margin-top: 10px;
 			}
 			#indetCon .mui-rig-price .mui-pri-spn1 {
 			    font-size: 0.9rem;
@@ -152,9 +170,9 @@
 			    font-weight: normal;
 			}
 			#indetCon .mui-indet-value{
-				color:#848689;
-				float: right;
-				padding-right: 50px;
+				color: black;
+			    float: right;
+			    font-weight: bold;
 			}
 			/*优惠劵*/
 			#indetCon .indet-favorable{
@@ -235,17 +253,20 @@
 		    <!--收货信息-->
 		    <div class="indet-site">
 		    	<div class="si-name">
-		    		<span class="si-name1">某某某</span>
+		    		<span class="si-name1">收货人：<span class="si-name1-a">某某某</span></span>
 		    		<span class="si-name2">12345678910</span>
 		    	</div>
 		    	<div class="si-site">
 		    		<span class="si-site1"></span>
-		    		<span class="si-site2">广东广州市天河区新世界东逸花园逸晴居小区-东方三路200号</span>
+		    		
+		    		<span class="si-site2">收货地址：<span class="si-site2-a">广东广州市天河区新世界东逸花园逸晴居小区-东方三路200号</span></span>
 		    	</div>
-		    	<p class="si-bot"></p>
 		    </div>
 		    <!--商品信息-->
 		    <div class="indet-comm">
+		    	<div class="indet-comm-ulHead">
+		    		<span class="ulHead-P">比客商城</span>
+		    	</div>
 		    	<ul class="indet-comm-ul">
 		    		<li class="indet-comm-li">
 		    			<img src="../images/comm.jpg" alt="图片" />
@@ -294,6 +315,16 @@
 								</div>
 							</div>
 						</div>
+		    		</li>
+		    		<li class="indet-comm-li">
+		    			<h5>如果是会员，可以享受会员折扣价</h5>
+		    		</li>
+		    		<li class="mui-table-view-cell mui-collapse indet-comm-li">
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell mui-cf">
+								<img src="../images/details-hui.png"/>订单满300送代金券30元  (活动时间：05月21日 - 05月01日)
+							</li>
+						</ul>
 		    		</li>
 		    	</ul>
 				
