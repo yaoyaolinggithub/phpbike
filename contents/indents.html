@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>确认订单</title>
@@ -12,7 +11,7 @@
 			#indetCon{
 			    padding-top: 45px;
 			}
-			#indetCon .indet-site,#indetCon .indet-comm,#indetCon .indet-favorable,#indetCon .indet-way,#indetCon .indet-money{
+			#indetCon .indet-site,#indetCon .indet-comm,#indetCon .indet-favorable,#indetCon .indet-way,#indetCon .indet-way2,#indetCon .indet-money{
 				width: 100%;
 				background-color: #fff;
     			padding: 14px 13px 12px 10px;
@@ -73,6 +72,7 @@
 			#indetCon .indet-comm{
 				position: relative;
 				padding-top: 0px;
+				padding-bottom: 0px;
 			}
 			.indet-comm-ulHead {
 				padding: 10px 0px;
@@ -176,64 +176,250 @@
 			}
 			/*优惠劵*/
 			#indetCon .indet-favorable{
-				margin-top: 10px;
 				color: #262629;
-				font-size: 0.95rem;
-			}
-			#indetCon .indet-favorable .favo-p2-txt{
-				width: 70%;
-				height: 33px;
+				padding: 0px 10px;
+				margin: 0px;
 				font-size: 0.9rem;
 			}
-			#indetCon .indet-favorable .mui-btn{
-				width: 30%;
-				font-size: 0.9rem;
-				text-align: center;
-				padding: 5.5px 0px;
+			.indet-favorable li{
+    			padding: 10px 0px;
+				border-bottom: 1px solid gainsboro;
 			}
-			/*支付方式*/
+			.indet-favorable .favo-li2{
+				color: #E31939;
+				position: relative;
+			}
+			.indet-favorable .favo-li2 .favo-li2-p{
+				display: block;
+   				width: 100%;
+			}
+			.indet-favorable .favo-li2::after {
+			    content: '';
+			    display: inline-block;
+			    width: 10px;
+			    height: 10px;
+			    position: absolute;
+			    right: 12px;
+			    top: 10px;
+			    border-bottom: 1px solid  #a1a1a1;
+			    border-right: 1px solid  #a1a1a1;
+			    -webkit-transform: rotate(45deg);
+			}
+			.indet-favorable .favo-li2 .favo-li2-d {
+			    display: none;
+			}
+			.favo-li2 .favo-li2-d {
+				padding: 10px 0px;
+			}
+			.favo-li2 .favo-li2-d .mode1{
+				padding: 5px 0px;
+			}
+			.favo-li2-d select{
+				display: inline-block;
+			    width: 200px;
+			    padding: 5px;
+			    margin: 0;
+			    border: 1px solid rgba(128, 128, 128, 0.5);
+			    color: black;
+			}
+			.favo-li2-d .mode1-in1{
+				display: inline-block;
+			    width: 200px;
+			    padding: 0px 5px;
+			    margin: 0;
+			    height: 33px;
+			    border: 1px solid rgba(128, 128, 128, 0.5);
+			    color: black;
+			    font-size: 14px;
+			}
+			.favo-li2-d .mode1-in2{
+				display: inline-block;
+			    width: 50px;
+			    height: 32px;
+			    background: #e31939;
+			    color: white;
+			    padding: 0px;
+			    margin: 0;
+			    font-size: 0.9rem;
+			    text-align: center;
+			    line-height: 30px;
+			}
+			.favo-li3 .favo-li3p1{
+			    color: black;
+			    font-size: 0.93rem;
+			    margin-bottom: 5px;
+			}
+			.favo-li3 .favo-li3p2 input{
+			    width: 120px;
+			    height: 30px;
+			    margin: 0;
+			    padding: 0;
+			    font-size: 0.9rem;
+			    border-radius: 0px;
+			    text-indent: 5px;
+			    color: black;
+			}
+			.favo-li3 .favo-li3p2 .mode1-in2{
+			    display: inline-block;
+			    width: 50px;
+			    height: 30px;
+			    background: #e31939;
+			    color: white;
+			    padding: 0px;
+			    margin: 0;
+			    font-size: 0.9rem;
+			    text-align: center;
+			    line-height: 30px;
+			}
+			.indet-favorable .favo-li4{
+			    border-bottom: 0px;
+			}
+			.favo-li4 .favo-li4p1{
+			    color: black;
+			    font-size: 0.93rem;
+			    margin-bottom: 5px;
+			}
+			.favo-li4 .favo-li4p2 input{
+			    width: 120px;
+			    height: 30px;
+			    margin: 0;
+			    padding: 0;
+			    font-size: 0.9rem;
+			    border-radius: 0px;
+			    text-indent: 5px;
+			    color: black;
+			}
+			.favo-li4 .favo-li4p2 .mode1-in2{
+			    display: inline-block;
+			    width: 50px;
+			    height: 30px;
+			    background: #e31939;
+			    color: white;
+			    padding: 0px;
+			    margin: 0;
+			    font-size: 0.9rem;
+			    text-align: center;
+			    line-height: 30px;
+			}
+			    
+			/*配送方式*/
 			#indetCon .indet-way{
 				margin-top: 10px;
+				padding: 10px 10px;
 			}
-			#indetCon .indet-way .way-select{
-				font-size: 1rem;
-				color:#262629 ;
-				margin-bottom: 10px;
+			.indet-way .way-select{
+				color: #000000;
+			    padding: 5px 0px 15px 0px;
+			    font-weight: bold;
+			    font-size: 0.95rem;
+			    border-bottom: 1px solid #cccccc;
+			    margin-bottom: 5px;
 			}
-			#indetCon .indet-way .mode1{
-				width: 50%;
-				margin-right: 30px;
+			.indet-way .way-selectsp1{
+				color: darkgray;
+			    font-size: 0.9rem;
+			    font-weight: initial;
+			    margin-left: 10px;
 			}
-			#indetCon .indet-way .mode1 input{
+			.indet-way .mode1 input{
 				position: inherit;
 				display: inline-block;
-			    width: 25px;
+			    width: 22px;
 			    height: 25px;
 			    border: 0;
 			    outline: 0!important;
 			    background-color: transparent;
 			    -webkit-appearance: none;
 			}
+			.mui-radio .mode1 {
+				display: block;
+    			padding: 5px 0px;
+    			font-size: 0.92rem;
+			}
 			#indetCon .mui-checkbox input[type=checkbox]:before,#indetCon .mui-radio input[type=radio]:before {
-			    font-size: 23px;
+			    font-size: 18px;
 			}
 			#indetCon .mui-checkbox input[type=checkbox]:checked:before,#indetCon  .mui-radio input[type=radio]:checked:before {
-			    color: #f23030;
+			    color: #666666;
+			}
+			/*其他选项*/
+			.indet-way2{
+				margin-top:10px ;
+			}
+			.indet-way2 .way-select{
+				background: url(../images/inden-b1.png) no-repeat left ;
+			    background-size: 30px;
+			    text-indent: 35px;
+			    color: #000;
+			    font-weight: bolder;
+			    margin-bottom: 10px;
+			    padding: 5px 0px;
+			    font-size: 0.92rem;
+			    line-height: normal;
+			}
+			.indet-way2 .wey2{
+			    padding-top: 10px;
+    			border-top: 1px solid gainsboro;
+    			
+    		}
+			.indet-way2 .way2-mode1{
+				padding: 10px ;
+				font-size: 0.9rem;
+				color: #E31939;
+				background: rgba(220, 220, 220, 0.35);
+				position: relative;
+			}
+			.indet-way2 .way2-mode1::after {
+			    content: '';
+			    display: inline-block;
+			    width: 10px;
+			    height: 10px;
+			    position: absolute;
+			    right: 15px;
+			    top: 40%;
+			    border-right: 1px solid #ccc;
+			    border-top: 1px solid #ccc;
+			    -webkit-transform: rotate(45deg);
+			}
+			.indet-way2 .way2-mode2{
+				padding: 10px ;
+				background: rgba(220, 220, 220, 0.35);
+				display: none;
+			}
+			.way2-mode2 span{
+				display: inline-block;
+				width: 25%;
+				font-size: 0.8rem;
+			}
+			.way2-mode2 input{
+				display: inline-block;
+			    width: 75%;
+			    padding: 0;
+			    margin: 0;
+			    height: 35px;
+			    font-size: 0.8rem;
+			    text-indent: 5px;
 			}
 			/*立即支付*/
 			#indetCon .indet-money{
 				margin-top: 10px;
 			}
-			#indetCon .indet-money .indet-money-con{
-				height: 45px;
-    			line-height: 30px;
-				text-align: center;
-				font-size: 0.9rem;
-				color: #f23030;
-				
+			.indet-money .moneyp{
+				text-align: right;
+				padding-bottom: 25px;
 			}
-			#indetCon .indet-money .indet-money-con .indet-money-span{
-				font-size: 1rem;
+			.indet-money .moneyp .moneyp1{
+				padding-bottom: 15px;
+    			border-bottom: 1px solid #d2cfcf;
+			}
+			.moneyp1r,.moneyp2z,.moneyp3s,.moneyp4y,.moneyp5j,.moneyp6y,.moneyp7h,.moneyp8f{
+				color: #ff2233;
+				display: inline-block;
+    			padding: 0px 5px;
+			}
+			.moneyp .moneyp8 .moneyp8f{
+				font-size: 1.3rem;
+				font-weight: bolder;
 			}
 			#indetCon .indet-money .indet-monet-sub .mui-btn-block {
 			    padding: 8px 0;
@@ -242,7 +428,6 @@
 			}
 		</style>
 	</head>
-
 	<body>
 		
 		<header class="mui-bar mui-bar-nav">
@@ -316,41 +501,99 @@
 							</div>
 						</div>
 		    		</li>
-		    		<li class="indet-comm-li">
-		    			<h5>如果是会员，可以享受会员折扣价</h5>
-		    		</li>
-		    		<li class="mui-table-view-cell mui-collapse indet-comm-li">
-						<ul class="mui-table-view mui-table-view-chevron">
-							<li class="mui-table-view-cell mui-cf">
-								<img src="../images/details-hui.png"/>订单满300送代金券30元  (活动时间：05月21日 - 05月01日)
-							</li>
-						</ul>
-		    		</li>
+		    		
 		    	</ul>
 				
 		    </div>
 		    <!--优惠劵-->
-		    <div class="indet-favorable">
-		    	<div class="favo-p2"><input class="favo-p2-txt" type="text"/><button type="button" class="mui-btn">验证代金卷</button></div>
-		    	<div class="favo-p1"><span class="favo-p1-spn1">使用代金劵：</span><span class="favo-p1-spn2">123456789123456</span></div>
-		    </div>
-		    <!--支付方式-->
+		    <ul class="indet-favorable">
+		    	<li class="favo-li1">如果是会员，可以享受会员折扣价</li>
+		    	<li class="favo-li2">
+		    		<span class="favo-li2-p">使用优惠劵</span>
+		    		<div class="favo-li2-d">
+		    			<div class="mode1">
+		    				<input name="favo1" value="weixin" type="radio" checked>
+		    				<select>
+						  		<option value ="请选择优惠劵">请选择优惠劵</option>
+						  		<option value ="优惠劵1">优惠劵1</option>
+						  		<option value="优惠劵2">优惠劵2</option>
+						  		<option value="优惠劵3">优惠劵3</option>
+							</select>
+		    			</div>
+		    			<div class="mode1">
+		    				<input name="favo1" value="zhifu" type="radio" >
+		    				<input type="text" value="" placeholder="直接输入优惠券" class="mode1-in1">
+		    				<span class="mode1-in2">使用</span>
+		    			</div>
+		    		</div>
+		    	</li>
+		    	<li class="favo-li3">
+		    		<p class="favo-li3p1">您的可用余额 <span class="favo-li3s1">1800.00</span></p>
+		    		<p class="favo-li3p2">
+		    			<input type="text" value="" placeholder="输入余额" class="mode1-in1">
+		    			<span class="mode1-in2">使用</span>
+		    		</p>
+		    	</li>
+		    	<li class="favo-li4">
+		    		<p class="favo-li4p1">您的可用积分 <span class="favo-li4s1">1800.00</span></p>
+		    		<p class="favo-li4p2">
+		    			<input type="text" value="" placeholder="输入积分" class="mode1-in1">
+		    			<span class="mode1-in2">使用</span>
+		    		</p>
+		    	</li>
+		    </ul>
+		    <!--配送方式-->
 		    <div class="indet-way">
-		    	<div class="way-select">支付方式</div>
-		    	<div class="way-mode mui-radio">
-		    		<span class="mode1"><input name="radio1" value="weixin" type="radio" checked>微信</span>
-		    		<span class="mode1"><input name="radio1" value="zhifu" type="radio" >支付宝</span>
+		    	<div class="way-select">配送方式<span class="way-selectsp1">请选择配送方式</span></div>
+		    	<div class="mui-radio">
+		    		<span class="mode1"><input name="radio1" value="weixin" type="radio" checked>申通物流(申通物流插件)</span>
 		    	</div>
+		    	<div class="mui-radio">
+		    		<span class="mode1"><input name="radio1" value="zhifu" type="radio" >顺丰物流(顺丰物流插件)</span>
+		    	</div>
+		    </div>
+		    <!--其他选项-->
+		    <div class="indet-way2">
+		    	<div class="way-select">其他选项</div>
+		    	<div class="wey2">
+		    		<div class="way2-mode1">开发票和缺货处理</div>
+		    		<div class="way2-mode2"><span class="way2-mode2p1">发票抬头：</span><input type="text" placeholder="XXX单位 或 XX个人"></div>
+		    	</div>
+		    	
 		    </div>
 		    <!--立即支付-->
 		    <div class="indet-money">
-		    	<div class="indet-money-con">商品总金额：￥<span class="indet-money-span">2500.00</span></div>
+		    	<div class="moneyp">
+		    		<p  class="moneyp1">*该订单完成后，您将获得 <span class="moneyp1r">相应的</span>积分</p>
+		    		<p  class="moneyp2">商品总额：￥ <span class="moneyp2z">8500.00</span>元</p>
+		    		<p  class="moneyp3">配送费用：￥ <span class="moneyp3s">15.00</span>元</p>
+		    		<p  class="moneyp4">使用优惠劵：-￥ <span class="moneyp4y">0</span>元</p>
+		    		<p  class="moneyp5">使用使用积分：-￥ <span class="moneyp5j">0</span>元</p>
+		    		<p  class="moneyp6">使用余额：-￥ <span class="moneyp6y">0</span>元</p>
+		    		<p  class="moneyp7">优惠活动：-￥ <span class="moneyp7h">0</span>元</p>
+		    		<p  class="moneyp8">应付金额：￥ <span class="moneyp8f">8551.54</span>元</p>
+		    	</div>
 		    	<div class="indet-monet-sub"><button type="button" class="mui-btn mui-btn-danger mui-btn-block">提交订单</button></div>
 		    </div>
 		</div>
 	</body>
 	<script src="../js/mui.min.js"></script>
 	<script type="text/javascript">
-		mui.init()
+		mui.init();
+		var favoli2p = document.querySelector(".favo-li2-p");
+		var favoli2d = document.querySelector(".favo-li2-d");
+		var waymode1 = document.querySelector(".way2-mode1");
+		var waymode2 = document.querySelector(".way2-mode2");
+		mui.plusReady(function() {
+            var listTo = true;
+            function btnDisp(Head,Cont){
+            	Head.addEventListener('tap', function(event) {
+                listTo  ?  (Cont.style.display = "block"):(Cont.style.display = "none");
+                    listTo = !listTo;
+            	}, false);
+            }
+            btnDisp(favoli2p,favoli2d);
+            btnDisp(waymode1,waymode2);
+		});
 	</script>
 </html>

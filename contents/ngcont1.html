@@ -539,7 +539,6 @@
 		mui('#ngCom').on('tap', '.mui-btn', function(event) {
 			var elem = this;
 			var li = elem.parentNode.parentNode.parentNode.parentNode.parentNode;
-			console.log(li);
 			mui.confirm('确认删除该商品？', '比客网商', btnArray, function(e) {
 				if (e.index == 0) {
 					li.parentNode.removeChild(li);
