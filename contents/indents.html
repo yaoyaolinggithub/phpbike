@@ -102,6 +102,7 @@
 			    border: 1px solid #e3e5e9;
 			}
 			#indetCon .indet-comm .mui-rig-h1 {
+				width: 100%;
 			    padding-left: 90px;
 			    position: absolute;
 			    top: 0;
@@ -585,15 +586,17 @@
 		var waymode1 = document.querySelector(".way2-mode1");
 		var waymode2 = document.querySelector(".way2-mode2");
 		mui.plusReady(function() {
-            var listTo = true;
-            function btnDisp(Head,Cont){
-            	Head.addEventListener('tap', function(event) {
-                listTo  ?  (Cont.style.display = "block"):(Cont.style.display = "none");
-                    listTo = !listTo;
-            	}, false);
-            }
-            btnDisp(favoli2p,favoli2d);
-            btnDisp(waymode1,waymode2);
+            var listTo1 = true;
+            favoli2p.addEventListener('tap', function(event) {
+                listTo1  ?  (favoli2d.style.display = "block"):(favoli2d.style.display = "none");
+                listTo1 = !listTo1;
+            }, false);
+            var listTo2 = true;
+            waymode1.addEventListener('tap', function(event) {
+                listTo2  ?  (waymode2.style.display = "block"):(waymode2.style.display = "none");
+                listTo2 = !listTo2;
+            }, false);
+   
 		});
 	</script>
 </html>

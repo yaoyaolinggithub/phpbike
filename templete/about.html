@@ -80,14 +80,12 @@
 			.aboutUl2 .aboutLi1:nth-child(2),.aboutUl2 .aboutLi1:nth-child(3){
 			    border-right:1px solid gainsboro;
 			}
-			
 			.aboutUl2 .aboutLi1{
 				display: inline-block;
 				margin: 10px 0px;
 			    width: 23%;
 			    text-align: center;
 			    font-size:0.9rem ;
-			   
 			}
 			.aboutUl2 .aboutLi1 .abLi1p1{
 				font-size:1.2rem ;
@@ -340,15 +338,15 @@
 				<li  class="aboutLi1">
 					
 				</li>
-				<li  class="aboutLi1">
+				<li  class="aboutLi1 aboutLi1-1">
 					<p class="abLi1p1">3333</p>
 					<p class="abLi1p2">我的订单</p>
 				</li>
-				<li  class="aboutLi1">
+				<li  class="aboutLi1 aboutLi1-2">
 					<p class="abLi1p1">3333</p>
 					<p class="abLi1p2">我的收藏</p>
 				</li>
-				<li  class="aboutLi1">
+				<li  class="aboutLi1 aboutLi1-3">
 					<p class="abLi1p1">3333</p>
 					<p class="abLi1p2">我的评价</p>
 				</li>
@@ -469,6 +467,23 @@
 				mui.openWindow({
 					url:"favorable.html",
 					id:"favorable",
+//					preload:true,
+					show:{
+						aniShow:"pop-in"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false)
+//			aboutLi1-1 跳转到我的订单
+			document.querySelector(".aboutLi1-1").addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"about-d1.html",
+					id:"about-d1",
 //					preload:true,
 					show:{
 						aniShow:"pop-in"
