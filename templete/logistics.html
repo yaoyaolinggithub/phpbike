@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>查看物流</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			/*订单商品*/
+			.logistisP1{
+				padding: 10px;
+				margin: 0;
+				font-size: 1rem;
+				color: black;
+			}
+			.logistisP2{
+				padding: 0;
+				margin: 0px 10px;
+			}
+			.logistisP2-li1{
+				background: white;
+				border-radius: 5px;
+			}
+			.logistisP2-li1 img{
+				margin: 5px;
+			    padding: 5px;
+			    border: 1px solid #eee;
+			    width: 60px;
+			}
+			.logistisP2-li1 .mui-ellipsis{
+				margin: 0px;
+			    padding: 0px;
+			    font-size:0.8rem ;
+			    color: black;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">查看物流</h1>
+		</header>
+		<div class="mui-content">
+			<!--订单商品-->
+			<p class="logistisP1">订单商品</p>
+			<ul class="logistisP2">
+				<li class="logistisP2-li1">
+					<img class="mui-pull-left" src="../images/I7.jpg">
+					<div class="">
+						<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						<p class='mui-ellipsis'>5000.00</p>
+						<p class='mui-ellipsis'>共1件</p>
+					</div>
+				</li>
+			</ul>
+			<!--物流公司-->
+			<div class="logistisP3">
+				<p class="logistisp1">物流公司：<span class="logistiss1">申通物流</span></p>
+				<p class="logistisp2">运单号码：<span class="logistiss2">2017051917.49</span></p>
+			</div>
+			<!--物流动态-->
+			
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		
+	</script>
+</html>

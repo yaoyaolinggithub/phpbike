@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>订单详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			/*订单状态*/
+			.aboutS1{
+				margin-bottom: 10px;
+			}
+			.aboutS1 li{
+				padding: 10px;
+			}
+			.aboutS1 h6{
+				font-size: 1rem;
+				color: black;
+				margin:0px;
+				padding: 3px 0px;
+				padding-left: 30px;
+				line-height: 20px;
+			}
+			.aboutS1-li1{
+				background: #5D6B85;
+			}
+			.aboutS1-li1 h6{
+				color: white;
+				overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			}
+			.aboutS1-li2 h6{
+				overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			}
+			.aboutS1-li4 h6{
+				overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			}
+			.aboutS1-li1 h6:nth-child(1){
+				background: url(../images/about-d1-s1-d1.png) no-repeat;
+			    background-size: 30px auto;
+			    background-position: 0px -217px;
+			}
+			.aboutS1-li2 h6:nth-child(1){
+				background: url(../images/about-d1-s1-d1.png) no-repeat;
+			    background-size: 30px auto;
+			    background-position: 0px -291px;
+			}
+			.aboutS1-li3 h6:nth-child(1){
+				background: url(../images/about-d1-s1-d1.png) no-repeat;
+			    background-size: 30px auto;
+			    background-position: 0px -251px;
+			}
+			.aboutS1 .aboutS1-li2,.aboutS1 .aboutS1-li3,.aboutS1 .aboutS1-li4{
+				padding: 0px 0px 10px 0px;
+				margin: 10px;
+				border-bottom: 1px solid #eee;
+			}
+			.aboutS1-li3 .aboutSHp1Num{
+				float: right;
+    			color: #666;
+			}
+			.aboutS1-li4{
+				background: url(../images/about-d1-s1-d2.png) no-repeat ;
+				background-size: auto 62px;
+			}
+			/*商品列表*/
+			.aboutS2{
+			    background: white;
+			    margin-bottom: 10px;
+			    border-top:1px solid #eee;
+			}
+			.Supplier1{
+				text-indent: 30px;
+			    background: url(../images/ngconG1.png) no-repeat center left;
+			    background-size: 20px;
+			    background-position-x: 10px;
+			    border-bottom: 1px solid #ebebeb;
+			    font-size: 0.9rem;
+			    padding: 10px;
+			}
+			.aboutS2ul2{
+				padding: 0;
+				margin: 0;
+			}
+			.aboutS2ul2 .aboutSul2li1{
+				padding-bottom: 10px;
+    			border-bottom: 1px solid #eee;
+			}
+			.aboutS2ul2 .aboutSul2li1:last-child{
+				padding-bottom: 10px;
+    			border-bottom: 0px solid #eee;
+			}
+			.aboutS2ul2 .mui-rig-con{
+				margin: 5px 10px 0px;
+			    position: relative;
+			    border-bottom: 1px solid #eee;
+			}
+			.aboutSul2li1 img{
+				width: 70px;
+			}
+			.aboutS2ul2 .mui-rig-con .mui-rig-h1{
+				width: 100%;
+				padding-left: 80px;
+				position: absolute;
+				top: 0;
+			}
+			.aboutS2ul2 .mui-rig-con .mui-rig-h1 .mui-rig1{
+				margin-bottom: 5px;
+				font-size: 0.9rem;
+			    vertical-align: middle;
+			    display: -webkit-box;
+			    -webkit-box-pack: center;
+			    -webkit-box-align: start;
+			    color: black;
+			    word-break: break-all;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    line-height: 17px;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			}
+			.aboutS2ul2 .mui-rig2{
+			    margin-bottom: 3px;
+			    white-space: nowrap;
+			    display: -webkit-box;
+			}
+			.aboutS2ul2 .mui-rig2 .mui-pri-spn1{
+				margin-right: 5px;
+				display: block;
+			    -webkit-box-flex: 1;
+			    -webkit-flex: 1;
+			    -ms-flex: 1;
+			    flex: 1;
+			    -webkit-flex-basis: 0;
+			    -ms-flex-preferred-size: 0;
+			    flex-basis: 0;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    font-size: 0.9rem;
+    			color: #f23030;
+			}
+			.aboutS2ul2 .mui-rig2 .mui-pri-spn1 strong{
+				font-size: 1rem;
+    			font-weight: normal;
+			}
+			.aboutS2ul2 .mui-rig2 .mui-rig2-spn2{
+			    font-size: 0.9rem;
+    			color: #999;
+			}
+			.aboutS2ul2 .mui-rig2-spn3{
+				font-size: 0.8rem;
+    			color: #999;
+			}
+			.item2-li-d2 {
+				line-height: 40px;
+				border-bottom: 1px solid #eee;
+				text-align: right;
+				font-size: 0.9rem;
+				padding: 0px 10px;
+			}
+			.item2-li-d2 strong{
+				color: #e41735;
+				font-size: 1.1rem;
+			}
+			/*订单金额*/
+			.aboutS3{
+				padding: 10px;
+				border-bottom: 1px solid #ccc;
+				text-align: right;
+			}
+			.aboutS3 .aboutS3P1{
+				font-size: 0.95rem;
+				color: black;
+				margin: 0;
+			}
+			.aboutS3 .aboutS3P1 span{
+				color: #e41735;
+			}
+			.aboutS3 .aboutS3P1s2{
+				font-size: 1.2rem;
+    			font-weight: bold;
+			}
+			/*配送方式*/
+			.aboutS4{
+				background: white;
+				padding: 10px ;
+				border-top: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			}
+			.aboutS4 p{
+				padding: 0;
+				margin: 0;
+				color: #666;
+				font-size: 0.8rem;
+			}
+			/*查看物流*/
+			.aboutS5 {
+			    width: 100%;
+			    background: #f4f4f4;
+			    height: 50px;
+			    position: fixed;
+			    bottom: 0;
+			}
+			.aboutS5 .mui-btn{
+				height: 40px;
+			    border-radius: 5px;
+			    border: 1px solid #999;
+			    color: gray;
+			    position: absolute;
+			    right: 3%;
+			    top: 0;
+			    bottom: 0;
+			    margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">订单详情</h1>
+		</header>
+		<div class="mui-content" style="padding-bottom: 50px;">
+			<!--订单状态-->
+			<div class="aboutS1">
+				<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+			        <li class="aboutS1-li1">
+			            <div class="mui-table">
+			                <h6>订单状态：<sapn class="aboutSHp1">待评价</sapn></h6>
+			                <h6>订单号：<sapn class="aboutSHp2">201703241705334401</sapn></h6>
+			                <h6>配送费用：￥<span class="aboutSHp3">0.00</span>元</h6>
+			            </div>
+			        </li>
+			        <li class="aboutS1-li2">
+			            <div class="mui-table">
+			                <h6>所选支付方式：<sapn class="aboutSHp1">PC端支付宝</sapn></h6>
+			                <h6>应付款金额：￥<sapn class="aboutSHp2">8280.00</sapn>元</h6>
+			            </div>
+			        </li>
+			        <li class="aboutS1-li3">
+			            <div class="mui-table">
+			                <h6 class="mui-cf">收货人姓名：<sapn class="aboutSHp1">某某某</sapn> <span  class="aboutSHp1Num">12345678910</span></h6>
+			                <h6>详细地址：<sapn class="aboutSHp2">广东省广州市天河区天河大道天河商业广场2017</sapn></h6>
+			            </div>
+			        </li>
+			        <li class="aboutS1-li4">
+			            <div class="mui-table">
+			                <h6>快递单号：<sapn class="aboutSHp1">20170519123456</sapn></h6>
+			                <h6><sapn class="aboutSHp2">查看物流</sapn></h6>
+			            </div>
+			        </li>
+			    </ul>
+			</div>
+			<!--商品列表-->
+			<div class="aboutS2">
+				<div class="Supplier1">供货商：比客商城</div>
+				<ul class="aboutS2ul2">
+					<li class="aboutSul2li1">				
+						<div class="mui-rig-con">
+							<img src="../images/comm.jpg" alt="图片" />
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499.00</strong></span>
+									<span class="mui-rig2-spn2">X1</span>
+								</div>
+								<div class="mui-rig2-spn3">申请退款</div>
+							</div>
+						</div>
+						<div class="item2-li-d2">
+							小计：<strong>￥<span class="item2-li-d2N2">2676.28</span>元</strong>
+						</div>
+					</li>
+					<li class="aboutSul2li1">				
+						<div class="mui-rig-con">
+							<img src="../images/comm.jpg" alt="图片" />
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499.00</strong></span>
+									<span class="mui-rig2-spn2">X1</span>
+								</div>
+								<div class="mui-rig2-spn3">申请退款</div>
+							</div>
+						</div>
+						<div class="item2-li-d2">
+							小计：<strong>￥<span class="item2-li-d2N2">2676.28</span>元</strong>
+						</div>
+					</li>
+					<li class="aboutSul2li1">				
+						<div class="mui-rig-con">
+							<img src="../images/comm.jpg" alt="图片" />
+							<div class="mui-rig-h1">
+								<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+								<div class="mui-rig2">
+									<span class="mui-pri-spn1">¥ <strong> 1499.00</strong></span>
+									<span class="mui-rig2-spn2">X1</span>
+								</div>
+								<div class="mui-rig2-spn3">申请退款</div>
+							</div>
+						</div>
+						<div class="item2-li-d2">
+							小计：<strong>￥<span class="item2-li-d2N2">2676.28</span>元</strong>
+						</div>
+					</li>
+			   </ul>
+			   <!--订单金额-->
+			    <div class="aboutS3">
+			    	<p  class="aboutS3P1">商品总额：<span class="aboutS3P1s1">￥ <span class="aboutS3P1p1">8500.00</span>元</span></p>
+			    	<p  class="aboutS3P1">配送费用：<span class="aboutS3P1s1">￥ <span class="aboutS3P1p2">0.00</span>元</span></p>
+			    	<p  class="aboutS3P1">使用优惠劵：<span class="aboutS3P1s1">-￥ <span class="aboutS3P1p3">0.00</span>元</span></p>
+			    	<p  class="aboutS3P1">使用使用积分：<span class="aboutS3P1s1">-￥ <span class="aboutS3P1p4">0.00</span>元</span></p>
+			    	<p  class="aboutS3P1">使用余额：<span class="aboutS3P1s1">-￥ <span class="aboutS3P1p5">0.00</span>元</span></p>
+			    	<p  class="aboutS3P1">优惠活动：<span class="aboutS3P1s1">-￥ <span class="aboutS3P1p6">0.00</span>元</span></p>
+			    	<p  class="aboutS3P1">应付金额：<span class="aboutS3P1s2">￥ <span class="aboutS3P1p7">8500.00</span>元</span></p>
+			    </div>
+			</div>
+			<!--配送方式-->
+			<div class="aboutS4">
+				<p class="aboutS4P1">配送方式：<span class="aboutS4s1">申通物流</span></p>
+				<p class="aboutS4P2">支付方式：<span class="aboutS4s2">PC端支付宝</span></p>
+			</div>
+			<!--底部定位查看物流-->
+			<div class="aboutS5">
+				<button type="button" class="mui-btn aboutBtnLo">
+					查看物流
+				</button>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		mui.plusReady(function(){
+			// 批量进入
+				function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+					$(IDBtns).on('tap',Skips,function(event){
+						$.openWindow({
+							url: skipPages,
+							id: skipIDs,
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, false);
+				}
+			// 跳转到商品详情
+			mui(".aboutS2ul2").on("tap",".aboutSul2li1",function(event){
+				mui.openWindow({
+					url: "details.html",
+					id: "details",
+					preload: true,
+					show: {
+						aniShow: 'none'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			},false);
+			// 跳转到查看物流
+			var aboutBtnLo = document.querySelector(".aboutBtnLo");
+			aboutBtnLo.addEventListener("tap",function(event){
+				mui.openWindow({
+					url: "logistics.html",
+					id: "logistics",
+					preload: true,
+					show: {
+						aniShow: 'none'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			},false);
+		})
+	</script>
+</html>
