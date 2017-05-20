@@ -354,15 +354,18 @@
 			</ul>
 		    <!--订单列表-->
 			<ul class="mui-table-view mui-grid-view mui-grid-9 aboutUl3">
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3">
+			    	<a href="#">
+			        	<span class="mui-icon">3333</span>
+			        	<div class="mui-media-body">余额</div>
+			    	</a>
+			    </li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
 			        <span class="mui-icon">3333</span>
-			        <div class="mui-media-body">待评价</div></a></li>
+			        <div class="mui-media-body">优惠券</div></a></li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
 			        <span class="mui-icon">3333</span>
-			        <div class="mui-media-body">退换/售后</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
-			        <span class="mui-icon">3333</span>
-			        <div class="mui-media-body">我的订单</div></a></li>
+			        <div class="mui-media-body">积分</div></a></li>
 			    <li class="mui-table-view-cell">
 			        <a class="mui-navigate-right"><span class="aboutU3S1">我的钱包</span><span class="aboutU3S2">查看我的钱包</span></a>
 			    </li>
@@ -484,6 +487,40 @@
 				mui.openWindow({
 					url:"about-d1.html",
 					id:"about-d1",
+//					preload:true,
+					show:{
+						aniShow:"pop-in"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false);
+			//aboutLi1-2 跳转到我的收藏
+			document.querySelector(".aboutLi1-2").addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"collect.html",
+					id:"collect",
+//					preload:true,
+					show:{
+						aniShow:"pop-in"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false)
+			//aboutLi1-3 跳转到我的评论
+			document.querySelector(".aboutLi1-3").addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"criticism.html",
+					id:"criticism",
 //					preload:true,
 					show:{
 						aniShow:"pop-in"

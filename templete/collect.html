@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的收藏</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			/*收藏列表*/
+			.collectU1{
+				background: white;
+				border-top: 2px solid #ccc;
+				padding: 0px 10px;
+				margin: 0px;
+			}
+			.collectU1 .logistisP2-li1{
+				padding: 10px 0px;
+				border-bottom: 1px solid #efeff4
+			}
+			.collectU1 .logistisP2-li1 img{
+			    margin-right: 15px;
+			    width: 70px;
+			}
+			.collectU1 .logistDiv1 p{
+				margin: 0;
+				padding: 0;
+				color: black;
+				font-size: 0.9rem;
+			}
+			.collectU1 .logistDiv1 .lgst2{ 
+				margin-top: 5px;
+			    color: #c32f2f;
+			    font-weight: bolder;
+			    font-size: 1rem;
+			}
+			.collectU1 .lgst3{
+				text-align: right;
+			}
+			.collectU1 .lgst3 button{
+				border-radius: 20px;
+			    padding: 3px 10px;
+			    margin: 4px 0px;
+			}
+			    
+		</style>
+	</head>
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">我的收藏</h1>
+		</header>
+		<div class="mui-content">
+			<!--收藏列表-->
+			<div class="collectD1">
+				<ul class="collectU1">
+					<li class="logistisP2-li1 mui-cf">
+						<img class="mui-pull-left" src="../images/I7.jpg">
+						<div class="logistDiv1">
+							<p class="mui-font1 lgst1">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+							<p class="lgst2">5000.00</p>
+							<p class="lgst3">
+								<button type="button" class="mui-btn mui-btn-danger">
+									加入购物车
+								</button>
+								<button type="button" class="mui-btn collectXbtn">
+									删除
+								</button>
+							</p>
+						</div>
+					</li>
+					<li class="logistisP2-li1 mui-cf">
+						<img class="mui-pull-left" src="../images/I7.jpg">
+						<div class="logistDiv1">
+							<p class="mui-font1 lgst1">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+							<p class="lgst2">5000.00</p>
+							<p class="lgst3">
+								<button type="button" class="mui-btn mui-btn-danger">
+									加入购物车
+								</button>
+								<button type="button" class="mui-btn collectXbtn">
+									删除
+								</button>
+							</p>
+						</div>
+					</li>
+					<li class="logistisP2-li1 mui-cf">
+						<img class="mui-pull-left" src="../images/I7.jpg">
+						<div class="logistDiv1">
+							<p class="mui-font1 lgst1">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+							<p class="lgst2">5000.00</p>
+							<p class="lgst3">
+								<button type="button" class="mui-btn mui-btn-danger">
+									加入购物车
+								</button>
+								<button type="button" class="mui-btn collectXbtn">
+									删除
+								</button>
+							</p>
+						</div>
+					</li>
+					<li class="logistisP2-li1 mui-cf">
+						<img class="mui-pull-left" src="../images/I7.jpg">
+						<div class="logistDiv1">
+							<p class="mui-font1 lgst1">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+							<p class="lgst2">5000.00</p>
+							<p class="lgst3">
+								<button type="button" class="mui-btn mui-btn-danger">
+									加入购物车
+								</button>
+								<button type="button" class="mui-btn collectXbtn">
+									删除
+								</button>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		mui.plusReady(function(){
+			// 调整到订单详情
+			mui(".collectU1").on("tap",".mui-pull-left",function(event){
+				mui.openWindow({
+					url: "details.html",
+					id: "details",
+					preload: true,
+					show: {
+						aniShow: 'none'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			},false);
+		})
+		//购物车商品demo，拖拽后显示操作图标，点击操作图标删除元素；
+		var btnArray = ['确认', '取消'];
+		mui('.collectU1').on('tap', '.collectXbtn', function(event) {
+			var elem = this;
+			var li = elem.parentNode.parentNode.parentNode;
+			mui.confirm('确认删除该商品？', '比客网商', btnArray, function(e) {
+				if (e.index == 0) {
+					li.parentNode.removeChild(li);
+				} else {
+					setTimeout(function() {
+						mui.swipeoutClose(li);
+					}, 0);
+				}
+			});
+		});	
+	</script>
+</html>

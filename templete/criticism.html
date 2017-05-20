@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的评价</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*头部导航*/
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			.criticismCont1{
+				background: white;
+			}
+			#item1 .mui-scroll-wrapper {
+			    position: static;
+			    z-index: 2;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    overflow: hidden;
+			    width: 100%;
+			}
+			#segmentedControl{
+				width: 90%;
+				margin: auto;
+			}
+			/*列表内容*/
+			#item1 .mui-table-view,#item2 .mui-table-view,#item3 .mui-table-view,#item4 .mui-table-view,#item5 .mui-table-view{
+				background: #f5f5f5;
+			}
+			.criticismCont2 li{
+				margin-bottom: 10px;
+				background: white;
+    			padding: 0px 10px;
+    			border-bottom: 1px solid #eeeeee;
+    			border-top: 1px solid #eeeeee;
+			}
+			/*待付款*/
+			.criticism1-li .item2-li-d1{
+				position: relative;
+				border-bottom: 1px solid #eee;
+			}
+			.criticism1-li h5{
+				margin: 0;
+			    font-size: 0.95rem;
+			    padding: 12px 0px;
+			    color: #999;
+			}
+			.criticism1-li  img{
+				width: 80px;
+			    height: 80px;
+			}
+			.criticism1-li  .mui-rig-h1 {
+				width: 100%;
+			    padding-left: 90px;
+			    position: absolute;
+			    top: 0;
+			}
+			.criticism1-li .mui-rig-h1 .mui-rig1{
+			    margin-bottom: 5px;
+			    font-size: 0.9rem;
+			    vertical-align: middle;
+			    display: -webkit-box;
+			    -webkit-box-pack: center;
+			    -webkit-box-align: start;
+			    color: #232326;
+			    word-break: break-all;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    line-height: 15px;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			}
+			.criticism1-li .mui-rig-h1 .mui-rig2{
+			    font-size: 1.1rem;
+			    color: #e41735;
+			    white-space: nowrap;
+			}
+			.criticism1-li .mui-rig-price {
+			    text-align: right;
+			}
+			.criticism1-li .mui-rig-price button{
+			    color: #999;
+			    border: 1px solid #999;
+			}
+			/*订单评价*/
+			.criticismli3{
+				padding: 10px 0px;
+			}
+			.criticismli3 .criticismli3P1{
+				margin: 0px;
+				color: black;
+			}
+			.criticismli3 .criticismli3P1 img{
+				width: 105px;
+    			height: 20px;
+			}
+			.criticismli3 .criticismli3P1 em{
+				float: left;
+				font-style: normal;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">我的评价</h1>
+		</header>
+		<div class="mui-content">
+			<!--头部导航-->
+			<div class="criticismCont1">
+				<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-negative">
+					<a class="mui-control-item mui-active" href="#item1">全部评价</a>
+					<a class="mui-control-item" href="#item2">待评价</a>
+					<a class="mui-control-item" href="#item3">已评价</a>
+				</div>
+			</div>
+			<!--列表内容-->
+			<div class="criticismCont2">
+				<div id="item1" class="mui-control-content mui-active">
+					<!--<div id="scroll" class="mui-scroll-wrapper">-->
+						<!--<div class="mui-scroll">-->
+							<ul class="mui-table-view">
+								<li class="criticism1-li">
+									<h5>购买时间：2017-03-24 17:05</h5>
+									<div class="item2-li-d1">
+										<img src="../images/comm.jpg"/>
+										<div class="mui-rig-h1">
+											<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+											<div class="mui-rig2">
+												￥<span class="mui-rig2-spn1">8300.00</span>
+											</div>
+											<div class="mui-rig-price mui-cf">
+												<button type="button" class="mui-btn criticismBtns1">
+													查看订单
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="criticismli3">
+										<p class="criticismli3P1 mui-cf"><em>评价：</em><img src="../images/criticism-5x.png" /></p>
+										<p class="criticismli3P2">迎馨家纺 全棉斜纹印花双人四件套 约定 桔色 1.5米床</p>
+									</div>
+								</li>
+								<li class="criticism1-li">
+									<h5>购买时间：2017-03-24 17:05</h5>
+									<div class="item2-li-d1">
+										<img src="../images/comm.jpg"/>
+										<div class="mui-rig-h1">
+											
+											<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+											<div class="mui-rig2">
+												￥<span class="mui-rig2-spn1">8300.00</span>
+											</div>
+											<div class="mui-rig-price mui-cf">
+												<button type="button" class="mui-btn criticismBtnp1">
+													评价订单
+												</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="criticism1-li">
+									<h5>购买时间：2017-03-24 17:05</h5>
+									<div class="item2-li-d1">
+										<img src="../images/comm.jpg"/>
+										<div class="mui-rig-h1">
+											
+											<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+											<div class="mui-rig2">
+												￥<span class="mui-rig2-spn1">8300.00</span>
+											</div>
+											<div class="mui-rig-price mui-cf">
+												<button type="button" class="mui-btn criticismBtnp1">
+													评价订单
+												</button>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						<!--</div>-->
+					<!--</div>-->
+				</div>
+				<div id="item2" class="mui-control-content">
+					<ul class="mui-table-view">
+						<li class="criticism1-li">
+							<h5>购买时间：2017-03-24 17:05</h5>
+							<div class="item2-li-d1">
+								<img src="../images/comm.jpg"/>
+								<div class="mui-rig-h1">
+									
+									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+									<div class="mui-rig2">
+										￥<span class="mui-rig2-spn1">8300.00</span>
+									</div>
+									<div class="mui-rig-price mui-cf">
+										<button type="button" class="mui-btn criticismBtnp1">
+											评价订单
+										</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="criticism1-li">
+							<h5>购买时间：2017-03-24 17:05</h5>
+							<div class="item2-li-d1">
+								<img src="../images/comm.jpg"/>
+								<div class="mui-rig-h1">
+									
+									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+									<div class="mui-rig2">
+										￥<span class="mui-rig2-spn1">8300.00</span>
+									</div>
+									<div class="mui-rig-price mui-cf">
+										<button type="button" class="mui-btn criticismBtnp1">
+											评价订单
+										</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="criticism1-li">
+							<h5>购买时间：2017-03-24 17:05</h5>
+							<div class="item2-li-d1">
+								<img src="../images/comm.jpg"/>
+								<div class="mui-rig-h1">
+									
+									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+									<div class="mui-rig2">
+										￥<span class="mui-rig2-spn1">8300.00</span>
+									</div>
+									<div class="mui-rig-price mui-cf">
+										<button type="button" class="mui-btn criticismBtnp1">
+											评价订单
+										</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="criticism1-li">
+							<h5>购买时间：2017-03-24 17:05</h5>
+							<div class="item2-li-d1">
+								<img src="../images/comm.jpg"/>
+								<div class="mui-rig-h1">
+									
+									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+									<div class="mui-rig2">
+										￥<span class="mui-rig2-spn1">8300.00</span>
+									</div>
+									<div class="mui-rig-price mui-cf">
+										<button type="button" class="mui-btn criticismBtnp1">
+											评价订单
+										</button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<ul class="mui-table-view">
+						<li class="criticism1-li">
+							<h5>购买时间：2017-03-24 17:05</h5>
+							<div class="item2-li-d1">
+								<img src="../images/comm.jpg"/>
+								<div class="mui-rig-h1">
+									<div class="mui-rig1">AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏显示器（HDMI版</div>
+									<div class="mui-rig2">
+										￥<span class="mui-rig2-spn1">8300.00</span>
+									</div>
+									<div class="mui-rig-price mui-cf">
+										<button type="button" class="mui-btn criticismBtns1">
+											查看订单
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="criticismli3">
+								<p class="criticismli3P1 mui-cf"><em>评价：</em><img src="../images/criticism-5x.png" /></p>
+								<p class="criticismli3P2">迎馨家纺 全棉斜纹印花双人四件套 约定 桔色 1.5米床</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" >
+		mui.init();
+		mui.plusReady(function(){
+			// 批量进入
+			function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+				mui(IDBtns).on('tap',Skips,function(event){
+					mui.openWindow({
+						url: skipPages,
+						id: skipIDs,
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+			}
+			dkipsPages(".criticismCont2",".criticismBtns1","about-d1-s1.html","about-d1-s1");
+			dkipsPages(".criticismCont2",".criticismBtnp1","criticism-evaluate.html","criticism-evaluate");
+			dkipsPages(".criticismCont2",".mui-rig1","details.html","details");
+			// 调整到订单详情
+//			mui(".aboutD1Cont").on("tap",".item2-li-d1",function(event){
+//				mui.openWindow({
+//					url: "about-d1-s1.html",
+//					id: "about-d1-s1",
+//					preload: true,
+//					show: {
+//						aniShow: 'pop-in'
+//					},
+//					styles: {
+//						popGesture: 'hide'
+//					},
+//					waiting: {
+//						autoShow: false
+//					}
+//				});
+//			},false);
+		})
+	</script>
+</html>
