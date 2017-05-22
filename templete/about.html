@@ -8,7 +8,6 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
 		<link rel="stylesheet" type="text/css" href="../font_about/iconfont.css"/>
-		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			/*头部*/
 			.aboutUl1{
@@ -366,7 +365,7 @@
 			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
 			        <span class="mui-icon">3333</span>
 			        <div class="mui-media-body">积分</div></a></li>
-			    <li class="mui-table-view-cell">
+			    <li class="mui-table-view-cell aboutUl3li4">
 			        <a class="mui-navigate-right"><span class="aboutU3S1">我的钱包</span><span class="aboutU3S2">查看我的钱包</span></a>
 			    </li>
 			</ul>
@@ -407,132 +406,67 @@
 		</div>
 		
 	</body>
+	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		mui.init();
 		var abologBtn = document.querySelector('.mui-left-zu');
 		var favoBtn = document.querySelector('.aboutU3S1p2');
 		var muiSeBtn = document.querySelector(".mui-se1");
 		var aboutserBtn = document.querySelector(".aboutU3S2p3");
+		var aboutLi11 = document.querySelector(".aboutLi1-1");
+		var aboutLi12 = document.querySelector(".aboutLi1-2");
+		var aboutLi13 = document.querySelector(".aboutLi1-3");
+		var aboutUl3li4 = document.querySelector(".aboutUl3li4");
+		var aboutU3S1p1 = document.querySelector(".aboutU3S1p1");
+		var aboutU3S1p3 = document.querySelector(".aboutU3S1p3");
+		var aboutU3S1p4 = document.querySelector(".aboutU3S1p4");
+		var aboutU3S1p5 = document.querySelector(".aboutU3S1p5");
+		var aboutU3S2p1 = document.querySelector(".aboutU3S2p1");
 		mui.plusReady(function(){
+			function singleBtn(singElent,singHtml,singId,singFhi){
+				singElent.addEventListener('tap',function(){
+					mui.openWindow({
+						url: singHtml,
+						id: singId,
+//						preload: true,
+						styles: {
+							popGesture: singFhi
+						},
+						show: {
+						    aniShow: 'none'
+						},
+						waiting: {
+							autoShow: false
+						}
+					})
+				})
+			}
 			// 跳转到登录页面
-			abologBtn.addEventListener('tap',function(){
-				mui.openWindow({
-					url: "login.html",
-					id: "login",
-//					preload: true,
-					styles: {
-						popGesture: 'hide'
-					},
-					show: {
-					    aniShow: 'none'
-					},
-					waiting: {
-						autoShow: false
-					}
-				})
-			})
+			singleBtn(abologBtn,"login.html","login",'hide');
 			// 跳转到设置页面
-			muiSeBtn.addEventListener("tap",function(event){
-				mui.openWindow({
-					url:"setting.html",
-					id:"setting",
-//					preload:true,
-					show:{
-						aniShow:"pop-in"
-					},
-					styles:{
-						popGesture:"hide"
-					},
-					waiting:{
-						autoShow:false
-					}
-				})
-			},false)
+			singleBtn(muiSeBtn,"setting.html","setting","pop-in");
 			// 跳转到客服页面
-			aboutserBtn.addEventListener("tap",function(event){
-				mui.openWindow({
-					url:"service.html",
-					id:"service",
-//					preload:true,
-					show:{
-						aniShow:"pop-in"
-					},
-					styles:{
-						popGesture:"hide"
-					},
-					waiting:{
-						autoShow:false
-					}
-				})
-			},false)
+			singleBtn(aboutserBtn,"service.html","service","pop-in");
 			// 跳转到优惠劵
-			favoBtn.addEventListener("tap",function(event){
-				mui.openWindow({
-					url:"favorable.html",
-					id:"favorable",
-//					preload:true,
-					show:{
-						aniShow:"pop-in"
-					},
-					styles:{
-						popGesture:"hide"
-					},
-					waiting:{
-						autoShow:false
-					}
-				})
-			},false)
-//			aboutLi1-1 跳转到我的订单
-			document.querySelector(".aboutLi1-1").addEventListener("tap",function(event){
-				mui.openWindow({
-					url:"about-d1.html",
-					id:"about-d1",
-//					preload:true,
-					show:{
-						aniShow:"pop-in"
-					},
-					styles:{
-						popGesture:"hide"
-					},
-					waiting:{
-						autoShow:false
-					}
-				})
-			},false);
-			//aboutLi1-2 跳转到我的收藏
-			document.querySelector(".aboutLi1-2").addEventListener("tap",function(event){
-				mui.openWindow({
-					url:"collect.html",
-					id:"collect",
-//					preload:true,
-					show:{
-						aniShow:"pop-in"
-					},
-					styles:{
-						popGesture:"hide"
-					},
-					waiting:{
-						autoShow:false
-					}
-				})
-			},false)
-			//aboutLi1-3 跳转到我的评论
-			document.querySelector(".aboutLi1-3").addEventListener("tap",function(event){
-				mui.openWindow({
-					url:"criticism.html",
-					id:"criticism",
-//					preload:true,
-					show:{
-						aniShow:"pop-in"
-					},
-					styles:{
-						popGesture:"hide"
-					},
-					waiting:{
-						autoShow:false
-					}
-				})
-			},false)
+			singleBtn(favoBtn,"favorable.html","favorable","pop-in");
+			// aboutLi1-1 跳转到我的订单
+			singleBtn(aboutLi11,"about-d1.html","about-d1","pop-in");
+			// aboutLi1-2 跳转到我的收藏
+			singleBtn(aboutLi12,"collect.html","collect","pop-in");
+			// aboutLi1-3 跳转到我的评论
+			singleBtn(aboutLi13,"criticism.html","criticism","pop-in");
+			// aboutUl3li4 跳转到我的钱包
+			singleBtn(aboutUl3li4,"notecase.html","notecase","pop-in");
+			// 全部订单 跳转到我的订单
+			singleBtn(aboutU3S1p1,"about-d1.html","about-d1","pop-in");
+			// 我的评价 跳转到我的评价
+			singleBtn(aboutU3S1p3,"criticism.html","criticism","pop-in");
+			// 我的收藏 跳转到我的收藏
+			singleBtn(aboutU3S1p4,"collect.html","collect","pop-in");
+			// 申请体现 跳转到提现信息
+			singleBtn(aboutU3S1p5,"account.html","account","pop-in");
+			// 地址管理 跳转到地址列表
+			singleBtn(aboutU3S2p1,"administration.html","administration","pop-in");
 		});
 	</script>
 </html>

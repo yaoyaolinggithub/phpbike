@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>提现提交</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style type="text/css">
+			/*输入框列表样式*/
+			#accountCont .mui-content-padded{
+			    margin: 10px 0px 0px;
+			    padding: 10px ;
+    			background: #fff;
+    			border-bottom: 1px solid gainsboro;
+			}
+			.accountD1 .mui-input-group .mui-input-row {
+			    margin: 15px 0px;
+			    position: relative;
+			}
+			#accountCont .mui-input-group:before,#accountCont .mui-input-group:after,#accountCont .mui-input-group .mui-input-row:after{
+			    height: 0px;
+			}
+			#accountCont .mui-input-group .mui-input-row:after {
+			    left: 0px;
+			}
+			.accountD1 .mui-input-row label {
+				width: 30%;
+			    padding: 0px;
+			    line-height: 40px;
+			    text-align: right;
+			    font-size: 0.9rem;
+			}
+			.accountD1 .mui-input-row input {
+				float: left;
+			    width: 70%;
+			    height: auto;
+			    border: 1px solid #dedede;
+			    padding: 5px 5px;
+			    font-size: 0.9rem;
+			    line-height: 19px;
+			    margin: 5px 0px;
+			    border-radius: 3px;
+			}
+			#accountCont .accountD1 .mui-input-row:nth-child(5) input {
+			    width: 35%;
+			}
+			.accinpImg{
+				width: 90px;
+				position: absolute;
+				bottom: 0;
+				top: 0;
+				margin: auto;
+				right:0;
+				
+			}
+			.accountBtn .mui-btn-block{
+				font-size: 1rem;
+			    margin: 30px 0px;
+			    padding: 10px 0;
+			}
+			/*申请表格*/
+			.accountD2 {
+				padding: 30px 15px;
+				background:#fff ;
+			}
+			.accountD2 tr{
+				line-height: 37px;
+				border-bottom:1px solid gainsboro ;
+			}
+			.accountD2 tr th{
+				text-align: center;
+			}
+			.accountD2 tr td{
+				text-align: center;
+				font-size: 0.95rem;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">提现信息</h1>
+		</header>
+		<div class="mui-content" id="accountCont">
+			<!--输入框列表-->
+			<div class="mui-content-padded accountD1">
+				<form class="mui-input-group">
+					<div class="mui-input-row">
+						<label>提现金额：</label>
+						<input type="text" class="mui-input-clear" placeholder="最少提现额度 100">
+					</div>
+					<div class="mui-input-row">
+						<label>银行名称：</label>
+						<input type="text" class="mui-input-clear" placeholder="如:支付宝,农业银行,工商银行等...">
+					</div>
+					<div class="mui-input-row">
+						<label>收款账号：</label>
+						<input type="text" class="mui-input-clear" placeholder="如:支付宝账号,建设银行账号">
+					</div>
+					<div class="mui-input-row">
+						<label>开户名：</label>
+						<input type="text" class="mui-input-clear" placeholder="开户人姓名">
+					</div>
+					<div class="mui-input-row">
+						<label>验证码：</label>
+						<input type="text" placeholder="请输入验证码">
+						<img class="accinpImg" src="../images/accountL1.png" />
+					</div>
+					<!--配送地址提交-->
+					<div class="accountBtn">
+						<button type="button" class="mui-btn mui-btn-danger mui-btn-block">确定提交</button>
+					</div>
+				</form>
+			</div>
+			<!--申请表格-->
+			<div class="accountD2">
+				<table width="100%" border="0" cellspacing="1" cellpadding="0">
+					<tr>
+						<th>编号</th>
+						<th>申请日期</th>                
+						<th>金额</th>
+						<th>状态</th>
+					</tr> 
+		            <tr>
+		                <td>7</td>
+		                <td>2017-05-22</td>
+		                <td>10001.00</td>
+		                <td>申请中</td>
+		            </tr>
+		            <tr>
+		                <td>6</td>
+		                <td>2017-05-15</td>
+		                <td>1000.00</td>
+		                <td>申请中</td>
+		            </tr>
+		            <tr>
+		                <td>5</td>
+		                <td>2017-02-09</td>
+		                <td>10.00</td>
+		                <td>申请中</td>
+		            </tr>
+		            <tr>
+		                <td>4</td>
+		                <td>2017-01-02</td>
+		                <td>2000.00</td>
+		                <td>申请成功</td>
+		            </tr>
+		            <tr>
+		                <td>3</td>
+		                <td>2017-01-02</td>
+		                <td>15000.00</td>
+		                <td>申请成功</td>
+		            </tr>
+		            <tr>
+		                <td>1</td>
+		                <td>2016-06-18</td>
+		                <td>100.00</td>
+		                <td>申请成功</td>
+		            </tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init();
+	</script>
+</html>

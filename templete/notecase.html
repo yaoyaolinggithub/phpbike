@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的钱包</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<style type="text/css">
+			/*账户总额*/
+			.notecaseD1{
+				border-top: 1px solid darkgray;
+				border-bottom: 1px solid darkgray;
+				line-height: 100px;
+				text-align: center;
+			}
+			.notecaseD1 .noteP1{
+				margin: 0;
+				background: #F5F5F5;
+				color: #e41735;
+			}
+			.noteP1 .noteS1{
+				font-size: 2rem;
+			}
+			.noteP1 .noteS1 em{
+				font-style: normal;
+			}
+			/*金额详情*/
+			.notecaseD2{
+				background: #fff;
+			    margin: 10px ;
+			    margin-left: 20px;
+			    padding-bottom: 1px;
+			}
+			.notecaseD2UL{
+				margin: 10px 0px;
+			    padding: 0px 0px 0px 10px;
+			    border-left: 1px solid darkgray;
+			}
+			.notecaseD2UL li{
+				border-bottom: 1px solid #ccc;
+				padding: 10px 0px;
+				position: relative;
+			}
+			.notecaseD2UL li:first-of-type .notecaseliTop {
+				background: #e41735;
+			}
+			.notecaseliTop{
+				display: block;
+			    width: 9px;
+			    height: 9px;
+			    background: #666;
+			    position: absolute;
+			    top: 42%;
+			    left: -15px;
+			    border-radius: 5px;
+			}
+			.notecaseD1li1 p{
+				margin: 0;
+				color: #666;
+				text-indent: 15px;
+			}
+			.notecaseD1li1 .noteDlP1 span{
+				color:#e41735;
+			}
+			/*回到顶部样式*/
+			#noteBtnTop {
+				z-index: 20;
+				width:40px; 
+				height:40px; 
+				border-radius: 50%;
+				position:fixed; 
+				right:25px; 
+				bottom:10px; 
+				display:none; 
+				background: rgba(255, 255, 255,0.3);
+			}
+			#noteBtnTop img{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">资金管理</h1>
+		</header>
+		<div class="mui-content" id="notecaseCont" style="background: #fff;">
+			<!--账户总额-->
+			<div class="notecaseD1">
+				<p class="noteP1">账户余额<span class="noteS1">￥<em>18475.41</em>元</span></p>
+			</div> 
+			<!--金额详情-->
+			<div class="notecaseD2">
+				<ul class="notecaseD2UL">
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					<li class="notecaseD1li1">
+						<span class="notecaseliTop"></span>
+						<p class="noteDlP1">金额：<span class="noteDlP1-s1">-1000.00</span>，积分：<span class="noteDlP1-s2">-851</span></p>
+						<p class="noteDlP2">2017-05-13 17:51:23</p>
+						<p class="noteDlP3">下单消费</p>
+					</li>
+					
+					
+				</ul>
+			</div>
+			
+			<!--回到顶部按钮-->
+			<a href="javascript:;" id="noteBtnTop">
+			    <img src="../images/top.png" alt="" />
+			</a>
+		</div>
+		
+	</body>
+	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init();
+		// 回到顶部
+		window.onload = function(){
+		    var noteBtn = document.getElementById('noteBtnTop');  //获取回到顶部按钮的ID
+		    var clientHeight = document.documentElement.clientHeight;   //获取可视区域的高度
+		    window.onscroll = function(){         //滚动条滚动事件
+		        //获取滚动条的滚动高度
+		        var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+		        if(osTop >= clientHeight){  //如果滚动高度大于可视区域高度，则显示回到顶部按钮
+			        noteBtn.style.display = 'block';
+		        }else{         //否则隐藏
+		            noteBtn.style.display = 'none';
+		        }
+		    }
+			mui.plusReady(function() {
+				noteBtn.addEventListener('tap', function() {
+					alert(1);
+					mui('#notecaseCont').pullRefresh().scrollTo(0, 0, 30);
+				}, false);
+			});
+		}
+	</script>
+</html>

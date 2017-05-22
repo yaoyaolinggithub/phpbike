@@ -8,6 +8,27 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="../css/mui.min.css">
 		<style type="text/css">
+			/*头部导航*/
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			.criticismCont1{
+				border-top: 1px solid gainsboro;
+				background: white;
+			}
+			#item1 .mui-scroll-wrapper {
+			    position: static;
+			    z-index: 2;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    overflow: hidden;
+			    width: 100%;
+			}
+			#segmentedControl{
+				width: 90%;
+				margin: auto;
+			}
 			/*代金劵列表*/
 			#favoCont .favorul{
 				background:#efeff4;
@@ -99,9 +120,33 @@
 			    background-color: #f5f5f5;
 			    background: url(../images/fa-bot.png) repeat-x;
 			    background-size: 8px;
-			    
 			}
-			
+			/*已使用优惠劵样式*/
+			#item2 .mui-favor-li1 {
+			    color: #c7b6b6;
+			}
+			#item2 .favo-primary .favor-li-p1 {
+			    color: #c7b6b6;
+    		}
+    		#item2 .mui-favor-li2 {
+		    color: #c7b6b6;
+	    	}
+			#item2 .mui-favor-bot {
+			    background: #c7b6b6;
+			}
+			/*已过期优惠劵样式*/
+			#item3 .mui-favor-li1 {
+			    color: #d6d3d3;
+			}
+			#item3 .favo-primary .favor-li-p1 {
+			    color: #d6d3d3;
+    		}
+    		#item3 .mui-favor-li2 {
+		    color: #d6d3d3;
+	    	}
+			#item3 .mui-favor-bot {
+			    background: #d6d3d3;
+			}
 			
 		</style>
 	</head>
@@ -111,112 +156,335 @@
 		    <h1 class="mui-title">代金劵</h1>
 		</header>
 		<div class="mui-content" id="favoCont">
-		    <!--代金劵列表-->
-		    <ul class="mui-table-view favorul">
-		        <li class="mui-table-view-cell">
-		        	<div class="favo-over-li">
-		        		<div class="mui-favor-li">
-			        		<div class="mui-favor-li1">
-			        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
-			        		</div>
-			        		<div class="mui-favor-li2">
-			        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
-			        		</div>
-			        	</div> 
-			        	<span class="favo-primary">
-			        		<div class="favor-li-p1">新人劵</div>
-			        		<div class="favor-li-p2">
-			        			<p class="favorp1">2017.05.03</p>
-			        			<p class="favorp2">00:00</p>
-			        			<p class="favorp3">~</p>
-			        			<p class="favorp4">2020.05.03</p>
-			        			<p class="favorp5">00:00</p>
-			        		</div>
-			        	</span>
-		        	</div>
-		        	
-		        	<div class="mui-favor-bot">代金券序号：<span class="favor-bot-p">4564654564564564</span></div>
-		        	<div class="favor-border"></div>
-		        </li>
-		        <li class="mui-table-view-cell">
-		        	<div class="favo-over-li">
-		        		<div class="mui-favor-li">
-			        		<div class="mui-favor-li1">
-			        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
-			        		</div>
-			        		<div class="mui-favor-li2">
-			        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
-			        		</div>
-			        	</div> 
-			        	<span class="favo-primary">
-			        		<div class="favor-li-p1">新人劵</div>
-			        		<div class="favor-li-p2">
-			        			<p class="favorp1">2017.05.03</p>
-			        			<p class="favorp2">00:00</p>
-			        			<p class="favorp3">~</p>
-			        			<p class="favorp4">2020.05.03</p>
-			        			<p class="favorp5">00:00</p>
-			        		</div>
-			        	</span>
-		        	</div>
-		        	
-		        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
-		        	<div class="favor-border"></div>
-		        </li>
-		        <li class="mui-table-view-cell">
-		        	<div class="favo-over-li">
-		        		<div class="mui-favor-li">
-			        		<div class="mui-favor-li1">
-			        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
-			        		</div>
-			        		<div class="mui-favor-li2">
-			        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
-			        		</div>
-			        	</div> 
-			        	<span class="favo-primary">
-			        		<div class="favor-li-p1">新人劵</div>
-			        		<div class="favor-li-p2">
-			        			<p class="favorp1">2017.05.03</p>
-			        			<p class="favorp2">00:00</p>
-			        			<p class="favorp3">~</p>
-			        			<p class="favorp4">2020.05.03</p>
-			        			<p class="favorp5">00:00</p>
-			        		</div>
-			        	</span>
-		        	</div>
-		        	
-		        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
-		        	<div class="favor-border"></div>
-		        </li>
-		        <li class="mui-table-view-cell">
-		        	<div class="favo-over-li">
-		        		<div class="mui-favor-li">
-			        		<div class="mui-favor-li1">
-			        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
-			        		</div>
-			        		<div class="mui-favor-li2">
-			        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
-			        		</div>
-			        	</div> 
-			        	<span class="favo-primary">
-			        		<div class="favor-li-p1">新人劵</div>
-			        		<div class="favor-li-p2">
-			        			<p class="favorp1">2017.05.03</p>
-			        			<p class="favorp2">00:00</p>
-			        			<p class="favorp3">~</p>
-			        			<p class="favorp4">2020.05.03</p>
-			        			<p class="favorp5">00:00</p>
-			        		</div>
-			        	</span>
-		        	</div>
-		        	
-		        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
-		        	<div class="favor-border"></div>
-		        </li>
-		    </ul>
+			<!--头部导航-->
+			<div class="criticismCont1">
+				<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-negative">
+					<a class="mui-control-item mui-active" href="#item1">未使用</a>
+					<a class="mui-control-item" href="#item2">已使用</a>
+					<a class="mui-control-item" href="#item3">已过期</a>
+				</div>
+			</div>
+			<!--列表内容-->
+			<div class="criticismCont2">
+				<div id="item1" class="mui-control-content mui-active">
+					<!--未使用代金劵列表-->
+				    <ul class="mui-table-view favorul">
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：<span class="favor-bot-p">4564654564564564</span></div>
+				        	<div class="favor-border"></div>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
+				        	<div class="favor-border"></div>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
+				        	<div class="favor-border"></div>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
+				        	<div class="favor-border"></div>
+				        </li>
+				    </ul>
+				</div>
+				<div id="item2" class="mui-control-content">
+					<!--未使用代金劵列表-->
+				    <ul class="mui-table-view favorul">
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：<span class="favor-bot-p">4564654564564564</span></div>
+				        	<div class="favor-border"></div>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
+				        	<div class="favor-border"></div>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
+				        	<div class="favor-border"></div>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
+				        	<div class="favor-border"></div>
+				        </li>
+				    </ul>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<!--未使用代金劵列表-->
+				    <ul class="mui-table-view favorul">
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：<span class="favor-bot-p">4564654564564564</span></div>
+				        	<div class="favor-border"></div>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
+				        	<div class="favor-border"></div>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
+				        	<div class="favor-border"></div>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<div class="favo-over-li">
+				        		<div class="mui-favor-li">
+					        		<div class="mui-favor-li1">
+					        			<i>¥</i><span>20</span><span class="forliP">（满99可用）</span>
+					        		</div>
+					        		<div class="mui-favor-li2">
+					        			使用范围：限购[名品城家居专营店]店铺部分商品(限部分商品)
+					        		</div>
+					        	</div> 
+					        	<span class="favo-primary">
+					        		<div class="favor-li-p1">新人劵</div>
+					        		<div class="favor-li-p2">
+					        			<p class="favorp1">2017.05.03</p>
+					        			<p class="favorp2">00:00</p>
+					        			<p class="favorp3">~</p>
+					        			<p class="favorp4">2020.05.03</p>
+					        			<p class="favorp5">00:00</p>
+					        		</div>
+					        	</span>
+				        	</div>
+				        	
+				        	<div class="mui-favor-bot">代金券序号：4564654564564564</div>
+				        	<div class="favor-border"></div>
+				        </li>
+				    </ul>
+				</div>
+			</div>
+		    
 		</div>
 	</body>
-	<script src="../js/mui.min.js"></script>
+	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		mui.init();
 	</script>

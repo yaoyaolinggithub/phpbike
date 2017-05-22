@@ -430,7 +430,8 @@
 					"contents/ngcont.html",
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"contents/ngcont1.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -467,11 +468,15 @@
 					"font_about/iconfont.eot",
 					"font_about/iconfont.ttf",
 					"font_about/iconfont.svg",
-					"images/aboutBJ.png"
+					"images/aboutBJ.png",
+					"images/about-li1.png"
 				],
 				"refer": [
 					"templete/setting.html",
-					"templete/service.html"
+					"templete/service.html",
+					"templete/criticism.html",
+					"templete/collect.html",
+					"templete/notecase.html"
 				],
 				"priority": 0
 			},
@@ -524,7 +529,8 @@
 					"fonts/mui.ttf",
 					"images/iconfont-tianjia.png",
 					"images/bike.jpg",
-					"images/bikecode.png"
+					"images/bikecode.png",
+					"images/setting-T1.png"
 				],
 				"refer": [
 					"templete/about.html"
@@ -756,6 +762,49 @@
 				"refer": [
 					"templete/details.html"
 				],
+				"priority": 0
+			},
+			"contents/ngcont1.html": {
+				"resources": [
+					"images/sop.png",
+					"images/ngconG1.png",
+					"images/comm.jpg",
+					"images/ngcontG2.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"templete/criticism-evaluate.html": {
+				"resources": [
+					"images/evaluateX1.gif",
+					"images/evaluate-I1.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"templete/criticism.html": {
+				"resources": [
+					"css/mui.min.css",
+					"images/criticism-5x.png"
+				],
+				"refer": [
+					"templete/criticism-evaluate.html"
+				],
+				"priority": 0
+			},
+			"templete/collect.html": {
+				"resources": [
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"templete/notecase.html": {
+				"resources": [
+					"font_about/iconfont.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

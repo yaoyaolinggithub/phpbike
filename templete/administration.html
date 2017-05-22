@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>地址管理</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<style type="text/css">
+			/*地址列表*/
+			.adminUl{
+				padding: 0;
+				margin: 0;
+				border-top: 1px solid gainsboro;
+			}
+			.adminLi1{
+				padding: 13px 10px 10px;
+				border-bottom: 1px solid #ccc;
+				display: flex;
+  				justify-content: space-between;
+			}
+			.adminLi1D1{
+				width: 30px;
+				background: url(../images/adminL1.png) no-repeat 50%;
+				background-size: 25px ;
+				opacity: 0;
+			}
+			.adminLi1D2{
+				width: 100%;
+				padding:0px 10px;
+			}
+			.adminLi1 .adminLi1D2 p{
+				margin: 0;
+			}
+			.adminLi1D2 .adminLi1D2-s1{
+				display: inline-block;
+				width: 30%;
+				font-weight: bold;
+			}
+			.adminLi1D2 .adminLi1D2-s2{
+				display: inline-block;
+				width: 70%;
+			}
+			.adminLi1D2 .adminLi1D2-s2{
+				text-align: right;
+			}
+			.adminLi1D2 .adminLi1D2-p1{
+				margin-bottom: 5px;
+			}
+			.adminLi1D3{
+				width: 30px;
+				background: url(../images/adminL2.png) no-repeat 50%;
+				background-size: 20px ;
+			}
+			/*默认选中地址白色样式*/
+			.adminLi1:first-of-type .adminLi1D2 p{
+				color: #fff;
+			}
+			.adminLi1:first-of-type {
+			    background: #5e6b85;
+			}
+			.adminLi1:first-of-type .adminLi1D1{
+			    opacity: 1;
+			}
+			/*底部固定添加地址*/
+			.adminbot {
+				padding: 5px 10px;
+				background:white;
+				border-top: 1px solid gainsboro;
+				position: fixed;
+				bottom: 0;
+			    left: 0;
+			    right: 0;
+			}
+			.adminbot button{
+				margin: 0px;
+				padding: 8px 0px;
+				font-size: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">地址管理</h1>
+		</header>
+		<div class="mui-content" style="background: #fff;">
+			<!--地址列表-->
+			<div class="adminstartD1">
+				<ul class="adminUl">
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+				</ul>
+			</div>
+			<!--底部固定添加地址-->
+			<div class="adminbot">
+				<button type="button" class="mui-btn mui-btn-danger mui-btn-block">添加新地址</button>
+			</div>
+		</div>
+		
+	</body>
+	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init();
+	</script>
+</html>
