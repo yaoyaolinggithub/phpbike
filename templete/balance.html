@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>积分余额</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<style type="text/css">
+			/*积分余额*/
+			.balanceCont1{
+				display: flex;
+  				justify-content: space-between;
+  				border-top: 1px solid darkgray;
+  				border-bottom: 1px solid darkgray;
+  				text-align: center;
+			}
+			.balanceCont1 .balanD1{
+				width: 33.3%;
+				margin: 10px 0px;
+    			border-right: 1px solid gainsboro;
+			}
+			.balanceCont1 .balanD1:last-of-type{
+    			border-right: 0px solid gainsboro;
+			}
+			.balanceCont1 .balanD1 p{
+				margin: 0;
+				color: #dd524d;
+			}
+			.balanceCont1 .balanD1 button{
+				padding: 6px 10px;
+				margin: 4px 0px;
+			}
+			.balanceCont1 .balanD1 .balanD1p2{
+				color: black;
+			}
+			/*底部积分详情头部*/
+			.balanceCont2{
+				padding: 20px 10px;
+			}
+			.balanceCont2 .mui-segmented-control .mui-control-item {
+				font-size: 0.9rem;
+    			line-height: 28px;
+    		}
+    		/*底部积分详情内容*/
+    		.balanceCont3 ul{
+    			padding: 0px;
+    			margin:0;
+    		}
+    		.balanceCont3 ul li{
+    			margin-left: 10px;
+			    padding: 10px 10px 5px 0px;
+			    border-bottom: 1px solid gainsboro;
+    		}
+    		.balanceCont3 ul li p{
+    			margin-bottom: 2px;
+    			color: #3c3c3c;
+    		}
+    		.balanceCont3 .item2-li  p span+span
+{
+    			float: right;
+    			max-width: 60%;
+    		}
+    		.balanceCont3 .balanceConts2{
+    			font-size: 1.1rem;
+    			color:#dd524d ;
+    			font-weight: bolder;
+    		}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">资金管理</h1>
+		</header>
+		<div class="mui-content" style="background: #fff;">
+			<!--积分余额-->
+		    <div class="balanceCont1">
+		    	<div class="balanD1">
+		    		<p class="balanD1p1">9874</p>
+		    		<p class="balanD1p2">可用积分</p>
+		    	</div>
+		    	<div class="balanD1">
+		    		<p class="balanD1p1">1234.56</p>
+		    		<p class="balanD1p2">可用余额</p>
+		    	</div>
+		    	<div class="balanD1">
+		    		<button type="button" class="mui-btn mui-btn-danger balaBtnchage">充值</button>
+		    		<button type="button" class="mui-btn mui-btn-danger balaBtnmod">提现</button>
+		    	</div>
+		    </div>
+		    <!--底部积分详情-->
+		    <!--头部导航-->
+			<div class="balanceCont2">
+				<div class="mui-segmented-control mui-segmented-control-negative">
+					<a class="mui-control-item mui-active" href="#item1">全部</a>
+					<a class="mui-control-item" href="#item2">充值记录</a>
+					<a class="mui-control-item" href="#item3">积分</a>
+				</div>
+			</div>
+			<!--列表内容-->
+			<div class="balanceCont3">
+				<div id="item1" class="mui-control-content mui-active">
+					<!--<div id="scroll" class="mui-scroll-wrapper">-->
+						<!--<div class="mui-scroll">-->
+							<ul class="balanceContul1">
+								<li class="item2-li">
+									<p class="mui-cf"><span class="balanceConts1">余额：-1111.00</span><span class="balanceConts2 mui-font1">下单消费</span></p>
+									<p class="mui-cf"><span class="balanceConts3">积分：10</span><span class="balanceConts4">2017-05-10</span></p>
+								</li>
+								<li class="item2-li">
+									<p class="mui-cf"><span class="balanceConts1">余额：-1111.00</span><span class="balanceConts2 mui-font1">下单消费</span></p>
+									<p class="mui-cf"><span class="balanceConts3">积分：10</span><span class="balanceConts4">2017-05-10</span></p>
+								</li>
+								<li class="item2-li">
+									<p class="mui-cf"><span class="balanceConts1">余额：-1111.00</span><span class="balanceConts2 mui-font1">下单消费</span></p>
+									<p class="mui-cf"><span class="balanceConts3">积分：10</span><span class="balanceConts4">2017-05-10</span></p>
+								</li>
+								<li class="item2-li">
+									<p class="mui-cf"><span class="balanceConts1">余额：-1111.00</span><span class="balanceConts2 mui-font1">下单消费</span></p>
+									<p class="mui-cf"><span class="balanceConts3">积分：10</span><span class="balanceConts4">2017-05-10</span></p>
+								</li>
+								<li class="item2-li">
+									<p class="mui-cf"><span class="balanceConts1">余额：-1111.00</span><span class="balanceConts2 mui-font1">下单消费</span></p>
+									<p class="mui-cf"><span class="balanceConts3">积分：10</span><span class="balanceConts4">2017-05-10</span></p>
+								</li>
+							</ul>
+						<!--</div>-->
+					<!--</div>-->
+				</div>
+				<div id="item2" class="mui-control-content">
+					<ul class="balanceContul2">
+						<li class="item2-li">
+							<p class="mui-cf"><span class="balanceConts1">充值金额：100.00</span><span class="balanceConts2 mui-font1">手机网站支付宝</span></p>
+							<p class="mui-cf"><span class="balanceConts3">支付状态：待支付</span><span class="balanceConts4">2017-05-10</span></p>
+						</li>
+						<li class="item2-li">
+							<p class="mui-cf"><span class="balanceConts1">充值金额：100.00</span><span class="balanceConts2 mui-font1">手机网站支付宝</span></p>
+							<p class="mui-cf"><span class="balanceConts3">支付状态：待支付</span><span class="balanceConts4">2017-05-10</span></p>
+						</li>
+						<li class="item2-li">
+							<p class="mui-cf"><span class="balanceConts1">充值金额：100.00</span><span class="balanceConts2 mui-font1">手机网站支付宝</span></p>
+							<p class="mui-cf"><span class="balanceConts3">支付状态：待支付</span><span class="balanceConts4">2017-05-10</span></p>
+						</li>
+					</ul>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<ul class="balanceContul3">
+						<li class="item2-li">
+							<p class="mui-cf"><span class="balanceConts1"> 余额：-100.00</span><span class="balanceConts2 mui-font1">下单消费</span></p>
+							<p class="mui-cf"><span class="balanceConts3">积分：-20</span><span class="balanceConts4">2017-05-10</span></p>
+						</li>
+						<li class="item2-li">
+							<p class="mui-cf"><span class="balanceConts1"> 余额：-100.00</span><span class="balanceConts2 mui-font1">下单消费</span></p>
+							<p class="mui-cf"><span class="balanceConts3">积分：-20</span><span class="balanceConts4">2017-05-10</span></p>
+						</li>
+						<li class="item2-li">
+							<p class="mui-cf"><span class="balanceConts1"> 余额：-100.00</span><span class="balanceConts2 mui-font1">下单消费</span></p>
+							<p class="mui-cf"><span class="balanceConts3">积分：-20</span><span class="balanceConts4">2017-05-10</span></p>
+						</li>
+						<li class="item2-li">
+							<p class="mui-cf"><span class="balanceConts1"> 余额：-100.00</span><span class="balanceConts2 mui-font1">下单消费</span></p>
+							<p class="mui-cf"><span class="balanceConts3">积分：-20</span><span class="balanceConts4">2017-05-10</span></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" >
+		mui.init();
+		var balaBtnchage = document.querySelector(".balaBtnchage");
+		var balaBtnmod = document.querySelector(".balaBtnmod");
+		mui.plusReady(function(){
+			function singleBtn(singElent,singHtml,singId,singFhi){
+				singElent.addEventListener('tap',function(){
+					mui.openWindow({
+						url: singHtml,
+						id: singId,
+//						preload: true,
+						styles: {
+							popGesture: singFhi
+						},
+						show: {
+						    aniShow: 'none'
+						},
+						waiting: {
+							autoShow: false
+						}
+					})
+				})
+			}
+			// 充值 跳转到充值页面
+			singleBtn(balaBtnchage,"recharge.html","recharge","pop-in");
+			// 提现 跳转到提现信息
+			singleBtn(balaBtnmod,"account.html","account","pop-in");
+			
+		});
+	</script>
+</html>

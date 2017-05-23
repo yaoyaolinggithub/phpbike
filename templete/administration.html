@@ -8,6 +8,10 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
 		<style type="text/css">
+			#adminstrat{
+				background: white;
+				padding-bottom: 51px;
+			}
 			/*地址列表*/
 			.adminUl{
 				padding: 0;
@@ -35,18 +39,33 @@
 			}
 			.adminLi1D2 .adminLi1D2-s1{
 				display: inline-block;
-				width: 30%;
-				font-weight: bold;
-			}
-			.adminLi1D2 .adminLi1D2-s2{
-				display: inline-block;
-				width: 70%;
+			    width: 30%;
+			    font-weight: bold;
+			    max-width: 90px;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
 			}
 			.adminLi1D2 .adminLi1D2-s2{
 				text-align: right;
+				display: block;
+			    -webkit-box-flex: 1;
+			    -webkit-flex: 1;
+			    -ms-flex: 1;
+			    flex: 1;
+			    -webkit-flex-basis: 0;
+			    -ms-flex-preferred-size: 0;
+			    flex-basis: 0;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
 			}
 			.adminLi1D2 .adminLi1D2-p1{
 				margin-bottom: 5px;
+				display: flex;
+			    -webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
 			}
 			.adminLi1D3{
 				width: 30px;
@@ -85,7 +104,7 @@
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 		    <h1 class="mui-title">地址管理</h1>
 		</header>
-		<div class="mui-content" style="background: #fff;">
+		<div class="mui-content" id="adminstrat">
 			<!--地址列表-->
 			<div class="adminstartD1">
 				<ul class="adminUl">
@@ -93,7 +112,7 @@
 						<div class="adminLi1D1"></div>
 						<div class="adminLi1D2">
 							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
-							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
 						</div>
 						<div class="adminLi1D3"></div>
 					</li>
@@ -101,7 +120,7 @@
 						<div class="adminLi1D1"></div>
 						<div class="adminLi1D2">
 							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
-							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
 						</div>
 						<div class="adminLi1D3"></div>
 					</li>
@@ -109,7 +128,7 @@
 						<div class="adminLi1D1"></div>
 						<div class="adminLi1D2">
 							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
-							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
 						</div>
 						<div class="adminLi1D3"></div>
 					</li>
@@ -117,7 +136,7 @@
 						<div class="adminLi1D1"></div>
 						<div class="adminLi1D2">
 							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
-							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
 						</div>
 						<div class="adminLi1D3"></div>
 					</li>
@@ -125,10 +144,107 @@
 						<div class="adminLi1D1"></div>
 						<div class="adminLi1D2">
 							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
-							<p class="adminLi1D2-p2">北京市，市辖区，西城区，111111111111111111111</p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
 						</div>
 						<div class="adminLi1D3"></div>
 					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					<li class="adminLi1">
+						<div class="adminLi1D1"></div>
+						<div class="adminLi1D2">
+							<p class="adminLi1D2-p1"><span class="adminLi1D2-s1">哞哞哞</span><span class="adminLi1D2-s2">电话：<span class="adminLi1D2-s3">11111111111</span></span></p>
+							<p class="adminLi1D2-p2 mui-font2">北京市，市辖区，西城区，111111111111111111111</p>
+						</div>
+						<div class="adminLi1D3"></div>
+					</li>
+					
 				</ul>
 			</div>
 			<!--底部固定添加地址-->
@@ -141,5 +257,40 @@
 	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		mui.init();
+		mui.plusReady(function(){
+			// 跳转添加地址
+			document.querySelector(".adminbot").addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"adminAdd.html",
+					id:"adminAdd",
+					preload:true,
+					show:{
+						aniShow:"pop-in"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false);
+			mui(".adminUl").on("tap",".adminLi1D3",function(event){
+				mui.openWindow({
+					url:"adminalter.html",
+					id:"adminalter",
+					preload:true,
+					show:{
+						aniShow:"pop-in"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false);
+		})
 	</script>
 </html>

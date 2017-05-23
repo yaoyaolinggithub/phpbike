@@ -422,6 +422,7 @@
 		var aboutU3S1p4 = document.querySelector(".aboutU3S1p4");
 		var aboutU3S1p5 = document.querySelector(".aboutU3S1p5");
 		var aboutU3S2p1 = document.querySelector(".aboutU3S2p1");
+		var aboutU3S2p2 = document.querySelector(".aboutU3S2p2");
 		mui.plusReady(function(){
 			function singleBtn(singElent,singHtml,singId,singFhi){
 				singElent.addEventListener('tap',function(){
@@ -467,6 +468,8 @@
 			singleBtn(aboutU3S1p5,"account.html","account","pop-in");
 			// 地址管理 跳转到地址列表
 			singleBtn(aboutU3S2p1,"administration.html","administration","pop-in");
+			//积分余额 跳转到积分管理
+			singleBtn(aboutU3S2p2,"balance.html","balance","pop-in");
 		});
 	</script>
 </html>

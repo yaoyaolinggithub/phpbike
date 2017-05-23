@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>地址管理</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../sitejs/app.css" />-->
+		<link href="../sitejs/mui.picker.css" rel="stylesheet" />
+		<link href="../sitejs/mui.poppicker.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../sitejs/mui.picker.min.css" />
+		<style type="text/css">
+			/*主体*/
+			#adminalter{
+			    background: #ffffff;
+			}
+			#adminalter .mui-content-padded{
+			    margin: 0px;
+			}
+			#adminalter .mui-input-group:before,#adminalter .mui-input-group:after,#adminalter .mui-input-group:after,#adminalter .mui-input-group .mui-input-row:after{
+			    height: 0px;
+			}
+			#adminalter .mui-input-group .mui-input-row:after {
+			    left: 0px;
+			}
+			#adminalter .mui-input-group .mui-input-row{
+			    border-bottom: 1px solid #ceced2;
+			}
+			/*选择框样式*/
+			#adminalter .mui-input-group .mui-input-row {
+			    height: 55px;
+			}
+			#adminalter .mui-input-row label {
+			    width: 105px;
+			    padding: 10px 15px;
+			    font-size: 15px;
+    			color: #232326;
+    			line-height: 31px;
+			}
+			#adminalter .mui-input-row label~input{
+			    width: 65%;
+			    font-size: 1rem;
+    			color: #222;
+    			height: 54px;
+    			float: none;
+    			position: absolute;
+			    top: 0;
+			    bottom: 0;
+			}
+			#adminalter .mui-input-row .mui-input-clear~.mui-icon-clear{
+			    top: 16px;
+			}
+			/*选择城市*/
+			#adminalter #showCityPicker3 {
+				height: 100%;
+			    width: auto;
+			    border: 0px;
+			    padding-left: 0px;
+			    padding-right: 200px;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			}
+			#adminalter .mui-input-row textarea {
+				padding-top: 17px;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    margin: auto;
+			    margin: 0px 0px;
+			    width: 70%;
+			    font-size: 15px;
+    			color: #232326;
+			}
+			#adminalter .mui-content-padded .cityDetail {
+			    height: 70px;
+			}
+			/*配送地址提交*/
+			#adminalter .site-siteBtn{
+				padding: 50px 10px;
+    			background: #fff;
+    			text-align: right;
+    			position: relative;
+			}
+			#adminalter .site-siteBtn button{
+				padding: 10px;
+			}
+			#adminalter .site-siteBtn button:nth-child(3){
+				padding: 10px 30px;
+			}
+			.site-siteBtn .adminaler-dele{
+				height: 35px;
+				background: url(../images/ngcontG2.png) no-repeat center top;
+			    background-size: 24px;
+			    position: absolute;
+			    left: 10px;
+			    font-size: 0.8rem;
+			    line-height: 70px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">地址管理</h1>
+		</header>
+		<div class="mui-content" id="adminalter">
+			<div class="mui-content-padded">
+				<form class="mui-input-group">
+					<div class="mui-input-row">
+						<label>收货人：</label>
+						<input type="text" class="mui-input-clear" placeholder="">
+					</div>
+					<div class="mui-input-row">
+						<label>手机号码：</label>
+						<input type="text" class="mui-input-clear" placeholder="">
+					</div>
+					<!--点击选择city-->
+					<div class="mui-input-row">
+						<label>所在地区：</label>
+						<button id='showCityPicker3' class="mui-input-clear" type='button'></button>
+					</div>
+					<div class="mui-input-row cityDetail">
+						<label>详细地址：</label>
+						<textarea id="textarea" rows="1" placeholder=""></textarea>
+					</div>
+					<div class="mui-input-row">
+						<label>邮政编码：</label>
+						<input type="text" class="mui-input-clear" placeholder="">
+					</div>
+					<!--配送地址提交-->
+					<div class="site-siteBtn">
+						<span class="adminaler-dele">删除</span>
+						<button type="button" class="mui-btn mui-btn-danger ">设置为默认地址</button>
+						<button type="button" class="mui-btn mui-btn-danger ">保存</button>
+					</div>
+					
+				</form>
+				
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<!--城市列表-->
+	<script src="../sitejs/mui.picker.js"></script>
+	<script src="../sitejs/mui.poppicker.js"></script>
+	<script src="../sitejs/city.data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../sitejs/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+	(function($, doc) {
+		$.init();
+		$.ready(function() {
+			//-----------------------------------------
+			//					//三级联示例
+			var cityPicker3 = new $.PopPicker({
+				layer: 3
+			});
+			cityPicker3.setData(cityData3);
+			var showCityPickerButton = doc.getElementById('showCityPicker3');
+			showCityPickerButton.addEventListener('tap', function(event) {
+				cityPicker3.show(function(items) {
+					showCityPickerButton.style.paddingRight = "50px";
+					showCityPickerButton.style.width = "auto";
+					showCityPickerButton.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text + "   >";
+					
+					//返回 false 可以阻止城市选择框的关闭
+					//return false;
+				});
+			}, false);
+		});
+		$.plusReady(function(){
+			// 跳转商品结算页面
+//			var siteCBtn = doc.getElementById("siteCbtn");
+//			siteCBtn.addEventListener("tap",function(event){
+//				$.openWindow({
+//					url:"indents.html",
+//					id:"indents",
+//					preload:true,
+//					show:{
+//						aniShow:"pop-in"
+//					},
+//					styles:{
+//						popGesture:"hide"
+//					},
+//					waiting:{
+//						autoShow:false
+//					}
+//				})
+//			},false);
+		})
+	})(mui, document);
+	</script>
+</html>
