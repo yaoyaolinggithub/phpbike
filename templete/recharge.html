@@ -8,7 +8,55 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
 		<style type="text/css">
-			
+			/*余额*/
+			.rechargeCont1{
+				padding: 10px;
+				border-top: 1px solid gainsboro;
+				border-bottom: 1px solid gainsboro;
+			}
+			.rechargeCont1 .rechageS1{
+				font-size: 1.1rem;
+			    font-weight: bold;
+			    color: #dd524d;
+			}
+			/*选择金额*/
+			.rechargeCont2{
+				display: flex;
+				flex-wrap: wrap;
+				align-content: space-between;
+			}
+			.rechargeCont2 .rechagesp1{
+				height: auto;
+				width: 29.3%;
+				padding: 0;
+				margin: 2%;
+				font-size: 0.95rem;
+				border: 1px solid gainsboro;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 30px;
+				color: darkgray;
+				background: white;
+			}
+			.rechageFont{
+				padding: 20px 10px;
+				font-size: 0.95rem;
+			    color: #484646;
+			    font-weight: bold;
+			}
+			.rechageFont .rechageFonts{
+				font-size: 1.5rem;
+				color: #dd524d;
+			}
+			/*充值方式*/
+			.rechargeCont3{
+				padding: 10px;
+			}
+			.rechargeCont3 button{
+				font-size: 1rem;
+			    padding: 10px 0px;
+			    margin-bottom: 20px;
+			}
 		</style>
 	</head>
 	<body>
@@ -16,13 +64,36 @@
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 		    <h1 class="mui-title">在线充值</h1>
 		</header>
-		<div class="mui-content" style="background: #fff;">
+		<div class="mui-content">
+			<!--余额-->
+			<p class="rechargeCont1">
+				您的当前余额：<span class="rechageS1">1234.56</span> 元
+			</p>
+			<!--选择金额-->
+			<div class="rechargeCont2">
+				<span class="rechagesp1">10元</span>
+				<span class="rechagesp1">50元</span>
+				<span class="rechagesp1">100元</span>
+				<span class="rechagesp1">500元</span>
+				<span class="rechagesp1">1000元</span>
+				<input type="text" class="rechagesp1" placeholder="请输入金额">
+				<div class="rechageFont">充值金额：<span class="rechageFonts">500</span> 元</div>
+			</div>
+			<!--充值方式-->
+			<div class="rechargeCont3">
+				<button type="button" class="mui-btn mui-btn-danger mui-btn-block">微信充值</button>
+				<button type="button" class="mui-btn mui-btn-danger mui-btn-block">支付宝充值</button>
+			</div>
 			
 		</div>
 	</body>
 	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript" >
+	<script type="text/javascript">
 		mui.init();
+		var rechagesps = document.querySelectorAll(".rechagesp1");
+		for(var i=0; i<rechagesps.length; i++){
+			
+		}
 		mui.plusReady(function(){
 			
 		});

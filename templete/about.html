@@ -412,7 +412,7 @@
 		var abologBtn = document.querySelector('.mui-left-zu');
 		var favoBtn = document.querySelector('.aboutU3S1p2');
 		var muiSeBtn = document.querySelector(".mui-se1");
-		var aboutserBtn = document.querySelector(".aboutU3S2p3");
+//		var aboutserBtn = document.querySelector(".aboutU3S2p3");
 		var aboutLi11 = document.querySelector(".aboutLi1-1");
 		var aboutLi12 = document.querySelector(".aboutLi1-2");
 		var aboutLi13 = document.querySelector(".aboutLi1-3");
@@ -422,7 +422,9 @@
 		var aboutU3S1p4 = document.querySelector(".aboutU3S1p4");
 		var aboutU3S1p5 = document.querySelector(".aboutU3S1p5");
 		var aboutU3S2p1 = document.querySelector(".aboutU3S2p1");
-		var aboutU3S2p2 = document.querySelector(".aboutU3S2p2");
+		var aboutU3S2p2 = document.querySelector(".aboutU3S2p2"); 
+		var aboutU3S2p3 = document.querySelector(".aboutU3S2p3");
+		var aboutU3S2p4 = document.querySelector(".aboutU3S2p4");
 		mui.plusReady(function(){
 			function singleBtn(singElent,singHtml,singId,singFhi){
 				singElent.addEventListener('tap',function(){
@@ -431,23 +433,23 @@
 						id: singId,
 //						preload: true,
 						styles: {
-							popGesture: singFhi
+							popGesture: 'none'
 						},
 						show: {
-						    aniShow: 'none'
+						    aniShow: singFhi
 						},
 						waiting: {
-							autoShow: false
+							autoShow: true
 						}
 					})
 				})
 			}
 			// 跳转到登录页面
-			singleBtn(abologBtn,"login.html","login",'hide');
+			singleBtn(abologBtn,"login.html","login",'none');
 			// 跳转到设置页面
 			singleBtn(muiSeBtn,"setting.html","setting","pop-in");
-			// 跳转到客服页面
-			singleBtn(aboutserBtn,"service.html","service","pop-in");
+			// 跳转到客服页面 转为了退换货
+//			singleBtn(aboutserBtn,"service.html","service","pop-in");
 			// 跳转到优惠劵
 			singleBtn(favoBtn,"favorable.html","favorable","pop-in");
 			// aboutLi1-1 跳转到我的订单
@@ -470,6 +472,10 @@
 			singleBtn(aboutU3S2p1,"administration.html","administration","pop-in");
 			//积分余额 跳转到积分管理
 			singleBtn(aboutU3S2p2,"balance.html","balance","pop-in");
+			//售后服务 跳转到退换货
+			singleBtn(aboutU3S2p3,"afterSale.html","afterSale","pop-in");
+			//发展收益 跳转到暂没开放功能
+			singleBtn(aboutU3S2p4,"flaw.html","flaw","none");
 		});
 	</script>
 </html>

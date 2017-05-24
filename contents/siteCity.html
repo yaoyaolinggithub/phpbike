@@ -202,22 +202,25 @@
 		$.plusReady(function(){
 			// 跳转商品结算页面
 			var siteCBtn = doc.getElementById("siteCbtn");
-			siteCBtn.addEventListener("tap",function(event){
-				$.openWindow({
-					url:"indents.html",
-					id:"indents",
-					preload:true,
-					show:{
-						aniShow:"pop-in"
-					},
-					styles:{
-						popGesture:"hide"
-					},
-					waiting:{
-						autoShow:false
-					}
-				})
-			},false);
+			function singleBtn(singElent,singHtml,singId,singFhi){
+				singElent.addEventListener('tap',function(event){
+					$.openWindow({
+						url: singHtml,
+						id: singId,
+	//					preload: true,
+						styles: {
+							popGesture: 'none'
+						},
+						show: {
+						    aniShow: singFhi
+						},
+						waiting: {
+							autoShow: true
+						}
+					})
+				},false)
+			}
+			singleBtn(siteCBtn, "indents.html","indents","none");
 		})
 	})(mui, document);
 	</script>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>申请服务详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<style type="text/css">
+			/*物品详情*/
+			.afterDeta1{
+				padding: 10px;
+				border-top: 1px solid gainsboro;
+				border-bottom: 1px solid gainsboro;
+			}
+			.afterDeta1 img{
+				width: 90px;
+				float: left;
+			}
+			.afterDeta1 .aftersP1{
+				padding-left: 100px;
+				color: dodgerblue;
+			}
+			/*物体详情*/
+			.afterDesp2{
+				margin: 0px 10px;
+				padding: 10px 0px;
+				font-size: 0.8rem;
+				color: #000;
+				font-weight: bold;
+				border-bottom: 1px solid gainsboro;
+				display: flex;
+    			justify-content: space-between;
+			}
+			.afterDesp2 .afterS1{
+				display: inline-block; 
+				width: 25%;
+				padding: 0px 10px;
+				text-align: right;
+			}
+			.afterDesp2 .afterS2{
+				display: inline-block; 
+				width: 75%;
+				padding: 0px 10px;
+				text-align: left;
+				font-weight: normal;
+				word-wrap: break-word;  
+    			word-break: normal;  
+			}
+			/*问题图片*/
+			.afterDeta3{
+				padding: 20px 10px;
+			}
+			.afterDeta3 .afterDep1{
+				padding: 0px 10px;
+				color: #000;
+			}
+			.afterDeta3 img{
+				margin: 1%;
+    			width: 30%;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">申请服务详情</h1>
+		</header>
+		<div class="mui-content" style="background: #fff;">
+			<!--物品详情-->
+			<div class="afterDeta1 mui-cf">
+				<img src="../images/cuxiao.jpg" />
+				<p class="aftersP1">小米手机5,十余项黑科技，很轻狠快</p>
+			</div>
+			<!--物体详情-->
+			<div class="afterDeta2">
+				<p class="afterDesp2"><span class="afterS1">售后信息</span><span class="afterS2">申请中</span></p>
+				<p class="afterDesp2"><span class="afterS1">问题描述</span><span class="afterS2 afterBs1">2017052411471234</span></p>
+				<p class="afterDesp2"><span class="afterS1">问题备注</span><span class="afterS2 afterBs1">2017052411471234</span></p>
+			</div>
+			<!--问题图片-->
+			<div class="afterDeta3 mui-cf">
+				<p class="afterDep1">问题图片：</p>
+				<img src="../images/cuxiao.jpg" />
+				<img src="../images/cuxiao.jpg" />
+				<img src="../images/cuxiao.jpg" />
+				<img src="../images/cuxiao.jpg" />
+			</div>
+
+
+		</div>
+	</body>
+	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init();
+		mui.plusReady(function(){
+			document.querySelector(".aftersP1").addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"details.html",
+					id:"details",
+					styles: {
+						popGesture: 'none'
+					},
+					show: {
+					    aniShow: "none"
+					},
+					waiting: {
+						autoShow: true
+					}
+				})
+			},false)
+		});
+	</script>
+</html>

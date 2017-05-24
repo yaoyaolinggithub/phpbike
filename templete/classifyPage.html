@@ -238,11 +238,8 @@
 //						show: {
 //							aniShow: 'pop-in'
 //						},
-//						styles: {
-//							popGesture: 'hide'
-//						},
 //						waiting: {
-//							autoShow: false
+//							autoShow: true
 //						}
 //					});
 //				}, false);
@@ -252,14 +249,14 @@
 						url: "list.html",
 						id: "list",
 						preload: true,
+						styles: {
+							popGesture: 'none'
+						},
 						show: {
 							aniShow: 'pop-in'
 						},
-						styles: {
-							popGesture: 'hide'
-						},
 						waiting: {
-							autoShow: false
+							autoShow: true
 						}
 					});
 				}, false);

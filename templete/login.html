@@ -262,7 +262,7 @@
 								aniShow: 'pop-in'
 							},
 							waiting: {
-								autoShow: false
+								autoShow: true
 							}
 						});
 					} else if (settings.autoLogin && state.token) {
@@ -357,14 +357,14 @@
 							url: 'reg.html',
 							id: 'reg',
 							preload: true,
+							styles: {
+								popGesture: 'none'
+							},
 							show: {
 								aniShow: 'pop-in'
 							},
-							styles: {
-								popGesture: 'hide'
-							},
 							waiting: {
-								autoShow: false
+								autoShow: true
 							}
 						});
 					}, false);
@@ -373,14 +373,14 @@
 							url: 'forget_password.html',
 							id: 'forget_password',
 							preload: true,
+							styles: {
+								popGesture: 'none'
+							},
 							show: {
 								aniShow: 'pop-in'
 							},
-							styles: {
-								popGesture: 'hide'
-							},
 							waiting: {
-								autoShow: false
+								autoShow: true
 							}
 						});
 					}, false);

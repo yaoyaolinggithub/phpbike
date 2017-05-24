@@ -157,40 +157,45 @@
 		// 小统一分类批量点击进入列表页事件
 		var searB3 = document.querySelector(".searB3");
 		mui.plusReady(function() {
-			// 方框列表点击
-			mui(".searK2").on('tap','.searPps',function(event){
-				mui.openWindow({
-					url: "../templete/list.html",
-					id: "list",
-					preload: true,
-					show: {
-						aniShow: 'pop-in'
-					},
-					styles: {
-						popGesture: 'hide'
-					},
-					waiting: {
-						autoShow: false
-					}
-				});
-			}, false);
-			// 点击搜索商品
-			searB3.addEventListener('tap',function(event){
-				mui.openWindow({
-					url: "../templete/list.html",
-					id: "list",
-					preload: true,
-					show: {
-						aniShow: 'pop-in'
-					},
-					styles: {
-						popGesture: 'hide'
-					},
-					waiting: {
-						autoShow: false
-					}
-				});
-			}, false);
+			function singleBtn(singElent,singHtml,singId,singFhi){
+				singElent.addEventListener('tap',function(event){
+					mui.openWindow({
+						url: singHtml,
+						id: singId,
+	//					preload: true,
+						styles: {
+							popGesture: 'none'
+						},
+						show: {
+						    aniShow: singFhi
+						},
+						waiting: {
+							autoShow: true
+						}
+					})
+				},false)
+			}
+			singleBtn(searB3,"../templete/list.html","list",'pop-in');
+			// 批量进入
+			function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+				mui(IDBtns).on('tap',Skips,function(event){
+					mui.openWindow({
+						url: skipPages,
+						id: skipIDs,
+//						preload: true,
+						styles: {
+							popGesture: 'none'
+						},
+						show: {
+							aniShow: 'none'
+						},
+						waiting: {
+							autoShow: true
+						}
+					});
+				}, false);
+			}
+			dkipsPages(".searK2",'.searPps',"../templete/list.html","list");
 		});
 	</script>
 </html>

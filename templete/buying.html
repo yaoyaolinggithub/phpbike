@@ -257,22 +257,26 @@
 			buYinClcio('6');
 		}, 1000);
 		mui.plusReady(function() {
-			mui("#buyingCont").on('tap','.mui-table-view-cell',function(event){
-				mui.openWindow({
-					url: "details.html",
-					id: "details",
-					preload: true,
-					show: {
-						aniShow: 'pop-in'
-					},
-					styles: {
-						popGesture: 'hide'
-					},
-					waiting: {
-						autoShow: false
-					}
-				});
-			}, false);
+			// 批量进入
+			function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+				mui(IDBtns).on('tap',Skips,function(event){
+					mui.openWindow({
+						url: skipPages,
+						id: skipIDs,
+//						preload: true,
+						styles: {
+							popGesture: 'none'
+						},
+						show: {
+							aniShow: 'none'
+						},
+						waiting: {
+							autoShow: true
+						}
+					});
+				}, false);
+			}
+			dkipsPages("#buyingCont",'.mui-table-view-cell',"details.html","details");
 		});
 	</script>
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>退换货</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<style type="text/css">
+			.afterSaleCont1{
+				background: white;
+				border-top: 1px solid gainsboro;
+			}
+			.afterSaleul1 {
+				padding: 10px;
+				margin: 0;
+			}
+			.afterSaleul1 .afterSaleli1 {
+				padding-bottom: 38px;
+			}
+			.afterSaleul1 .afterSaleli1 .afterP1{
+				margin: 0;
+				padding: 10px 0px;
+				font-size: 0.8rem;
+				color: #000;
+				font-weight: bold;
+				border-bottom: 1px solid gainsboro;
+				display: flex;
+  				justify-content: space-between;
+			}
+			.afterSaleul1 .afterSaleli1 .afterS1{
+				display: inline-block; 
+				width: 40%;
+				padding: 0px 10px;
+				text-align: right;
+			}
+			.afterSaleul1 .afterSaleli1 .afterS2{
+				display: inline-block; 
+				width: 60%;
+				padding: 0px 10px;
+				text-align: left;
+				font-weight: normal;
+			}
+			.afterSaleul1 .afterBtn {
+				margin: 0;
+				text-align: center;
+				border-bottom: 1px solid gainsboro;
+			}
+			.afterSaleul1 .afterBtn button{
+				margin: 10px 0px;
+    			padding: 8px 70px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">退换货</h1>
+		</header>
+		<div class="mui-content">
+			<!--退换货主体-->
+			<div class="afterSaleCont1">
+				<ul class="afterSaleul1">
+					<li class="afterSaleli1">
+						<p class="afterP1"><span class="afterS1">返修/退换货编号</span><span class="afterS2">30</span></p>
+						<p class="afterP1"><span class="afterS1">订单编号</span><span class="afterS2 afterBs1">2017052411471234</span></p>
+						<p class="afterP1"><span class="afterS1">商品名称</span><span class="afterS2 afterBds">小米手机5,十余项黑科技，很轻狠快</span></p>
+						<p class="afterP1"><span class="afterS1">申请时间</span><span class="afterS2">2017-05-24</span></p>
+						<p class="afterP1"><span class="afterS1">状态</span><span class="afterS2">待客服处理</span></p>
+						<p class="afterBtn"><button type="button" class="mui-btn mui-btn-danger">查看</button></p>
+					</li>
+					<li class="afterSaleli1">
+						<p class="afterP1"><span class="afterS1">返修/退换货编号</span><span class="afterS2">30</span></p>
+						<p class="afterP1"><span class="afterS1">订单编号</span><span class="afterS2 afterBs1">2017052411471234</span></p>
+						<p class="afterP1"><span class="afterS1">商品名称</span><span class="afterS2 afterBds">小米手机5,十余项黑科技，很轻狠快</span></p>
+						<p class="afterP1"><span class="afterS1">申请时间</span><span class="afterS2">2017-05-24</span></p>
+						<p class="afterP1"><span class="afterS1">状态</span><span class="afterS2">待客服处理</span></p>
+						<p class="afterBtn"><button type="button" class="mui-btn mui-btn-danger">查看</button></p>
+					</li>
+					<li class="afterSaleli1">
+						<p class="afterP1"><span class="afterS1">返修/退换货编号</span><span class="afterS2">30</span></p>
+						<p class="afterP1"><span class="afterS1">订单编号</span><span class="afterS2 afterBs1">2017052411471234</span></p>
+						<p class="afterP1"><span class="afterS1">商品名称</span><span class="afterS2 afterBds">小米手机5,十余项黑科技，很轻狠快</span></p>
+						<p class="afterP1"><span class="afterS1">申请时间</span><span class="afterS2">2017-05-24</span></p>
+						<p class="afterP1"><span class="afterS1">状态</span><span class="afterS2">待客服处理</span></p>
+						<p class="afterBtn"><button type="button" class="mui-btn mui-btn-danger">查看</button></p>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init();
+		mui.plusReady(function(){
+			// 批量进入
+			function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+				mui(IDBtns).on('tap',Skips,function(event){
+					mui.openWindow({
+						url: skipPages,
+						id: skipIDs,
+						preload: true,
+						styles: {
+							popGesture: 'none'
+						},
+						show: {
+						    aniShow: "none"
+						},
+						waiting: {
+							autoShow: true
+						}
+					});
+				}, false);
+			}
+			dkipsPages(".afterSaleul1",".afterBs1","about-d1-s1.html","about-d1-s1");
+			dkipsPages(".afterSaleul1",".afterBds","details.html","details");
+			dkipsPages(".afterSaleul1",".afterBtn","afterSale-s1.html","afterSale-s1");
+		});
+	</script>
+</html>

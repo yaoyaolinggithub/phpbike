@@ -430,11 +430,11 @@
 			    height: 100%;
 			    margin: 0;
 			}
-			#details-nav   #mui-detal-a2{
+			#details-nav   .detaBtnlist{
 				background: #f23030;
 				line-height: 50px;
 			}
-			#details-nav   #mui-detal-a2 .mui-med-li{
+			#details-nav   .detaBtnlist .mui-med-li{
 				color: white;
 				line-height: 39px;
 			    font-size: 1rem;
@@ -667,7 +667,7 @@
 				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#" id="mui-detal-a1">
 
 				        <div class="mui-media-body mui-med-li">加入购物车</div></a></li>
-				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3" id="detailsBtnli"><a href="#" id="mui-detal-a2">
+				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3 detaBtnlist" id="detailsBtnli"><a href="#" >
 
 				        <div class="mui-media-body mui-med-li">立即购买</div></a></li>
 				</ul>
@@ -738,51 +738,27 @@
 				document.getElementById("item1mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
 				document.getElementById("item2mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
 				document.getElementById("item3mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
-				//单个跳转有bug
-//				var detaSopBtn = document.getElementById('detailsBtnli');
-//				detaSopBtn.addEventListener('tap',function(event){
-//					alert("测试跳转");
-//					$.openWindow({
-//						url: "../contents/siteCity.html",
-//						id: "siteCity",
-//						preload: true,
-//						show: {
-//							aniShow: 'pop-in'
-//						},
-//						styles: {
-//							popGesture: 'hide'
-//						},
-//						waiting: {
-//							autoShow: false
-//						}
-//					});
-//					// 冒泡管理 
-////					event.stopPropagation();
-//				}, false);
-
-				// 绑定跳转试试
-				mui("#details-nav").on('tap','#mui-detal-a2',function(event){
-					$.openWindow({
-						url: "../contents/siteCity.html",
-						id: "siteCity",
-						preload: true,
-						show: {
-							aniShow: 'pop-in'
-						},
-						styles: {
-							popGesture: 'hide'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-				}, false);
-				
+				// 批量进入
+				function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+					mui(IDBtns).on('tap',Skips,function(event){
+						mui.openWindow({
+							url: skipPages,
+							id: skipIDs,
+	//						preload: true,
+							styles: {
+								popGesture: 'none'
+							},
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: true
+							}
+						});
+					}, false);
+				}
+				dkipsPages("#details-nav",'.detaBtnlist',"../contents/siteCity.html","siteCity");
 			});
-				
-			
 		})(mui);
-
-			
 	</script>
 </html>

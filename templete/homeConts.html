@@ -1293,44 +1293,44 @@
 				},3000);	
 			};
 			$.plusReady(function() {
-				function skipsPage(IdBtn,SkipPage,SkipsId){
-					IdBtn.addEventListener('tap', function(event) {
+				function singleBtn(singElent,singHtml,singId,singFhi){
+					singElent.addEventListener('tap',function(event){
 						$.openWindow({
-							url: SkipPage,
-							id: SkipsId,
-							preload: true,
-							show: {
-								aniShow: 'none'
-							},
+							url: singHtml,
+							id: singId,
+	//						preload: true,
 							styles: {
-								popGesture: 'hide'
+								popGesture: 'none'
+							},
+							show: {
+							    aniShow: singFhi
 							},
 							waiting: {
-								autoShow: false
+								autoShow: true
 							}
-						});
-					}, false);
-				};
+						})
+					},false)
+				}
 				// 搜索页跳转
 				var searBtn = document.querySelector('.seaript');
 				var searSli2 = document.querySelector('.searSli2');
-				skipsPage(searBtn,"../contents/searchPage.html","searchPage");
-				skipsPage(searSli2,"buying.html","buying");
+				singleBtn(searBtn,"../contents/searchPage.html","searchPage","none");
+				singleBtn(searSli2,"buying.html","buying","none");
 				// 批量进入
 				function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
 					$(IDBtns).on('tap',Skips,function(event){
 						$.openWindow({
 							url: skipPages,
 							id: skipIDs,
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
+//							preload: true,
 							styles: {
-								popGesture: 'hide'
+								popGesture: 'none'
+							},
+							show: {
+								aniShow: 'none'
 							},
 							waiting: {
-								autoShow: false
+								autoShow: true
 							}
 						});
 					}, false);

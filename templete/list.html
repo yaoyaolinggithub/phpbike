@@ -485,14 +485,15 @@
 						url: "details.html",
 						id: "details",
 						preload: true,
+						styles: {
+							popGesture: 'none'
+						},
 						show: {
 							aniShow: 'pop-in'
 						},
-						styles: {
-							popGesture: 'hide'
-						},
+						
 						waiting: {
-							autoShow: false
+							autoShow: true
 						}
 					});
 				}, false);
@@ -501,8 +502,6 @@
                 var listTo = true;
                 listTapOff.addEventListener('tap', function(event) {
                 	listTo  ?  (listCont1.id = "listCont2")&&(listTapOff.style.backgroundImage = "url(../images/list-L1.png)"):(listCont1.id = "listCont1")&&(listTapOff.style.backgroundImage = "url(../images/list-L2.png)");
-//                  listTo  ?  (listCont1.id = "listCont2")||:(listCont1.id = "listCont1");
-//                  listTo ? listTapOff.style.backgroundImage = "url(../images/list-L1.png)":listTapOff.style.backgroundImage = "url(../images/list-L2.png)";
                     listTo = !listTo;
                 }, false);
 
