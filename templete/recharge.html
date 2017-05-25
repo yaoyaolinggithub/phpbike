@@ -37,8 +37,10 @@
 				line-height: 30px;
 				color: darkgray;
 				background: white;
+				position:relative;
 			}
 			.rechageFont{
+				height: 64px;
 				padding: 20px 10px;
 				font-size: 0.95rem;
 			    color: #484646;
@@ -47,6 +49,11 @@
 			.rechageFont .rechageFonts{
 				font-size: 1.5rem;
 				color: #dd524d;
+			}
+			.rechargeCont2 .rechagePh{
+				color: #525151;
+				border:1px solid #dd524d;
+				background: url(../images/rechargeL1.png) no-repeat  right bottom/18px white;
 			}
 			/*充值方式*/
 			.rechargeCont3{
@@ -71,13 +78,13 @@
 			</p>
 			<!--选择金额-->
 			<div class="rechargeCont2">
-				<span class="rechagesp1">10元</span>
+				<span class="rechagesp1 rechagePh">10元</span>
 				<span class="rechagesp1">50元</span>
 				<span class="rechagesp1">100元</span>
 				<span class="rechagesp1">500元</span>
 				<span class="rechagesp1">1000元</span>
-				<input type="text" class="rechagesp1" placeholder="请输入金额">
-				<div class="rechageFont">充值金额：<span class="rechageFonts">500</span> 元</div>
+				<input type="text" class="rechagesp1 rechage" placeholder="请输入金额" >
+				<div class="rechageFont">充值金额：<span class="rechageFonts"></span> 元</div>
 			</div>
 			<!--充值方式-->
 			<div class="rechargeCont3">
@@ -91,9 +98,34 @@
 	<script type="text/javascript">
 		mui.init();
 		var rechagesps = document.querySelectorAll(".rechagesp1");
-		for(var i=0; i<rechagesps.length; i++){
-			
-		}
+		var rechageFonts = document.querySelector(".rechageFonts");
+		var rechagePh = document.querySelector(".rechagePh");
+		var listsTap = document.querySelector(".rechargeCont2>.rechagesp1.rechagePh");
+		var rechage = document.querySelector(".rechage");
+		rechageFonts.innerHTML = parseInt(listsTap.innerHTML);
+		mui(".rechargeCont2").on("tap",".rechagesp1",function(){
+		    var listNum = document.querySelector(".rechargeCont2>.rechagesp1.rechagePh");
+			if (this !== listNum) {
+				this.classList.add('rechagePh');
+				if(listNum){listNum.classList.remove('rechagePh')}
+				if(this.tagName === "INPUT"){
+					this.classList.remove('rechagePh');
+					this.style.border = "1px solid #dd524d";
+					rechageFonts.innerHTML=this.value;
+				}else{
+					rechage.style.border = "1px solid gainsboro";
+				}
+				console.log(this.innerHTML.split("").splice(this.innerHTML.split("").length-1,1,0));
+				rechageFonts.innerHTML = this.innerHTML;
+				
+				
+			}
+		});
+		rechage.addEventListener("input",function(event){
+			console.log(11);
+			rechageFonts.innerHTML = rechage.value;
+		},false);
+		
 		mui.plusReady(function(){
 			
 		});

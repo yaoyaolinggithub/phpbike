@@ -3190,22 +3190,26 @@
 		})
 		// 小统一分类批量点击进入列表页事件
 		mui.plusReady(function() {
-			mui("#segmentedControlContents").on('tap','.mui-fycont-li',function(event){
-				mui.openWindow({
-					url: "../templete/list.html",
-					id: "list",
-					preload: true,
-					styles: {
-						popGesture: 'none'
-					},
-					show: {
-						aniShow: 'pop-in'
-					},
-					waiting: {
-						autoShow: true
-					}
-				});
-			}, false);
+			// 批量进入
+			function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+				mui(IDBtns).on('tap',Skips,function(event){
+					mui.openWindow({
+						url: skipPages,
+						id: skipIDs,
+//						preload: true,
+						styles: {
+							popGesture: 'none'
+						},
+						show: {
+							aniShow: 'pop-in'
+						},
+						waiting: {
+							autoShow: true
+						}
+					});
+				}, false);
+			}
+			dkipsPages("#segmentedControlContents",'.mui-fycont-li',"../templete/list.html","list");
 		});
 	</script>
 </html>

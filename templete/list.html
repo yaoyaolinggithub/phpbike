@@ -480,23 +480,27 @@
 			$.init();
 			//批量进入详情页
 			$.plusReady(function() {
-				mui("#listCont1").on('tap','.mui-media',function(event){
-					$.openWindow({
-						url: "details.html",
-						id: "details",
-						preload: true,
-						styles: {
-							popGesture: 'none'
-						},
-						show: {
-							aniShow: 'pop-in'
-						},
-						
-						waiting: {
-							autoShow: true
-						}
-					});
-				}, false);
+				// 批量进入
+				function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+					$(IDBtns).on('tap',Skips,function(event){
+						$.openWindow({
+							url: skipPages,
+							id: skipIDs,
+//							preload: true,
+							styles: {
+								popGesture: 'none'
+							},
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: true
+							}
+						});
+					}, false);
+				}
+				dkipsPages("#listCont1",'.mui-media',"details.html","details");
+				
 				var listTapOff = document.querySelector(".listTap5");
                 var listCont1 = document.querySelector("#listCont1");
                 var listTo = true;

@@ -685,22 +685,26 @@
 		(function($, doc) {
 			$.init();
 			$.plusReady(function() {
-				mui("#ndrefresh").on('tap','.mui-clearfix',function(event){
-					$.openWindow({
-						url: "../templete/list.html",
-						id: "list",
-						preload: true,
-						styles: {
-							popGesture: 'none'
-						},
-						show: {
-							aniShow: 'pop-in'
-						},
-						waiting: {
-							autoShow: true
-						}
-					});
-				}, false);
+				// 批量进入
+				function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+					mui(IDBtns).on('tap',Skips,function(event){
+						mui.openWindow({
+							url: skipPages,
+							id: skipIDs,
+	//						preload: true,
+							styles: {
+								popGesture: 'none'
+							},
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: true
+							}
+						});
+					}, false);
+				}
+				dkipsPages("#ndrefresh",'.mui-clearfix',"../templete/list.html","list");
 			});
 		}(mui, document));
 		// 回到顶部

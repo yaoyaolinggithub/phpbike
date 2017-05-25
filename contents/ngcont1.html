@@ -481,59 +481,50 @@
 		}
 		
 		mui.plusReady(function(){
+			function singleBtn(singElent,singHtml,singId,singFhi){
+				singElent.addEventListener('tap',function(event){
+					mui.openWindow({
+						url: singHtml,
+						id: singId,
+	//					preload: true,
+						styles: {
+							popGesture: 'none'
+						},
+						show: {
+						    aniShow: singFhi
+						},
+						waiting: {
+							autoShow: true
+						}
+					})
+				},false)
+			}
 			// 跳转登录页
 			var ngBtn = document.getElementById("nglong");
-			ngBtn.addEventListener("tap",function(event){
-				mui.openWindow({
-					url:"../templete/login.html",
-					id:"login",
-					preload:true,
-					styles:{
-						popGesture:"none"
-					},
-					show:{
-						aniShow:"none"
-					},
-					waiting:{
-						autoShow:true
-					}
-				})
-			},false);
+			singleBtn(ngBtn,"../templete/login.html","login","none");
 			// 跳转购买  填写地址页
 			var botP4Btn = document.querySelector(".mui-botP4");
-			botP4Btn.addEventListener('tap', function(event) {
-				mui.openWindow({
-					url: 'siteCity.html',
-					id: 'siteCity',
-					preload: true,
-					styles: {
-						popGesture: 'none'
-					},
-					show: {
-						aniShow: 'none'
-					},
-					waiting: {
-						autoShow: true
-					}
-				});
-			}, false);		
-			// 推荐LI批量进入详情页
-			mui("#ngCom").on('tap','.mui-rig1',function(event){
-				mui.openWindow({
-					url: "../templete/details.html",
-					id: "details",
-					preload: true,
-					styles: {
-						popGesture: 'none'
-					},
-					show: {
-						aniShow: 'pop-in'
-					},
-					waiting: {
-						autoShow: true
-					}
-				});
-			}, false);	
+			singleBtn(botP4Btn,'siteCity.html','siteCity',"none");
+			// 批量进入 推荐LI批量进入详情页
+			function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+				mui(IDBtns).on('tap',Skips,function(event){
+					mui.openWindow({
+						url: skipPages,
+						id: skipIDs,
+	//					preload: true,
+						styles: {
+							popGesture: 'none'
+						},
+						show: {
+							aniShow: 'pop-in'
+						},
+						waiting: {
+							autoShow: true
+						}
+					});
+				}, false);
+			}
+			dkipsPages("#ngCom",'.mui-rig1', "../templete/details.html","details");
 		})
 		//购物车商品demo，拖拽后显示操作图标，点击操作图标删除元素；
 		var btnArray = ['确认', '取消'];

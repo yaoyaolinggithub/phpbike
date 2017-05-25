@@ -280,7 +280,7 @@
 										共<span class="item2-li-d2N1">2</span>件商品应付：<strong>￥<span class="item2-li-d2N2">2676.28</span>元</strong>
 									</div>
 									<div class="item2-li-d3">
-										<button type="button" class="mui-btn">
+										<button type="button" class="mui-btn aboutD1Btncrit">
 											评价
 										</button>
 										<button type="button" class="mui-btn mui-btn-danger">
@@ -501,7 +501,7 @@
 								共<span class="item2-li-d2N1">2</span>件商品应付：<strong>￥<span class="item2-li-d2N2">2676.28</span>元</strong>
 							</div>
 							<div class="item2-li-d3">
-								<button type="button" class="mui-btn">
+								<button type="button" class="mui-btn aboutD1Btncrit">
 									评价
 								</button>
 								<button type="button" class="mui-btn mui-btn-danger">
@@ -532,42 +532,28 @@
 			});
 		});
 		mui.plusReady(function(){
-			// 批量进入
-				function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
-					$(IDBtns).on('tap',Skips,function(event){
-						$.openWindow({
-							url: skipPages,
-							id: skipIDs,
-							preload: true,
-							styles: {
-								popGesture: 'none'
-							},
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: true
-							}
-						});
-					}, false);
-				}
-			// 调整到订单详情
-			mui(".aboutD1Cont").on("tap",".item2-li-d1",function(event){
-				mui.openWindow({
-					url: "about-d1-s1.html",
-					id: "about-d1-s1",
-					preload: true,
-					styles: {
-						popGesture: 'none'
-					},
-					show: {
-						aniShow: 'pop-in'
-					},
-					waiting: {
-						autoShow: true
-					}
-				});
-			},false);
+			// 批量进入调整到订单详情
+			function dkipsPages(IDBtns,Skips,skipPages,skipIDs){
+				mui(IDBtns).on('tap',Skips,function(event){
+					mui.openWindow({
+						url: skipPages,
+						id: skipIDs,
+//						preload: true,
+						styles: {
+							popGesture: 'none'
+						},
+						show: {
+							aniShow: 'pop-in'
+						},
+						waiting: {
+							autoShow: true
+						}
+					});
+				}, false);
+			}
+			dkipsPages(".aboutD1Cont",".item2-li-d1","about-d1-s1.html","about-d1-s1");
+			// 跳转到产品评价
+			dkipsPages(".aboutD1Cont",".aboutD1Btncrit","criticism-evaluate.html","criticism-evaluate");
 		})
 	</script>
 </html>
