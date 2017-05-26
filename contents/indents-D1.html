@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>提交訂單</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			/*提交成功*/
+			.inDcont1 h3{
+				font-size: 1.1rem;
+				text-indent: 50px;
+				color: #9EC069;
+				line-height: 30px;
+				background: url(../images/indetsDl1.png) no-repeat left;
+				background-size: 70px;
+				margin: 0px 10px;
+				border-bottom: 1px solid gainsboro; 
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">提交订单</h1>
+		</header>
+		<div class="mui-content">
+			<!--提交成功-->
+			<div class="inDcont1">
+				<h3>订单已经提交成功</h3>
+			</div>
+			<!--提交详情-->
+			<ul class="inDcont2">
+				<li>请您在<span>2017-05-27</span>前完成支付</li>
+				<li>否则订单将自动取消！</li>
+				<li>订单号：<span>201705271638254567</span>/li>
+				<li>支付金额：￥<span>2921.92</span>元</li>
+			</ul>
+			<!--支付方式-->
+			<div class="inDcont3">
+				<span>支付方式</span> <span>请选择支付方式</span>
+			</div>
+			<!--支付按钮-->
+			<div class="rechargeCont3 " id="dcontent">
+				<p id="info" style="padding: 0 1em;text-align:left;">支付通道信息：</p>
+				<!--<button type="button" class="mui-btn mui-btn-danger mui-btn-block">微信充值</button>-->
+				<!--<button type="button" class="mui-btn mui-btn-danger mui-btn-block">支付宝充值</button>-->
+			</div>
+			<div id="output">
+				<!--Payment模块管理支付功能，可通过js调用第三方支付服务。通过plus.payment可获取支付管理对象。-->
+			</div>
+			
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+	</script>
+</html>

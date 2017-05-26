@@ -85,7 +85,7 @@
 		"NativeObj": {},
 		"Share": {},
 		"OAuth": {},
-		"Device": {}
+		"Device": {},"Payment":{}
 	},
 	"plus": {
 		"splashscreen": {
@@ -111,16 +111,7 @@
 				"password": "",/*Android应用打包使用密钥库中证书的密码*/
 				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
 				// "ImmersedStatusbar":false,//设置沉浸式状态栏  安卓
-				"permissions": [
-					"<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>",
-					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-					"<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>"
-				]
+				"permissions": ["<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>"]
 			},
 			"orientation": [
 				"portrait-primary",
@@ -476,7 +467,8 @@
 					"templete/service.html",
 					"templete/criticism.html",
 					"templete/collect.html",
-					"templete/notecase.html"
+					"templete/notecase.html",
+					"templete/balance.html"
 				],
 				"priority": 0
 			},
@@ -802,6 +794,24 @@
 			"templete/notecase.html": {
 				"resources": [
 					"font_about/iconfont.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"templete/balance.html": {
+				"resources": [
+					"css/mui.min.css"
+				],
+				"refer": [
+					"templete/recharge.html"
+				],
+				"priority": 0
+			},
+			"templete/recharge.html": {
+				"resources": [
+					"js/common.js",
+					"images/rechargeL1.png",
 					"css/mui.min.css"
 				],
 				"refer": [],
