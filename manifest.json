@@ -663,9 +663,12 @@
 					"images/site.png",
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"images/inden-b1.png"
 				],
-				"refer": [],
+				"refer": [
+					"contents/indents-D1.html"
+				],
 				"priority": 0
 			},
 			"templete/classifyPage.html": {
@@ -763,7 +766,9 @@
 					"images/comm.jpg",
 					"images/ngcontG2.png"
 				],
-				"refer": [],
+				"refer": [
+					"contents/siteCity.html"
+				],
 				"priority": 0
 			},
 			"templete/criticism-evaluate.html": {
@@ -813,6 +818,15 @@
 					"js/common.js",
 					"images/rechargeL1.png",
 					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"contents/indents-D1.html": {
+				"resources": [
+					"js/common.js",
+					"images/indetsDl1.png",
+					"js/immersed.js"
 				],
 				"refer": [],
 				"priority": 0

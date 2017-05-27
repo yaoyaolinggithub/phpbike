@@ -68,6 +68,19 @@
 			    border: 1px solid #dd524d;
 			    background-color: #dd524d;
 			}
+			/* 测试待删除 */
+			#outputCont #output{
+				/*width:100%;
+				text-align: center;
+				padding: 10px;
+				color: red;*/
+			}
+			#outputCont #output span{
+				width:100%;
+				text-align: center;
+				padding: 10px;
+				color: yellow;
+			}
 		</style>
 	</head>
 	<body>
@@ -96,9 +109,12 @@
 				<!--<button type="button" class="mui-btn mui-btn-danger mui-btn-block">微信充值</button>-->
 				<!--<button type="button" class="mui-btn mui-btn-danger mui-btn-block">支付宝充值</button>-->
 			</div>
-			<div id="output">
-				<!--Payment模块管理支付功能，可通过js调用第三方支付服务。通过plus.payment可获取支付管理对象。-->
+			<div id="outputCont">
+				<div id="output">
+					Payment模块管理支付功能，可通过js调用第三方支付服务。通过plus.payment可获取支付管理对象。
+				</div>
 			</div>
+			
 			
 		</div>
 	</body>
@@ -152,7 +168,6 @@
 						var de=document.createElement('button');
 						de.setAttribute('type', 'button');
 						de.setAttribute('class', 'mui-btn mui-btn-danger mui-btn-block');
-						de.setAttribute('onclick', 'appMoney(this.id)');
 						de.setAttribute('onclick', 'las(this.id)');
 						de.id=channel.id;
 						de.innerText=channel.description+'支付';

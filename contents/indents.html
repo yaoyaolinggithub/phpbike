@@ -596,7 +596,28 @@
                 listTo2  ?  (waymode2.style.display = "block"):(waymode2.style.display = "none");
                 listTo2 = !listTo2;
             }, false);
-   
+            
+            function singleBtn(singElent,singHtml,singId,singFhi){
+				singElent.addEventListener('tap',function(){
+					mui.openWindow({
+						url: singHtml,
+						id: singId,
+//						preload: true,
+						styles: {
+							popGesture: singFhi
+						},
+						show: {
+						    aniShow: 'none'
+						},
+						waiting: {
+							autoShow: true
+						}
+					})
+				})
+			}
+			// 确认订单 跳转到 确认付款
+			var indetmonetsub = document.querySelector(".indet-monet-sub");
+			singleBtn(indetmonetsub,"indents-D1.html","indents-D1","pop-in");
 		});
 	</script>
 </html>
